@@ -1,4 +1,4 @@
-# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/pyGram.g4 by ANTLR 4.10.1
+# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/Raimundo.g4 by ANTLR 4.10.1
 from antlr4 import *
 from io import StringIO
 import sys
@@ -216,7 +216,7 @@ class pyGramLexer(Lexer):
                   "KW_FLOAT", "KW_STRING", "KW_BOOL", "KW_VOID", "KW_TRUE", 
                   "KW_FALSE", "ID", "WS", "COMMENT" ]
 
-    grammarFileName = "pyGram.g4"
+    grammarFileName = "Raimundo.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)

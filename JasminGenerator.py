@@ -1,4 +1,4 @@
-class Id:
+class VariableIdentifier:
     def __init__(self, address: int = None, type=None, function: bool = False, local: bool = False):
         self.type = type
         self.address = address
@@ -6,7 +6,7 @@ class Id:
         self.local = local
 
 
-def translate_type_name(type):
+def translate_type_name(vartype: str):
     descriptor = {
         'NoneType': 'V',
         'boolean': 'Z',
@@ -16,7 +16,7 @@ def translate_type_name(type):
         'float': 'F',
         'string': 'Ljava/lang/String;',
     }
-    return descriptor[type]
+    return descriptor[vartype]
 
 
 class JasminCodeGenerator:

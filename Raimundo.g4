@@ -1,4 +1,4 @@
-grammar pyGram;
+grammar Raimundo;
 
 program: global_variables_declaration functions_declaration main_function_declaration;
 
@@ -83,13 +83,13 @@ term6 returns [type]
 ;
 
 factor  returns [type]
-: KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE #l_expr// expr.type
-| function_call_statement #l_function_call//function_call_statement.type
-| ID #l_id//symbol_table
-| INT_VALUE #l_int_value //integer
-| FLOAT_VALUE #l_float_value//float
-| STR_VALUE #l_str_value//string
-| BOOL_VALUE #l_bool_value// boolean
+: KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE #l_expr
+| function_call_statement #l_function_call
+| ID #l_id
+| INT_VALUE #l_int_value
+| FLOAT_VALUE #l_float_value
+| STR_VALUE #l_str_value
+| BOOL_VALUE #l_bool_value
 ;
 
 r_input: INPUT KW_PARENTHESIS_OPEN KW_PARENTHESIS_CLOSE

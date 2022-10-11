@@ -1,4 +1,4 @@
-# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/pyGram.g4 by ANTLR 4.10.1
+# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/Raimundo.g4 by ANTLR 4.10.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .pyGramParser import pyGramParser
