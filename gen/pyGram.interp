@@ -114,8 +114,8 @@ if_statement
 else_statement
 print_statement
 variable_declaration_statement
-single_variable_declaration
-multiple_variable_declaration
+single_variable_declaration_statement
+multiple_variable_declaration_statement
 assigment_statement
 expr
 term

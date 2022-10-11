@@ -168,16 +168,17 @@ class myListener(pyGramListener):
         self.stack_block.pop()
         self.jasmin.exit_while(len(self.stack_block))
 
-    def exitSingle_variable_declaration(self, ctx: pyGramParser.Single_variable_declarationContext):
-        for token in ctx.ID():
-            if token.getText() in self.symbol_table:
-                raise AlreadyDeclaredError(ctx.start.line, token.getText())
-            self.symbol_table[token.getText()] = Id(type=ctx.TYPE().getText())
-            # if self.symbol_table[token.getText()].type == 'int':
-            #     self.symbol_table[token.getText()].type = 'integer'
-            self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitMultiple_variable_declaration(self, ctx: pyGramParser.Multiple_variable_declarationContext):
+    def exitSingle_variable_declaration_statement(self, ctx: pyGramParser.Single_variable_declaration_statementContext):
+        token = ctx.ID()
+        if token.getText() in self.symbol_table:
+            raise AlreadyDeclaredError(ctx.start.line, token.getText())
+        self.symbol_table[token.getText()] = Id(type=ctx.TYPE().getText())
+        # if self.symbol_table[token.getText()].type == 'int':
+        #     self.symbol_table[token.getText()].type = 'integer'
+        self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
+
+    def exitMultiple_variable_declaration_statement(self, ctx: pyGramParser.Multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())

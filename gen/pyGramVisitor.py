@@ -89,13 +89,13 @@ class pyGramVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#single_variable_declaration.
-    def visitSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+    # Visit a parse tree produced by pyGramParser#single_variable_declaration_statement.
+    def visitSingle_variable_declaration_statement(self, ctx:pyGramParser.Single_variable_declaration_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#multiple_variable_declaration.
-    def visitMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
+    # Visit a parse tree produced by pyGramParser#multiple_variable_declaration_statement.
+    def visitMultiple_variable_declaration_statement(self, ctx:pyGramParser.Multiple_variable_declaration_statementContext):
         return self.visitChildren(ctx)
 
 

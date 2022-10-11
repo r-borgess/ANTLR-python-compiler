@@ -152,21 +152,21 @@ class pyGramListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#single_variable_declaration.
-    def enterSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+    # Enter a parse tree produced by pyGramParser#single_variable_declaration_statement.
+    def enterSingle_variable_declaration_statement(self, ctx:pyGramParser.Single_variable_declaration_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#single_variable_declaration.
-    def exitSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+    # Exit a parse tree produced by pyGramParser#single_variable_declaration_statement.
+    def exitSingle_variable_declaration_statement(self, ctx:pyGramParser.Single_variable_declaration_statementContext):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#multiple_variable_declaration.
-    def enterMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
+    # Enter a parse tree produced by pyGramParser#multiple_variable_declaration_statement.
+    def enterMultiple_variable_declaration_statement(self, ctx:pyGramParser.Multiple_variable_declaration_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#multiple_variable_declaration.
-    def exitMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
+    # Exit a parse tree produced by pyGramParser#multiple_variable_declaration_statement.
+    def exitMultiple_variable_declaration_statement(self, ctx:pyGramParser.Multiple_variable_declaration_statementContext):
         pass
 
 

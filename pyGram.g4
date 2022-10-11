@@ -33,9 +33,9 @@ if_statement: KW_IF KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OP
 else_statement: KW_ELSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
 print_statement: PRINT KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE KW_SEMICOLON;
 
-variable_declaration_statement: single_variable_declaration | multiple_variable_declaration;
-single_variable_declaration: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
-multiple_variable_declaration: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
+variable_declaration_statement: single_variable_declaration_statement | multiple_variable_declaration_statement;
+single_variable_declaration_statement: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
+multiple_variable_declaration_statement: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
 
 assigment_statement: ID KW_ASSIGNMENT expr KW_SEMICOLON #e_assigment
 | ID KW_ASSIGNMENT r_input KW_SEMICOLON #input

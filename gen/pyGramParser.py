@@ -187,8 +187,8 @@ class pyGramParser ( Parser ):
     RULE_else_statement = 12
     RULE_print_statement = 13
     RULE_variable_declaration_statement = 14
-    RULE_single_variable_declaration = 15
-    RULE_multiple_variable_declaration = 16
+    RULE_single_variable_declaration_statement = 15
+    RULE_multiple_variable_declaration_statement = 16
     RULE_assigment_statement = 17
     RULE_expr = 18
     RULE_term = 19
@@ -205,8 +205,8 @@ class pyGramParser ( Parser ):
                    "function_declaration", "return_statement", "function_call_statement", 
                    "forloop_statement", "while_statement", "break_statement", 
                    "if_statement", "else_statement", "print_statement", 
-                   "variable_declaration_statement", "single_variable_declaration", 
-                   "multiple_variable_declaration", "assigment_statement", 
+                   "variable_declaration_statement", "single_variable_declaration_statement", 
+                   "multiple_variable_declaration_statement", "assigment_statement", 
                    "expr", "term", "term2", "term3", "term4", "term5", "term6", 
                    "factor", "r_input" ]
 
@@ -1585,12 +1585,12 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def single_variable_declaration(self):
-            return self.getTypedRuleContext(pyGramParser.Single_variable_declarationContext,0)
+        def single_variable_declaration_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Single_variable_declaration_statementContext,0)
 
 
-        def multiple_variable_declaration(self):
-            return self.getTypedRuleContext(pyGramParser.Multiple_variable_declarationContext,0)
+        def multiple_variable_declaration_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Multiple_variable_declaration_statementContext,0)
 
 
         def getRuleIndex(self):
@@ -1624,13 +1624,13 @@ class pyGramParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 233
-                self.single_variable_declaration()
+                self.single_variable_declaration_statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 234
-                self.multiple_variable_declaration()
+                self.multiple_variable_declaration_statement()
                 pass
 
 
@@ -1643,7 +1643,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class Single_variable_declarationContext(ParserRuleContext):
+    class Single_variable_declaration_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1667,29 +1667,29 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_single_variable_declaration
+            return pyGramParser.RULE_single_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingle_variable_declaration" ):
-                listener.enterSingle_variable_declaration(self)
+            if hasattr( listener, "enterSingle_variable_declaration_statement" ):
+                listener.enterSingle_variable_declaration_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingle_variable_declaration" ):
-                listener.exitSingle_variable_declaration(self)
+            if hasattr( listener, "exitSingle_variable_declaration_statement" ):
+                listener.exitSingle_variable_declaration_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSingle_variable_declaration" ):
-                return visitor.visitSingle_variable_declaration(self)
+            if hasattr( visitor, "visitSingle_variable_declaration_statement" ):
+                return visitor.visitSingle_variable_declaration_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def single_variable_declaration(self):
+    def single_variable_declaration_statement(self):
 
-        localctx = pyGramParser.Single_variable_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_single_variable_declaration)
+        localctx = pyGramParser.Single_variable_declaration_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_single_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1718,7 +1718,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class Multiple_variable_declarationContext(ParserRuleContext):
+    class Multiple_variable_declaration_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1754,29 +1754,29 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_multiple_variable_declaration
+            return pyGramParser.RULE_multiple_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiple_variable_declaration" ):
-                listener.enterMultiple_variable_declaration(self)
+            if hasattr( listener, "enterMultiple_variable_declaration_statement" ):
+                listener.enterMultiple_variable_declaration_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiple_variable_declaration" ):
-                listener.exitMultiple_variable_declaration(self)
+            if hasattr( listener, "exitMultiple_variable_declaration_statement" ):
+                listener.exitMultiple_variable_declaration_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiple_variable_declaration" ):
-                return visitor.visitMultiple_variable_declaration(self)
+            if hasattr( visitor, "visitMultiple_variable_declaration_statement" ):
+                return visitor.visitMultiple_variable_declaration_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def multiple_variable_declaration(self):
+    def multiple_variable_declaration_statement(self):
 
-        localctx = pyGramParser.Multiple_variable_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_multiple_variable_declaration)
+        localctx = pyGramParser.Multiple_variable_declaration_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_multiple_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
