@@ -1,12 +1,10 @@
-import pprint
-
 from gen.pyGramParser import pyGramParser
-from JasminGenerator import JasminCodeGenerator, VariableIdentifier
+from JasminGenerator import JasminCodeGenerator, CustomListener
 from CustomExceptions import *
 from gen.pyGramListener import pyGramListener
 
 
-class myListener(pyGramListener):
+class CustomListener(pyGramListener):
     symbol_table = {}
     functions_args = {}
     stack_block = []
@@ -30,7 +28,7 @@ class myListener(pyGramListener):
         if function_id in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, function_id)
 
-        self.symbol_table[function_id] = VariableIdentifier(type=ctx.TYPE(0).getText())
+        self.symbol_table[function_id] = CustomListener(type=ctx.TYPE(0).getText())
 
         args = []
         args_names = []
@@ -38,7 +36,7 @@ class myListener(pyGramListener):
         for arg_id, arg_type in content:
             if arg_id.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, arg_id.getText())
-            self.symbol_table[arg_id.getText()] = VariableIdentifier(type=arg_type.getText(), local=True)
+            self.symbol_table[arg_id.getText()] = CustomListener(type=arg_type.getText(), local=True)
             args.append(arg_type.getText())
             args_names.append(arg_id.getText())
 
@@ -51,14 +49,14 @@ class myListener(pyGramListener):
         if function_id in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, function_id)
 
-        self.symbol_table[function_id] = VariableIdentifier(type="NoneType")
+        self.symbol_table[function_id] = CustomListener(type="NoneType")
 
         args = []
         args_names = []
         for arg_id, arg_type in list(zip(ctx.ID()[1:], ctx.TYPE()[0:])):
             if arg_id.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, arg_id.getText())
-            self.symbol_table[arg_id.getText()] = VariableIdentifier(type=arg_type.getText(), local=True)
+            self.symbol_table[arg_id.getText()] = CustomListener(type=arg_type.getText(), local=True)
             args.append(arg_type.getText())
             args_names.append(arg_id.getText())
 
@@ -162,28 +160,28 @@ class myListener(pyGramListener):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
-        self.symbol_table[token.getText()] = VariableIdentifier(type=ctx.TYPE().getText())
+        self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
         self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
     def exitGlobal_multiple_variable_declaration_statement(self, ctx:pyGramParser.Global_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
-            self.symbol_table[token.getText()] = VariableIdentifier(type=ctx.TYPE().getText())
+            self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
             self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
     def exitLocal_single_variable_declaration_statement(self, ctx:pyGramParser.Local_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
-        self.symbol_table[token.getText()] = VariableIdentifier(address=0, type=ctx.TYPE().getText(), local=True)
+        self.symbol_table[token.getText()] = CustomListener(address=0, type=ctx.TYPE().getText(), local=True)
         self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
     def exitLocal_multiple_variable_declaration_statement(self, ctx:pyGramParser.Local_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
-            self.symbol_table[token.getText()] = VariableIdentifier(address=0, type=ctx.TYPE().getText(), local=True)
+            self.symbol_table[token.getText()] = CustomListener(address=0, type=ctx.TYPE().getText(), local=True)
             self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
     def exitE_assigment(self, ctx: pyGramParser.E_assigmentContext):

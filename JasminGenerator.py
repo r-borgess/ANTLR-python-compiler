@@ -1,4 +1,4 @@
-class VariableIdentifier:
+class CustomListener:
     def __init__(self, address: int = None, type=None, function: bool = False, local: bool = False):
         self.type = type
         self.address = address

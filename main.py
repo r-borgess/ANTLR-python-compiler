@@ -4,7 +4,7 @@ from antlr4 import *
 
 from gen.pyGramLexer import pyGramLexer
 from gen.pyGramParser import pyGramParser
-from myListener import myListener
+from CustomListener import CustomListener
 
 if __name__ == '__main__':
     # TODO : receber arquivo por argumento
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     tree = parser.program()
 
     # Walker using listener
-    l = myListener(fileName)
+    l = CustomListener(fileName)
     walker = ParseTreeWalker()
     walker.walk(l, tree)
 
