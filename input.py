@@ -1,4 +1,5 @@
-int numero;
+real numero;
+real m;
 
 def fatorial (int fat) int{
     if (fat > 1) {
@@ -17,7 +18,6 @@ def resultado (int valor) void {
 }
 
 def media (real n1, real n2) real{
-    real m;
     m = (n1 + n2)/2;
     return m;
 
@@ -26,5 +26,5 @@ def main() {
     // print ("Fatorial de N. Digite o n?mero?");
     // numero = input();
     // resultado (fatorial (numero));
-    print(True);
+    numero = media(10.0, 20.0);
 }

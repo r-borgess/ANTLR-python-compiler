@@ -1,29 +1,19 @@
-import os
-
 from antlr4 import *
-
-from gen.pyGramLexer import pyGramLexer
-from gen.pyGramParser import pyGramParser
+from gen.RaimundoLexer import RaimundoLexer as RaimundoLexerLib
+from gen.RaimundoParser import RaimundoParser as RaimundoParserLib
 from CustomListener import CustomListener
+import os, sys
 
 if __name__ == '__main__':
-    # TODO : receber arquivo por argumento
-    fileName = 'input'
-    data = FileStream(fileName + ".py")
-
-    # Lexer
-    lexer = pyGramLexer(data)
-    stream = CommonTokenStream(lexer)
-
-    # Parser
-    parser = pyGramParser(stream)
-    tree = parser.program()
-
-    # Walker using listener
-    l = CustomListener(fileName)
-    walker = ParseTreeWalker()
-    walker.walk(l, tree)
-
-    # Autoexecute
-    os.system('java -jar jasmin.jar {}'.format(fileName + '.j'))
-    os.system('java {}'.format(fileName))
+    filename = "input"
+    content = FileStream(f"{filename}.py")
+    lexerlib = RaimundoLexerLib(content)
+    streamlib = CommonTokenStream(lexerlib)
+    parserlib = RaimundoParserLib(streamlib)
+    tree = parserlib.program()
+    listenerlib = CustomListener(filename)
+    treewalker = ParseTreeWalker()
+    treewalker.walk(listenerlib, tree)
+    finalfilename = filename + '.j'
+    os.system(f'java -jar jasmin.jar {finalfilename}')
+    os.system(f'java {finalfilename}')

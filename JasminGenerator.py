@@ -6,7 +6,7 @@ class CustomListener:
         self.local = local
 
 
-def translate_type_name(vartype: str):
+def translate_type_name(vartype):
     descriptor = {
         'NoneType': 'V',
         'boolean': 'Z',
@@ -29,7 +29,7 @@ class JasminCodeGenerator:
     def initialize_file(self, filename, symbol_table):
         self.file = open(filename, 'w+')
         self.write_jasmin_header()
-        self.symbol_table =
+        self.symbol_table = symbol_table
         self.top_index, self.label_count = 0, 0
 
     def close_file(self):

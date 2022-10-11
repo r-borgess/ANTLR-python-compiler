@@ -9,30 +9,30 @@ class NonDeclaredVariableError(Exception):
 
 
 class UnexpectedTypeError(Exception):
-    def __init__(self, line_number: int, expected_type, received_type):
+    def __init__(self, line_number, expected_type, received_type):
         super().__init__()
 
 
 class BreakException(Exception):
-    def __init__(self, line_number: int):
+    def __init__(self, line_number):
         super().__init__()
 
 
 class ReturnException(Exception):
-    def __init__(self, line_number: int):
+    def __init__(self, line_number):
         super().__init__()
 
 
 class MissingArgument(Exception):
-    def __init__(self, line: int, expected_args_num: int, received_args_num: int):
+    def __init__(self, line, expected_args_num, received_args_num):
         super().__init__()
 
 
 class UndeclaredFunction(Exception):
-    def __init__(self, line_number: int, identifier_name: str):
+    def __init__(self, line_number, identifier_name):
         super().__init__()
 
 
 class AlreadyDeclaredError(Exception):
-    def __init__(self, line_number: int, identifier_name: str):
+    def __init__(self, line_number, identifier_name):
         super().__init__()
