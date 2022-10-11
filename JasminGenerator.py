@@ -7,12 +7,12 @@ class Id:
 
 
 def type_convert(type):
-    descriptor = {'int': 'I', 'real': 'F', 'string': 'Ljava/lang/String;', 'boolean': 'Z', 'NoneType': 'V',
+    descriptor = {'int': 'I', 'real': 'F', 'float': 'F', 'string': 'Ljava/lang/String;', 'boolean': 'Z', 'NoneType': 'V',
                   'integer': 'I'}
     return descriptor[type]
 
 
-class Generator:
+class JasminCodeGenerator:
     MAX_LOCALS = 100
 
     def __init__(self, name, symbol_table):
@@ -38,6 +38,9 @@ class Generator:
             .field public static {} {}
             """.format(var_name, type_convert(var_type))
         )
+
+    def create_local(self, var_name, var_type):
+        self.store_var(var_name, 0)
 
     def start_file(self):
         self.__write(
@@ -228,7 +231,14 @@ class Generator:
         return self.store_val('boolean')
 
     def calc_eq(self, type, val1, val2, label_id, op):
-        cmp = {'==': 'eq', '!=': 'ne', '>=': 'ge', '>': 'gt', '<=': 'le', '<': 'lt'}
+        cmp = {
+            '==': 'eq',
+            '!=': 'ne',
+            '>=': 'ge',
+            '>': 'gt',
+            '<=': 'le',
+            '<': 'lt'
+        }
         self.load_temp(val1, type)
         self.load_temp(val2, type)
         if type in ['int', 'integer', 'boolean']:
@@ -297,7 +307,12 @@ class Generator:
                     fload {}
                     """.format(var_data.address)
                 )
-            # TODO: tratar string
+            elif var_data.type == 'string':
+                self.__write(
+                    """
+                    aload {}
+                    """.format(var_data.address)
+                )
         else:  # global var
             self.__write(
                 """
@@ -308,7 +323,7 @@ class Generator:
 
     def store_var(self, var, address):
         var_data = self.symbol_table[var]
-        if var_data.local:  # local var
+        if var_data.local == True:  # local var
             if var_data.type == 'int' or var_data.type == 'boolean':
                 self.__write(
                     """
@@ -432,7 +447,7 @@ class Generator:
         )
         return self.store_val(type)
 
-    def int_to_float(self, val):
+    def int_to_real(self, val):
         self.load_temp(val, "int")
         self.__write(
             """

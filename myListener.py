@@ -1,8 +1,10 @@
+import pprint
+
 if __name__ is not None and "." in __name__:
     from gen.pyGramParser import pyGramParser
 else:
     from gen.pyGramParser import pyGramParser
-from JasminGenerator import Generator, Id
+from JasminGenerator import JasminCodeGenerator, Id
 from SematicErrors import *
 from gen.pyGramListener import pyGramListener
 
@@ -13,7 +15,7 @@ class myListener(pyGramListener):
     stack_block = []
 
     def __init__(self, filename):
-        self.jasmin = Generator(filename, self.symbol_table)
+        self.jasmin = JasminCodeGenerator(filename, self.symbol_table)
         self.label_id = 0
 
     def __is_numeric(self, type):
@@ -32,12 +34,11 @@ class myListener(pyGramListener):
             raise AlreadyDeclaredError(ctx.start.line, function_id)
 
         self.symbol_table[function_id] = Id(type=ctx.TYPE(0).getText())
-        # if self.symbol_table[function_id].type == 'int':
-        #     self.symbol_table[function_id].type = 'integer'
 
         args = []
         args_names = []
-        for arg_id, arg_type in list(zip(ctx.ID()[1:], ctx.TYPE()[1:])):
+        content = list(zip(ctx.ID()[1:], ctx.TYPE()[1:]))
+        for arg_id, arg_type in content:
             if arg_id.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, arg_id.getText())
             self.symbol_table[arg_id.getText()] = Id(type=arg_type.getText(), local=True)
@@ -54,8 +55,6 @@ class myListener(pyGramListener):
             raise AlreadyDeclaredError(ctx.start.line, function_id)
 
         self.symbol_table[function_id] = Id(type="NoneType")
-        # if self.symbol_table[function_id].type == 'int':
-        #     self.symbol_table[function_id].type = 'integer'
 
         args = []
         args_names = []
@@ -93,7 +92,6 @@ class myListener(pyGramListener):
         if not self.__is_numeric(self.symbol_table[ctx_id].type):
             raise UnexpectedTypeError(ctx.start.line, 'int', self.symbol_table[ctx_id].type)
 
-        # ctx.expr()[len(ctx.expr()) - 1].inh = self.jasmin.enter_for(len(ctx.expr()) == 1)
         if len(ctx.expr()) == 1:
             ctx.expr()[0].inh_type = 'right_range'
             ctx.expr()[0].inh = self.jasmin.enter_for(len(self.stack_block), True, ctx_id)
@@ -127,19 +125,13 @@ class myListener(pyGramListener):
         # saindo da função antes de apagar referencias que podem ser importantes
         # TODO : verificar se existe retorno!!
         self.jasmin.exit_function()
-
         self.stack_block.pop()
-        # for arg_id in ctx.ID()[1:]:
-        #     del self.symbol_table[arg_id.getText()]
 
     def exitL_void(self, ctx: pyGramParser.L_voidContext):
         self.jasmin.do_return(None, 'NoneType')
         self.jasmin.exit_function()
-
         self.stack_block.pop()
 
-        # for arg_id in ctx.ID()[1:]:
-        #     del self.symbol_table[arg_id.getText()]
 
     def exitFunction_call_statement(self, ctx: pyGramParser.Function_call_statementContext):
         function_id = ctx.ID().getText()
@@ -147,9 +139,9 @@ class myListener(pyGramListener):
         if len(self.functions_args[function_id]) != len(ctx.expr()):
             raise MissingArgument(ctx.start.line, len(self.functions_args[function_id]), len(ctx.expr()))
 
-        for expected, recieved in list(zip(self.functions_args[function_id], ctx.expr())):
-            if expected != recieved.type:
-                raise UnexpectedTypeError(ctx.start.line, expected, recieved.type)
+        for expected, received in list(zip(self.functions_args[function_id], ctx.expr())):
+            if expected != received.type:
+                raise UnexpectedTypeError(ctx.start.line, expected, received.type)
 
         ctx.type = self.symbol_table[ctx.ID().getText()].type
 
@@ -169,23 +161,33 @@ class myListener(pyGramListener):
         self.jasmin.exit_while(len(self.stack_block))
 
 
-    def exitSingle_variable_declaration_statement(self, ctx: pyGramParser.Single_variable_declaration_statementContext):
+    def exitGlobal_single_variable_declaration_statement(self, ctx:pyGramParser.Global_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
         self.symbol_table[token.getText()] = Id(type=ctx.TYPE().getText())
-        # if self.symbol_table[token.getText()].type == 'int':
-        #     self.symbol_table[token.getText()].type = 'integer'
         self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitMultiple_variable_declaration_statement(self, ctx: pyGramParser.Multiple_variable_declaration_statementContext):
+    def exitGlobal_multiple_variable_declaration_statement(self, ctx:pyGramParser.Global_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
             self.symbol_table[token.getText()] = Id(type=ctx.TYPE().getText())
-            # if self.symbol_table[token.getText()].type == 'int':
-            #     self.symbol_table[token.getText()].type = 'integer'
             self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
+
+    def exitLocal_single_variable_declaration_statement(self, ctx:pyGramParser.Local_single_variable_declaration_statementContext):
+        token = ctx.ID()
+        if token.getText() in self.symbol_table:
+            raise AlreadyDeclaredError(ctx.start.line, token.getText())
+        self.symbol_table[token.getText()] = Id(address=0, type=ctx.TYPE().getText(), local=True)
+        self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
+
+    def exitLocal_multiple_variable_declaration_statement(self, ctx:pyGramParser.Local_multiple_variable_declaration_statementContext):
+        for token in ctx.ID():
+            if token.getText() in self.symbol_table:
+                raise AlreadyDeclaredError(ctx.start.line, token.getText())
+            self.symbol_table[token.getText()] = Id(address=0, type=ctx.TYPE().getText(), local=True)
+            self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
     def exitE_assigment(self, ctx: pyGramParser.E_assigmentContext):
         ctx_id = ctx.ID().getText()
@@ -194,12 +196,37 @@ class myListener(pyGramListener):
 
         expected = self.symbol_table[ctx_id].type
         received = ctx.expr().type
-        # if received == 'int':
-        #     received = 'integer'
         if expected != received:
             raise UnexpectedTypeError(ctx.start.line, expected, received)
 
         self.jasmin.store_var(ctx_id, ctx.expr().val)
+
+    def exitE_plus_assigment(self, ctx:pyGramParser.E_plus_assigmentContext):
+        ctx_id = ctx.ID().getText()
+        if ctx_id not in self.symbol_table:
+            raise UndeclaredVariable(ctx.start.line, ctx_id)
+
+        expected = self.symbol_table[ctx_id].type
+        received = ctx.expr().type
+        if expected != received:
+            raise UnexpectedTypeError(ctx.start.line, expected, received)
+
+        new_value = self.symbol_table[ctx_id].val + ctx.expr().val
+        self.jasmin.store_var(ctx_id, new_value)
+
+    def exitE_mult_assigment(self, ctx:pyGramParser.E_mult_assigmentContext):
+        ctx_id = ctx.ID().getText()
+        if ctx_id not in self.symbol_table:
+            raise UndeclaredVariable(ctx.start.line, ctx_id)
+
+        expected = self.symbol_table[ctx_id].type
+        received = ctx.expr().type
+        if expected != received:
+            raise UnexpectedTypeError(ctx.start.line, expected, received)
+
+        new_value = self.symbol_table[ctx_id].val * ctx.expr().val
+        self.jasmin.store_var(ctx_id, new_value)
+
     
     def exitInput(self, ctx: pyGramParser.InputContext):
         ctx_id = ctx.ID().getText()
@@ -259,7 +286,7 @@ class myListener(pyGramListener):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term2().type, ctx.term3().type)
         ctx.type = 'boolean'
         ctx.val = self.jasmin.calc_eq(ctx.term2().type, ctx.term2().val, ctx.term3().val, self.label_id, ctx.op.text)
-        self.label_id+=1
+        self.label_id += 1
 
     def exitE_term3(self, ctx: pyGramParser.E_termContext):
         ctx.type = ctx.term3().type
@@ -270,7 +297,7 @@ class myListener(pyGramListener):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term3().type, ctx.term4().type)
         ctx.type = 'boolean'
         ctx.val = self.jasmin.calc_eq(ctx.term3().type, ctx.term3().val, ctx.term4().val, self.label_id, ctx.op.text)
-        self.label_id+=1
+        self.label_id += 1
 
     def exitE_term4(self, ctx: pyGramParser.E_termContext):
         ctx.type = ctx.term4().type
@@ -286,10 +313,10 @@ class myListener(pyGramListener):
             val1, val2 = ctx.term4().val, ctx.term5().val
         elif ctx.term4().type == 'real':
             ctx.type = 'real'
-            val1, val2 = ctx.term4().val, self.jasmin.int_to_float(ctx.term5().val)
+            val1, val2 = ctx.term4().val, self.jasmin.int_to_real(ctx.term5().val)
         elif ctx.term5().type == 'real':
             ctx.type = 'real'
-            val1, val2 = self.jasmin.int_to_float(ctx.term4().val), ctx.term5().val
+            val1, val2 = self.jasmin.int_to_real(ctx.term4().val), ctx.term5().val
         else:
             ctx.type = 'int'
             val1, val2 = ctx.term4().val, ctx.term5().val
@@ -313,10 +340,10 @@ class myListener(pyGramListener):
             val1, val2 = ctx.term5().val, ctx.term6().val
         elif ctx.term5().type == 'real':
             ctx.type = 'real'
-            val1, val2 = ctx.term5().val, self.jasmin.int_to_float(ctx.term6().val)
+            val1, val2 = ctx.term5().val, self.jasmin.int_to_real(ctx.term6().val)
         elif ctx.term6().type == 'real':
             ctx.type = 'real'
-            val1, val2 = self.jasmin.int_to_float(ctx.term5().val), ctx.term6().val
+            val1, val2 = self.jasmin.int_to_real(ctx.term5().val), ctx.term6().val
         else:
             ctx.type = 'int'
             val1, val2 = ctx.term5().val, ctx.term6().val
@@ -336,7 +363,7 @@ class myListener(pyGramListener):
                 ctx.type = ctx.term6().type
             else:
                 raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term6().type)
-        elif ctx.op.text == 'not':  # not
+        elif ctx.op.text == '!':  # not
             if ctx.term6().type == 'boolean':
                 ctx.type = 'boolean'
             else:

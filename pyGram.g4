@@ -2,7 +2,7 @@ grammar pyGram;
 
 program: global_variables_declaration functions_declaration main_function_declaration;
 
-global_variables_declaration: variable_declaration_statement*;
+global_variables_declaration: global_variable_declaration_statement*;
 functions_declaration: function_declaration*;
 
 main_function_declaration: KW_DEF KW_MAIN KW_PARENTHESIS_OPEN KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE
@@ -14,7 +14,7 @@ function_body_statements: forloop_statement function_body_statements
 | if_statement else_statement? function_body_statements
 | print_statement function_body_statements
 | assigment_statement function_body_statements
-| variable_declaration_statement function_body_statements
+| local_variable_declaration_statement function_body_statements
 | function_call_statement KW_SEMICOLON function_body_statements
 | return_statement function_body_statements
 |
@@ -33,12 +33,18 @@ if_statement: KW_IF KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OP
 else_statement: KW_ELSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
 print_statement: PRINT KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE KW_SEMICOLON;
 
-variable_declaration_statement: single_variable_declaration_statement | multiple_variable_declaration_statement;
-single_variable_declaration_statement: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
-multiple_variable_declaration_statement: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
+global_variable_declaration_statement: global_single_variable_declaration_statement | global_multiple_variable_declaration_statement;
+global_single_variable_declaration_statement: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
+global_multiple_variable_declaration_statement: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
+
+local_variable_declaration_statement: local_single_variable_declaration_statement | local_multiple_variable_declaration_statement;
+local_single_variable_declaration_statement: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
+local_multiple_variable_declaration_statement: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
 
 assigment_statement: ID KW_ASSIGNMENT expr KW_SEMICOLON #e_assigment
 | ID KW_ASSIGNMENT r_input KW_SEMICOLON #input
+| ID KW_PLUS_ASSIGNMENT expr KW_SEMICOLON #e_plus_assigment
+| ID KW_MULT_ASSIGNMENT expr KW_SEMICOLON #e_mult_assigment
 ;
 
 expr returns [type, inh_type]
@@ -100,8 +106,11 @@ FLOAT_VALUE: [0-9]+[.][0-9]+;
 STR_VALUE: '"' .*? '"';
 BOOL_VALUE: KW_TRUE | KW_FALSE;
 
+
 // Símbolo
 //Operadores de atribuição
+KW_PLUS_ASSIGNMENT: '+=';
+KW_MULT_ASSIGNMENT: '*=';
 KW_ASSIGNMENT: '=';
 
 //Operadores relacionais
