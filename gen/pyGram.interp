@@ -102,7 +102,7 @@ rule names:
 program
 global_variables_declaration
 functions_declaration
-main_function
+main_function_declaration
 function_body_statements
 function_declaration
 r_return

@@ -1,11 +1,11 @@
 grammar pyGram;
 
-program: global_variables_declaration functions_declaration main_function;
+program: global_variables_declaration functions_declaration main_function_declaration;
 
 global_variables_declaration: variable_declaration*;
 functions_declaration: function_declaration*;
 
-main_function: KW_DEF KW_MAIN KW_PARENTHESIS_OPEN KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE #main
+main_function_declaration: KW_DEF KW_MAIN KW_PARENTHESIS_OPEN KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE
 ;
 
 function_body_statements: r_for function_body_statements

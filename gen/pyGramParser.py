@@ -175,7 +175,7 @@ class pyGramParser ( Parser ):
     RULE_program = 0
     RULE_global_variables_declaration = 1
     RULE_functions_declaration = 2
-    RULE_main_function = 3
+    RULE_main_function_declaration = 3
     RULE_function_body_statements = 4
     RULE_function_declaration = 5
     RULE_r_return = 6
@@ -201,12 +201,13 @@ class pyGramParser ( Parser ):
     RULE_r_input = 26
 
     ruleNames =  [ "program", "global_variables_declaration", "functions_declaration", 
-                   "main_function", "function_body_statements", "function_declaration", 
-                   "r_return", "function_call", "r_for", "r_while", "r_break", 
-                   "r_if", "r_else", "r_print", "variable_declaration", 
-                   "single_variable_declaration", "multiple_variable_declaration", 
-                   "assigment", "expr", "term", "term2", "term3", "term4", 
-                   "term5", "term6", "factor", "r_input" ]
+                   "main_function_declaration", "function_body_statements", 
+                   "function_declaration", "r_return", "function_call", 
+                   "r_for", "r_while", "r_break", "r_if", "r_else", "r_print", 
+                   "variable_declaration", "single_variable_declaration", 
+                   "multiple_variable_declaration", "assigment", "expr", 
+                   "term", "term2", "term3", "term4", "term5", "term6", 
+                   "factor", "r_input" ]
 
     EOF = Token.EOF
     PRINT=1
@@ -281,8 +282,8 @@ class pyGramParser ( Parser ):
             return self.getTypedRuleContext(pyGramParser.Functions_declarationContext,0)
 
 
-        def main_function(self):
-            return self.getTypedRuleContext(pyGramParser.Main_functionContext,0)
+        def main_function_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Main_function_declarationContext,0)
 
 
         def getRuleIndex(self):
@@ -316,7 +317,7 @@ class pyGramParser ( Parser ):
             self.state = 55
             self.functions_declaration()
             self.state = 56
-            self.main_function()
+            self.main_function_declaration()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -446,67 +447,60 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class Main_functionContext(ParserRuleContext):
+    class Main_function_declarationContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-
-        def getRuleIndex(self):
-            return pyGramParser.RULE_main_function
-
-     
-        def copyFrom(self, ctx:ParserRuleContext):
-            super().copyFrom(ctx)
-
-
-
-    class MainContext(Main_functionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Main_functionContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
         def KW_DEF(self):
             return self.getToken(pyGramParser.KW_DEF, 0)
+
         def KW_MAIN(self):
             return self.getToken(pyGramParser.KW_MAIN, 0)
+
         def KW_PARENTHESIS_OPEN(self):
             return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
+
         def KW_PARENTHESIS_CLOSE(self):
             return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
+
         def KW_BRACKETS_OPEN(self):
             return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+
         def function_body_statements(self):
             return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
+
 
         def KW_BRACKETS_CLOSE(self):
             return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
+        def getRuleIndex(self):
+            return pyGramParser.RULE_main_function_declaration
+
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMain" ):
-                listener.enterMain(self)
+            if hasattr( listener, "enterMain_function_declaration" ):
+                listener.enterMain_function_declaration(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMain" ):
-                listener.exitMain(self)
+            if hasattr( listener, "exitMain_function_declaration" ):
+                listener.exitMain_function_declaration(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMain" ):
-                return visitor.visitMain(self)
+            if hasattr( visitor, "visitMain_function_declaration" ):
+                return visitor.visitMain_function_declaration(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-    def main_function(self):
 
-        localctx = pyGramParser.Main_functionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_main_function)
+    def main_function_declaration(self):
+
+        localctx = pyGramParser.Main_function_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_main_function_declaration)
         try:
-            localctx = pyGramParser.MainContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
             self.state = 70
             self.match(pyGramParser.KW_DEF)

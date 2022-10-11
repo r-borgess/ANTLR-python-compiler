@@ -24,8 +24,8 @@ class pyGramVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#main.
-    def visitMain(self, ctx:pyGramParser.MainContext):
+    # Visit a parse tree produced by pyGramParser#main_function_declaration.
+    def visitMain_function_declaration(self, ctx:pyGramParser.Main_function_declarationContext):
         return self.visitChildren(ctx)
 
 

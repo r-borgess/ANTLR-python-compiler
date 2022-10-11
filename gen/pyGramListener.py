@@ -35,12 +35,12 @@ class pyGramListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#main.
-    def enterMain(self, ctx:pyGramParser.MainContext):
+    # Enter a parse tree produced by pyGramParser#main_function_declaration.
+    def enterMain_function_declaration(self, ctx:pyGramParser.Main_function_declarationContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#main.
-    def exitMain(self, ctx:pyGramParser.MainContext):
+    # Exit a parse tree produced by pyGramParser#main_function_declaration.
+    def exitMain_function_declaration(self, ctx:pyGramParser.Main_function_declarationContext):
         pass
 
 

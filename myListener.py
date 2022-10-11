@@ -22,7 +22,7 @@ class myListener(pyGramListener):
     def __is_inside_function(self):
         return 'function' in self.stack_block
 
-    def enterMain(self, ctx: pyGramParser.MainContext):
+    def enterMain_function_declaration(self, ctx: pyGramParser.Main_function_declarationContext):
         self.jasmin.enter_main()
 
     def enterL_type(self, ctx: pyGramParser.L_typeContext):
@@ -115,7 +115,7 @@ class myListener(pyGramListener):
         if 'loop' not in self.stack_block:
             raise BreakException(ctx.start.line)
 
-    def exitMain(self, ctx: pyGramParser.MainContext):
+    def exitMain_function_declaration(self, ctx: pyGramParser.Main_function_declarationContext):
         self.jasmin.exit_main()
 
     def exitR_if(self, ctx: pyGramParser.R_ifContext):
