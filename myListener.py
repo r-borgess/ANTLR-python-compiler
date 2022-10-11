@@ -17,7 +17,7 @@ class myListener(pyGramListener):
         self.label_id = 0
 
     def __is_numeric(self, type):
-        return (type == 'float') or (type == 'int') or (type == 'integer')
+        return (type == 'real') or (type == 'int') or (type == 'integer')
 
     def __is_inside_function(self):
         return 'function' in self.stack_block
@@ -193,11 +193,11 @@ class myListener(pyGramListener):
             raise UndeclaredVariable(ctx.start.line, ctx_id)
 
         expected = self.symbol_table[ctx_id].type
-        recieved = ctx.expr().type
-        # if recieved == 'int':
-        #     recieved = 'integer'
-        if expected != recieved:
-            raise UnexpectedTypeError(ctx.start.line, expected, recieved)
+        received = ctx.expr().type
+        # if received == 'int':
+        #     received = 'integer'
+        if expected != received:
+            raise UnexpectedTypeError(ctx.start.line, expected, received)
 
         self.jasmin.store_var(ctx_id, ctx.expr().val)
     
@@ -375,7 +375,7 @@ class myListener(pyGramListener):
         ctx.type = 'boolean'
         ctx.val = self.jasmin.create_temp(0 if ctx.getText() == 'False' else 1, ctx.type)
 
-    def exitFunction_call(self, ctx: pyGramParser.L_function_callContext):
+    def exitFunction_call_statement(self, ctx: pyGramParser.Function_call_statementContext):
         ctx.type = self.symbol_table[ctx.ID().getText()].type
         args = []
         types = []
@@ -385,8 +385,9 @@ class myListener(pyGramListener):
         ctx.val = self.jasmin.function_call(ctx.ID().getText(), args, types)
 
     def exitL_function_call(self, ctx: pyGramParser.L_function_callContext):
-        ctx.type = ctx.function_call().type
-        ctx.val = ctx.function_call().val
+        target = ctx.function_call_statement()
+        ctx.type = target.type
+        ctx.val = target.val
 
     def exitProgram(self, ctx: pyGramParser.ProgramContext):
         self.jasmin.close_file()

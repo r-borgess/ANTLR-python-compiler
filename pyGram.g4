@@ -78,7 +78,7 @@ term6 returns [type]
 
 factor  returns [type]
 : KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE #l_expr// expr.type
-| function_call_statement #l_function_call//function_call.type
+| function_call_statement #l_function_call//function_call_statement.type
 | ID #l_id//symbol_table
 | INT_VALUE #l_int_value //integer
 | FLOAT_VALUE #l_float_value//float

@@ -7,7 +7,7 @@ class Id:
 
 
 def type_convert(type):
-    descriptor = {'int': 'I', 'float': 'F', 'string': 'Ljava/lang/String;', 'boolean': 'Z', 'NoneType': 'V',
+    descriptor = {'int': 'I', 'real': 'F', 'string': 'Ljava/lang/String;', 'boolean': 'Z', 'NoneType': 'V',
                   'integer': 'I'}
     return descriptor[type]
 
