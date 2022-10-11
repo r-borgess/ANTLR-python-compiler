@@ -23,8 +23,8 @@ def media (real n1, real n2) real{
 
 }
 def main() {
-    print ("Fatorial de N. Digite o n?mero?");
-    numero = input();
-    resultado (fatorial (numero));
-
+    // print ("Fatorial de N. Digite o n?mero?");
+    // numero = input();
+    // resultado (fatorial (numero));
+    print(True);
 }

@@ -156,7 +156,8 @@ KW_STRING: 'string';
 KW_BOOL: 'bool';
 KW_VOID: 'void';
 
-KW_TRUE: 'true';
-KW_FALSE: 'false';
+KW_TRUE: 'True';
+KW_FALSE: 'False';
 ID: [a-zA-Z][a-zA-Z0-9_]*;
 WS: [ \t\r\n] -> skip;
+COMMENT: '//' .*? '\r'? '\n' -> skip;

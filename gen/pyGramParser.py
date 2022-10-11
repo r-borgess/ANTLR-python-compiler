@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,49,417,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,50,417,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
@@ -176,7 +176,7 @@ class pyGramParser ( Parser ):
                      "')'", "'{'", "'}'", "'||'", "'&&'", "'!'", "'for'", 
                      "'break'", "'if'", "'else'", "'while'", "'in'", "'def'", 
                      "'main'", "'return'", "<INVALID>", "'int'", "'real'", 
-                     "'string'", "'bool'", "'void'", "'true'", "'false'" ]
+                     "'string'", "'bool'", "'void'", "'True'", "'False'" ]
 
     symbolicNames = [ "<INVALID>", "PRINT", "INPUT", "RANGE", "INT_VALUE", 
                       "FLOAT_VALUE", "STR_VALUE", "BOOL_VALUE", "KW_PLUS_ASSIGNMENT", 
@@ -189,7 +189,7 @@ class pyGramParser ( Parser ):
                       "KW_FOR", "KW_BREAK", "KW_IF", "KW_ELSE", "KW_WHILE", 
                       "KW_IN", "KW_DEF", "KW_MAIN", "KW_RETURN", "TYPE", 
                       "KW_INT", "KW_FLOAT", "KW_STRING", "KW_BOOL", "KW_VOID", 
-                      "KW_TRUE", "KW_FALSE", "ID", "WS" ]
+                      "KW_TRUE", "KW_FALSE", "ID", "WS", "COMMENT" ]
 
     RULE_program = 0
     RULE_global_variables_declaration = 1
@@ -283,6 +283,7 @@ class pyGramParser ( Parser ):
     KW_FALSE=47
     ID=48
     WS=49
+    COMMENT=50
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)

@@ -381,6 +381,7 @@ class myListener(pyGramListener):
 
     def exitL_id(self, ctx: pyGramParser.L_idContext):
         ctx_id = ctx.ID().getText()
+
         if ctx_id not in self.symbol_table:
             raise UndeclaredVariable(ctx.start.line, ctx_id)
         ctx.type = self.symbol_table[ctx_id].type
