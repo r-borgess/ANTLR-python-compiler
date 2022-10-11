@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     # Parser
     parser = pyGramParser(stream)
-    tree = parser.prog()
+    tree = parser.program()
 
     # Walker using listener
     l = myListener(fileName)

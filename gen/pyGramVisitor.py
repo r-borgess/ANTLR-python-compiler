@@ -1,4 +1,4 @@
-# Generated from C:/Users/panto/Documents/Repositórios/Compilador-Python\pyGram.g4 by ANTLR 4.9.2
+# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/pyGram.g4 by ANTLR 4.10.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .pyGramParser import pyGramParser
@@ -9,8 +9,18 @@ else:
 
 class pyGramVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by pyGramParser#prog.
-    def visitProg(self, ctx:pyGramParser.ProgContext):
+    # Visit a parse tree produced by pyGramParser#program.
+    def visitProgram(self, ctx:pyGramParser.ProgramContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by pyGramParser#global_variables_declaration.
+    def visitGlobal_variables_declaration(self, ctx:pyGramParser.Global_variables_declarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by pyGramParser#functions_declaration.
+    def visitFunctions_declaration(self, ctx:pyGramParser.Functions_declarationContext):
         return self.visitChildren(ctx)
 
 
@@ -19,8 +29,8 @@ class pyGramVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#local.
-    def visitLocal(self, ctx:pyGramParser.LocalContext):
+    # Visit a parse tree produced by pyGramParser#function_body_statements.
+    def visitFunction_body_statements(self, ctx:pyGramParser.Function_body_statementsContext):
         return self.visitChildren(ctx)
 
 
@@ -74,8 +84,18 @@ class pyGramVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#declaration.
-    def visitDeclaration(self, ctx:pyGramParser.DeclarationContext):
+    # Visit a parse tree produced by pyGramParser#variable_declaration.
+    def visitVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by pyGramParser#single_variable_declaration.
+    def visitSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by pyGramParser#multiple_variable_declaration.
+    def visitMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
         return self.visitChildren(ctx)
 
 

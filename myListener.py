@@ -168,7 +168,16 @@ class myListener(pyGramListener):
         self.stack_block.pop()
         self.jasmin.exit_while(len(self.stack_block))
 
-    def exitDeclaration(self, ctx: pyGramParser.DeclarationContext):
+    def exitSingle_variable_declaration(self, ctx: pyGramParser.Single_variable_declarationContext):
+        for token in ctx.ID():
+            if token.getText() in self.symbol_table:
+                raise AlreadyDeclaredError(ctx.start.line, token.getText())
+            self.symbol_table[token.getText()] = Id(type=ctx.TYPE().getText())
+            # if self.symbol_table[token.getText()].type == 'int':
+            #     self.symbol_table[token.getText()].type = 'integer'
+            self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
+
+    def exitMultiple_variable_declaration(self, ctx: pyGramParser.Multiple_variable_declarationContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
@@ -378,7 +387,7 @@ class myListener(pyGramListener):
         ctx.type = ctx.function_call().type
         ctx.val = ctx.function_call().val
 
-    def exitProg(self, ctx: pyGramParser.ProgContext):
+    def exitProgram(self, ctx: pyGramParser.ProgramContext):
         self.jasmin.close_file()
 
     def exitR_break(self, ctx: pyGramParser.R_breakContext):

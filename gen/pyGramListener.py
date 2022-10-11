@@ -1,4 +1,4 @@
-# Generated from C:/Users/panto/Documents/Repositórios/Compilador-Python\pyGram.g4 by ANTLR 4.9.2
+# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/pyGram.g4 by ANTLR 4.10.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .pyGramParser import pyGramParser
@@ -8,12 +8,30 @@ else:
 # This class defines a complete listener for a parse tree produced by pyGramParser.
 class pyGramListener(ParseTreeListener):
 
-    # Enter a parse tree produced by pyGramParser#prog.
-    def enterProg(self, ctx:pyGramParser.ProgContext):
+    # Enter a parse tree produced by pyGramParser#program.
+    def enterProgram(self, ctx:pyGramParser.ProgramContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#prog.
-    def exitProg(self, ctx:pyGramParser.ProgContext):
+    # Exit a parse tree produced by pyGramParser#program.
+    def exitProgram(self, ctx:pyGramParser.ProgramContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#global_variables_declaration.
+    def enterGlobal_variables_declaration(self, ctx:pyGramParser.Global_variables_declarationContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#global_variables_declaration.
+    def exitGlobal_variables_declaration(self, ctx:pyGramParser.Global_variables_declarationContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#functions_declaration.
+    def enterFunctions_declaration(self, ctx:pyGramParser.Functions_declarationContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#functions_declaration.
+    def exitFunctions_declaration(self, ctx:pyGramParser.Functions_declarationContext):
         pass
 
 
@@ -26,12 +44,12 @@ class pyGramListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#local.
-    def enterLocal(self, ctx:pyGramParser.LocalContext):
+    # Enter a parse tree produced by pyGramParser#function_body_statements.
+    def enterFunction_body_statements(self, ctx:pyGramParser.Function_body_statementsContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#local.
-    def exitLocal(self, ctx:pyGramParser.LocalContext):
+    # Exit a parse tree produced by pyGramParser#function_body_statements.
+    def exitFunction_body_statements(self, ctx:pyGramParser.Function_body_statementsContext):
         pass
 
 
@@ -125,12 +143,30 @@ class pyGramListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#declaration.
-    def enterDeclaration(self, ctx:pyGramParser.DeclarationContext):
+    # Enter a parse tree produced by pyGramParser#variable_declaration.
+    def enterVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#declaration.
-    def exitDeclaration(self, ctx:pyGramParser.DeclarationContext):
+    # Exit a parse tree produced by pyGramParser#variable_declaration.
+    def exitVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#single_variable_declaration.
+    def enterSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#single_variable_declaration.
+    def exitSingle_variable_declaration(self, ctx:pyGramParser.Single_variable_declarationContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#multiple_variable_declaration.
+    def enterMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#multiple_variable_declaration.
+    def exitMultiple_variable_declaration(self, ctx:pyGramParser.Multiple_variable_declarationContext):
         pass
 
 

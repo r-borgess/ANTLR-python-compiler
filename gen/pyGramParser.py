@@ -1,4 +1,4 @@
-# Generated from C:/Users/panto/Documents/Repositórios/Compilador-Python\pyGram.g4 by ANTLR 4.9.2
+# Generated from /home/jpedro/workspace/jpedrodsp/novo_compilador/pyGram.g4 by ANTLR 4.10.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -8,157 +8,137 @@ if sys.version_info[1] > 5:
 else:
 	from typing.io import TextIO
 
-
 def serializedATN():
-    with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3*")
-        buf.write("\u014c\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
-        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\3\2")
-        buf.write("\7\2\62\n\2\f\2\16\2\65\13\2\3\2\7\28\n\2\f\2\16\2;\13")
-        buf.write("\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4Q\n\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4c")
-        buf.write("\n\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\7\5n\n\5\f\5")
-        buf.write("\16\5q\13\5\5\5s\n\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3")
-        buf.write("\5\3\5\3\5\3\5\3\5\3\5\7\5\u0083\n\5\f\5\16\5\u0086\13")
-        buf.write("\5\5\5\u0088\n\5\3\5\3\5\3\5\3\5\3\5\5\5\u008f\n\5\3\6")
-        buf.write("\3\6\5\6\u0093\n\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\7\7\u009c")
-        buf.write("\n\7\f\7\16\7\u009f\13\7\5\7\u00a1\n\7\3\7\3\7\3\b\3\b")
-        buf.write("\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u00ad\n\b\3\b\3\b\3\b\3\b")
-        buf.write("\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\n\3\n\3\n\3\13\3\13")
-        buf.write("\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3")
-        buf.write("\r\7\r\u00cd\n\r\f\r\16\r\u00d0\13\r\5\r\u00d2\n\r\3\r")
-        buf.write("\3\r\3\16\3\16\3\16\3\16\5\16\u00da\n\16\3\16\3\16\3\16")
-        buf.write("\3\16\5\16\u00e0\n\16\7\16\u00e2\n\16\f\16\16\16\u00e5")
-        buf.write("\13\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3")
-        buf.write("\17\3\17\3\17\5\17\u00f3\n\17\3\20\3\20\3\20\3\20\3\20")
-        buf.write("\3\20\7\20\u00fb\n\20\f\20\16\20\u00fe\13\20\3\21\3\21")
-        buf.write("\3\21\3\21\3\21\3\21\7\21\u0106\n\21\f\21\16\21\u0109")
-        buf.write("\13\21\3\22\3\22\3\22\3\22\3\22\3\22\7\22\u0111\n\22\f")
-        buf.write("\22\16\22\u0114\13\22\3\23\3\23\3\23\3\23\3\23\3\23\7")
-        buf.write("\23\u011c\n\23\f\23\16\23\u011f\13\23\3\24\3\24\3\24\3")
-        buf.write("\24\3\24\3\24\7\24\u0127\n\24\f\24\16\24\u012a\13\24\3")
-        buf.write("\25\3\25\3\25\3\25\3\25\3\25\7\25\u0132\n\25\f\25\16\25")
-        buf.write("\u0135\13\25\3\26\3\26\3\26\5\26\u013a\n\26\3\27\3\27")
-        buf.write("\3\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u0146\n")
-        buf.write("\27\3\30\3\30\3\30\3\30\3\30\2\b\36 \"$&(\31\2\4\6\b\n")
-        buf.write("\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\2\7\3\2\4\7\3\2")
-        buf.write("\b\t\3\2\n\13\3\2\f\r\4\2\13\13\26\26\2\u015b\2\63\3\2")
-        buf.write("\2\2\4>\3\2\2\2\6b\3\2\2\2\b\u008e\3\2\2\2\n\u0090\3\2")
-        buf.write("\2\2\f\u0096\3\2\2\2\16\u00a4\3\2\2\2\20\u00b4\3\2\2\2")
-        buf.write("\22\u00ba\3\2\2\2\24\u00bd\3\2\2\2\26\u00c3\3\2\2\2\30")
-        buf.write("\u00c8\3\2\2\2\32\u00d5\3\2\2\2\34\u00f2\3\2\2\2\36\u00f4")
-        buf.write("\3\2\2\2 \u00ff\3\2\2\2\"\u010a\3\2\2\2$\u0115\3\2\2\2")
-        buf.write("&\u0120\3\2\2\2(\u012b\3\2\2\2*\u0139\3\2\2\2,\u0145\3")
-        buf.write("\2\2\2.\u0147\3\2\2\2\60\62\5\32\16\2\61\60\3\2\2\2\62")
-        buf.write("\65\3\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\649\3\2\2\2\65")
-        buf.write("\63\3\2\2\2\668\5\b\5\2\67\66\3\2\2\28;\3\2\2\29\67\3")
-        buf.write("\2\2\29:\3\2\2\2:<\3\2\2\2;9\3\2\2\2<=\5\4\3\2=\3\3\2")
-        buf.write("\2\2>?\7\36\2\2?@\7\21\2\2@A\7\22\2\2AB\7\17\2\2BC\5\6")
-        buf.write("\4\2CD\7\23\2\2D\5\3\2\2\2EF\5\16\b\2FG\5\6\4\2Gc\3\2")
-        buf.write("\2\2HI\5\22\n\2IJ\5\6\4\2Jc\3\2\2\2KL\5\20\t\2LM\5\6\4")
-        buf.write("\2Mc\3\2\2\2NP\5\24\13\2OQ\5\26\f\2PO\3\2\2\2PQ\3\2\2")
-        buf.write("\2QR\3\2\2\2RS\5\6\4\2Sc\3\2\2\2TU\5\30\r\2UV\5\6\4\2")
-        buf.write("Vc\3\2\2\2WX\5\34\17\2XY\5\6\4\2Yc\3\2\2\2Z[\5\f\7\2[")
-        buf.write("\\\7\20\2\2\\]\5\6\4\2]c\3\2\2\2^_\5\n\6\2_`\5\6\4\2`")
-        buf.write("c\3\2\2\2ac\3\2\2\2bE\3\2\2\2bH\3\2\2\2bK\3\2\2\2bN\3")
-        buf.write("\2\2\2bT\3\2\2\2bW\3\2\2\2bZ\3\2\2\2b^\3\2\2\2ba\3\2\2")
-        buf.write("\2c\7\3\2\2\2de\7\35\2\2ef\7!\2\2fg\7)\2\2gr\7\21\2\2")
-        buf.write("hi\7!\2\2io\7)\2\2jk\7\16\2\2kl\7!\2\2ln\7)\2\2mj\3\2")
-        buf.write("\2\2nq\3\2\2\2om\3\2\2\2op\3\2\2\2ps\3\2\2\2qo\3\2\2\2")
-        buf.write("rh\3\2\2\2rs\3\2\2\2st\3\2\2\2tu\7\22\2\2uv\7\17\2\2v")
-        buf.write("w\5\6\4\2wx\7\23\2\2x\u008f\3\2\2\2yz\7\35\2\2z{\7 \2")
-        buf.write("\2{|\7)\2\2|\u0087\7\21\2\2}~\7!\2\2~\u0084\7)\2\2\177")
-        buf.write("\u0080\7\16\2\2\u0080\u0081\7!\2\2\u0081\u0083\7)\2\2")
-        buf.write("\u0082\177\3\2\2\2\u0083\u0086\3\2\2\2\u0084\u0082\3\2")
-        buf.write("\2\2\u0084\u0085\3\2\2\2\u0085\u0088\3\2\2\2\u0086\u0084")
-        buf.write("\3\2\2\2\u0087}\3\2\2\2\u0087\u0088\3\2\2\2\u0088\u0089")
-        buf.write("\3\2\2\2\u0089\u008a\7\22\2\2\u008a\u008b\7\17\2\2\u008b")
-        buf.write("\u008c\5\6\4\2\u008c\u008d\7\23\2\2\u008d\u008f\3\2\2")
-        buf.write("\2\u008ed\3\2\2\2\u008ey\3\2\2\2\u008f\t\3\2\2\2\u0090")
-        buf.write("\u0092\7\37\2\2\u0091\u0093\5\36\20\2\u0092\u0091\3\2")
-        buf.write("\2\2\u0092\u0093\3\2\2\2\u0093\u0094\3\2\2\2\u0094\u0095")
-        buf.write("\7\20\2\2\u0095\13\3\2\2\2\u0096\u0097\7)\2\2\u0097\u00a0")
-        buf.write("\7\21\2\2\u0098\u009d\5\36\20\2\u0099\u009a\7\16\2\2\u009a")
-        buf.write("\u009c\5\36\20\2\u009b\u0099\3\2\2\2\u009c\u009f\3\2\2")
-        buf.write("\2\u009d\u009b\3\2\2\2\u009d\u009e\3\2\2\2\u009e\u00a1")
-        buf.write("\3\2\2\2\u009f\u009d\3\2\2\2\u00a0\u0098\3\2\2\2\u00a0")
-        buf.write("\u00a1\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\u00a3\7\22\2")
-        buf.write("\2\u00a3\r\3\2\2\2\u00a4\u00a5\7\27\2\2\u00a5\u00a6\7")
-        buf.write(")\2\2\u00a6\u00a7\7\34\2\2\u00a7\u00a8\7$\2\2\u00a8\u00ac")
-        buf.write("\7\21\2\2\u00a9\u00aa\5\36\20\2\u00aa\u00ab\7\16\2\2\u00ab")
-        buf.write("\u00ad\3\2\2\2\u00ac\u00a9\3\2\2\2\u00ac\u00ad\3\2\2\2")
-        buf.write("\u00ad\u00ae\3\2\2\2\u00ae\u00af\5\36\20\2\u00af\u00b0")
-        buf.write("\7\22\2\2\u00b0\u00b1\7\17\2\2\u00b1\u00b2\5\6\4\2\u00b2")
-        buf.write("\u00b3\7\23\2\2\u00b3\17\3\2\2\2\u00b4\u00b5\7\33\2\2")
-        buf.write("\u00b5\u00b6\5\36\20\2\u00b6\u00b7\7\17\2\2\u00b7\u00b8")
-        buf.write("\5\6\4\2\u00b8\u00b9\7\23\2\2\u00b9\21\3\2\2\2\u00ba\u00bb")
-        buf.write("\7\30\2\2\u00bb\u00bc\7\20\2\2\u00bc\23\3\2\2\2\u00bd")
-        buf.write("\u00be\7\31\2\2\u00be\u00bf\5\36\20\2\u00bf\u00c0\7\17")
-        buf.write("\2\2\u00c0\u00c1\5\6\4\2\u00c1\u00c2\7\23\2\2\u00c2\25")
-        buf.write("\3\2\2\2\u00c3\u00c4\7\32\2\2\u00c4\u00c5\7\17\2\2\u00c5")
-        buf.write("\u00c6\5\6\4\2\u00c6\u00c7\7\23\2\2\u00c7\27\3\2\2\2\u00c8")
-        buf.write("\u00d1\7\"\2\2\u00c9\u00ce\5\36\20\2\u00ca\u00cb\7\16")
-        buf.write("\2\2\u00cb\u00cd\5\36\20\2\u00cc\u00ca\3\2\2\2\u00cd\u00d0")
-        buf.write("\3\2\2\2\u00ce\u00cc\3\2\2\2\u00ce\u00cf\3\2\2\2\u00cf")
-        buf.write("\u00d2\3\2\2\2\u00d0\u00ce\3\2\2\2\u00d1\u00c9\3\2\2\2")
-        buf.write("\u00d1\u00d2\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\u00d4\7")
-        buf.write("\20\2\2\u00d4\31\3\2\2\2\u00d5\u00d6\7!\2\2\u00d6\u00d9")
-        buf.write("\7)\2\2\u00d7\u00d8\7\3\2\2\u00d8\u00da\5\36\20\2\u00d9")
-        buf.write("\u00d7\3\2\2\2\u00d9\u00da\3\2\2\2\u00da\u00e3\3\2\2\2")
-        buf.write("\u00db\u00dc\7\16\2\2\u00dc\u00df\7)\2\2\u00dd\u00de\7")
-        buf.write("\3\2\2\u00de\u00e0\5\36\20\2\u00df\u00dd\3\2\2\2\u00df")
-        buf.write("\u00e0\3\2\2\2\u00e0\u00e2\3\2\2\2\u00e1\u00db\3\2\2\2")
-        buf.write("\u00e2\u00e5\3\2\2\2\u00e3\u00e1\3\2\2\2\u00e3\u00e4\3")
-        buf.write("\2\2\2\u00e4\u00e6\3\2\2\2\u00e5\u00e3\3\2\2\2\u00e6\u00e7")
-        buf.write("\7\20\2\2\u00e7\33\3\2\2\2\u00e8\u00e9\7)\2\2\u00e9\u00ea")
-        buf.write("\7\3\2\2\u00ea\u00eb\5\36\20\2\u00eb\u00ec\7\20\2\2\u00ec")
-        buf.write("\u00f3\3\2\2\2\u00ed\u00ee\7)\2\2\u00ee\u00ef\7\3\2\2")
-        buf.write("\u00ef\u00f0\5.\30\2\u00f0\u00f1\7\20\2\2\u00f1\u00f3")
-        buf.write("\3\2\2\2\u00f2\u00e8\3\2\2\2\u00f2\u00ed\3\2\2\2\u00f3")
-        buf.write("\35\3\2\2\2\u00f4\u00f5\b\20\1\2\u00f5\u00f6\5 \21\2\u00f6")
-        buf.write("\u00fc\3\2\2\2\u00f7\u00f8\f\4\2\2\u00f8\u00f9\7\24\2")
-        buf.write("\2\u00f9\u00fb\5 \21\2\u00fa\u00f7\3\2\2\2\u00fb\u00fe")
-        buf.write("\3\2\2\2\u00fc\u00fa\3\2\2\2\u00fc\u00fd\3\2\2\2\u00fd")
-        buf.write("\37\3\2\2\2\u00fe\u00fc\3\2\2\2\u00ff\u0100\b\21\1\2\u0100")
-        buf.write("\u0101\5\"\22\2\u0101\u0107\3\2\2\2\u0102\u0103\f\4\2")
-        buf.write("\2\u0103\u0104\7\25\2\2\u0104\u0106\5\"\22\2\u0105\u0102")
-        buf.write("\3\2\2\2\u0106\u0109\3\2\2\2\u0107\u0105\3\2\2\2\u0107")
-        buf.write("\u0108\3\2\2\2\u0108!\3\2\2\2\u0109\u0107\3\2\2\2\u010a")
-        buf.write("\u010b\b\22\1\2\u010b\u010c\5$\23\2\u010c\u0112\3\2\2")
-        buf.write("\2\u010d\u010e\f\4\2\2\u010e\u010f\t\2\2\2\u010f\u0111")
-        buf.write("\5$\23\2\u0110\u010d\3\2\2\2\u0111\u0114\3\2\2\2\u0112")
-        buf.write("\u0110\3\2\2\2\u0112\u0113\3\2\2\2\u0113#\3\2\2\2\u0114")
-        buf.write("\u0112\3\2\2\2\u0115\u0116\b\23\1\2\u0116\u0117\5&\24")
-        buf.write("\2\u0117\u011d\3\2\2\2\u0118\u0119\f\4\2\2\u0119\u011a")
-        buf.write("\t\3\2\2\u011a\u011c\5&\24\2\u011b\u0118\3\2\2\2\u011c")
-        buf.write("\u011f\3\2\2\2\u011d\u011b\3\2\2\2\u011d\u011e\3\2\2\2")
-        buf.write("\u011e%\3\2\2\2\u011f\u011d\3\2\2\2\u0120\u0121\b\24\1")
-        buf.write("\2\u0121\u0122\5(\25\2\u0122\u0128\3\2\2\2\u0123\u0124")
-        buf.write("\f\4\2\2\u0124\u0125\t\4\2\2\u0125\u0127\5(\25\2\u0126")
-        buf.write("\u0123\3\2\2\2\u0127\u012a\3\2\2\2\u0128\u0126\3\2\2\2")
-        buf.write("\u0128\u0129\3\2\2\2\u0129\'\3\2\2\2\u012a\u0128\3\2\2")
-        buf.write("\2\u012b\u012c\b\25\1\2\u012c\u012d\5*\26\2\u012d\u0133")
-        buf.write("\3\2\2\2\u012e\u012f\f\4\2\2\u012f\u0130\t\5\2\2\u0130")
-        buf.write("\u0132\5*\26\2\u0131\u012e\3\2\2\2\u0132\u0135\3\2\2\2")
-        buf.write("\u0133\u0131\3\2\2\2\u0133\u0134\3\2\2\2\u0134)\3\2\2")
-        buf.write("\2\u0135\u0133\3\2\2\2\u0136\u0137\t\6\2\2\u0137\u013a")
-        buf.write("\5*\26\2\u0138\u013a\5,\27\2\u0139\u0136\3\2\2\2\u0139")
-        buf.write("\u0138\3\2\2\2\u013a+\3\2\2\2\u013b\u013c\7\21\2\2\u013c")
-        buf.write("\u013d\5\36\20\2\u013d\u013e\7\22\2\2\u013e\u0146\3\2")
-        buf.write("\2\2\u013f\u0146\5\f\7\2\u0140\u0146\7)\2\2\u0141\u0146")
-        buf.write("\7%\2\2\u0142\u0146\7&\2\2\u0143\u0146\7\'\2\2\u0144\u0146")
-        buf.write("\7(\2\2\u0145\u013b\3\2\2\2\u0145\u013f\3\2\2\2\u0145")
-        buf.write("\u0140\3\2\2\2\u0145\u0141\3\2\2\2\u0145\u0142\3\2\2\2")
-        buf.write("\u0145\u0143\3\2\2\2\u0145\u0144\3\2\2\2\u0146-\3\2\2")
-        buf.write("\2\u0147\u0148\7#\2\2\u0148\u0149\7\21\2\2\u0149\u014a")
-        buf.write("\7\22\2\2\u014a/\3\2\2\2\35\639Pbor\u0084\u0087\u008e")
-        buf.write("\u0092\u009d\u00a0\u00ac\u00ce\u00d1\u00d9\u00df\u00e3")
-        buf.write("\u00f2\u00fc\u0107\u0112\u011d\u0128\u0133\u0139\u0145")
-        return buf.getvalue()
-
+    return [
+        4,1,47,367,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
+        1,0,1,0,1,0,1,0,1,1,5,1,60,8,1,10,1,12,1,63,9,1,1,2,5,2,66,8,2,10,
+        2,12,2,69,9,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,
+        4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,90,8,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
+        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,111,8,4,1,5,
+        1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,121,8,5,10,5,12,5,124,9,5,3,5,126,
+        8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,
+        142,8,5,10,5,12,5,145,9,5,3,5,147,8,5,1,5,1,5,3,5,151,8,5,1,5,1,
+        5,1,5,1,5,3,5,157,8,5,1,6,1,6,3,6,161,8,6,1,6,1,6,1,7,1,7,1,7,1,
+        7,1,7,5,7,170,8,7,10,7,12,7,173,9,7,3,7,175,8,7,1,7,1,7,1,8,1,8,
+        1,8,1,8,1,8,1,8,1,8,1,8,3,8,187,8,8,1,8,1,8,1,8,1,8,1,8,1,8,1,9,
+        1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,
+        11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,13,1,13,1,13,1,13,1,
+        13,5,13,224,8,13,10,13,12,13,227,9,13,3,13,229,8,13,1,13,1,13,1,
+        13,1,14,1,14,3,14,236,8,14,1,15,1,15,1,15,1,15,3,15,242,8,15,1,15,
+        1,15,1,16,1,16,1,16,1,16,5,16,250,8,16,10,16,12,16,253,9,16,1,16,
+        1,16,1,16,1,16,5,16,259,8,16,10,16,12,16,262,9,16,3,16,264,8,16,
+        1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,3,17,
+        278,8,17,1,18,1,18,1,18,1,18,1,18,1,18,5,18,286,8,18,10,18,12,18,
+        289,9,18,1,19,1,19,1,19,1,19,1,19,1,19,5,19,297,8,19,10,19,12,19,
+        300,9,19,1,20,1,20,1,20,1,20,1,20,1,20,5,20,308,8,20,10,20,12,20,
+        311,9,20,1,21,1,21,1,21,1,21,1,21,1,21,5,21,319,8,21,10,21,12,21,
+        322,9,21,1,22,1,22,1,22,1,22,1,22,1,22,5,22,330,8,22,10,22,12,22,
+        333,9,22,1,23,1,23,1,23,1,23,1,23,1,23,5,23,341,8,23,10,23,12,23,
+        344,9,23,1,24,1,24,1,24,3,24,349,8,24,1,25,1,25,1,25,1,25,1,25,1,
+        25,1,25,1,25,1,25,1,25,3,25,361,8,25,1,26,1,26,1,26,1,26,1,26,0,
+        6,36,38,40,42,44,46,27,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
+        32,34,36,38,40,42,44,46,48,50,52,0,5,1,0,9,12,1,0,13,14,1,0,15,16,
+        1,0,17,18,2,0,16,16,28,28,382,0,54,1,0,0,0,2,61,1,0,0,0,4,67,1,0,
+        0,0,6,70,1,0,0,0,8,110,1,0,0,0,10,156,1,0,0,0,12,158,1,0,0,0,14,
+        164,1,0,0,0,16,178,1,0,0,0,18,194,1,0,0,0,20,202,1,0,0,0,22,205,
+        1,0,0,0,24,213,1,0,0,0,26,218,1,0,0,0,28,235,1,0,0,0,30,237,1,0,
+        0,0,32,245,1,0,0,0,34,277,1,0,0,0,36,279,1,0,0,0,38,290,1,0,0,0,
+        40,301,1,0,0,0,42,312,1,0,0,0,44,323,1,0,0,0,46,334,1,0,0,0,48,348,
+        1,0,0,0,50,360,1,0,0,0,52,362,1,0,0,0,54,55,3,2,1,0,55,56,3,4,2,
+        0,56,57,3,6,3,0,57,1,1,0,0,0,58,60,3,28,14,0,59,58,1,0,0,0,60,63,
+        1,0,0,0,61,59,1,0,0,0,61,62,1,0,0,0,62,3,1,0,0,0,63,61,1,0,0,0,64,
+        66,3,10,5,0,65,64,1,0,0,0,66,69,1,0,0,0,67,65,1,0,0,0,67,68,1,0,
+        0,0,68,5,1,0,0,0,69,67,1,0,0,0,70,71,5,35,0,0,71,72,5,36,0,0,72,
+        73,5,22,0,0,73,74,5,23,0,0,74,75,5,24,0,0,75,76,3,8,4,0,76,77,5,
+        25,0,0,77,7,1,0,0,0,78,79,3,16,8,0,79,80,3,8,4,0,80,111,1,0,0,0,
+        81,82,3,20,10,0,82,83,3,8,4,0,83,111,1,0,0,0,84,85,3,18,9,0,85,86,
+        3,8,4,0,86,111,1,0,0,0,87,89,3,22,11,0,88,90,3,24,12,0,89,88,1,0,
+        0,0,89,90,1,0,0,0,90,91,1,0,0,0,91,92,3,8,4,0,92,111,1,0,0,0,93,
+        94,3,26,13,0,94,95,3,8,4,0,95,111,1,0,0,0,96,97,3,34,17,0,97,98,
+        3,8,4,0,98,111,1,0,0,0,99,100,3,28,14,0,100,101,3,8,4,0,101,111,
+        1,0,0,0,102,103,3,14,7,0,103,104,5,21,0,0,104,105,3,8,4,0,105,111,
+        1,0,0,0,106,107,3,12,6,0,107,108,3,8,4,0,108,111,1,0,0,0,109,111,
+        1,0,0,0,110,78,1,0,0,0,110,81,1,0,0,0,110,84,1,0,0,0,110,87,1,0,
+        0,0,110,93,1,0,0,0,110,96,1,0,0,0,110,99,1,0,0,0,110,102,1,0,0,0,
+        110,106,1,0,0,0,110,109,1,0,0,0,111,9,1,0,0,0,112,113,5,35,0,0,113,
+        114,5,46,0,0,114,125,5,22,0,0,115,116,5,38,0,0,116,122,5,46,0,0,
+        117,118,5,19,0,0,118,119,5,38,0,0,119,121,5,46,0,0,120,117,1,0,0,
+        0,121,124,1,0,0,0,122,120,1,0,0,0,122,123,1,0,0,0,123,126,1,0,0,
+        0,124,122,1,0,0,0,125,115,1,0,0,0,125,126,1,0,0,0,126,127,1,0,0,
+        0,127,128,5,23,0,0,128,129,5,38,0,0,129,130,5,24,0,0,130,131,3,8,
+        4,0,131,132,5,25,0,0,132,157,1,0,0,0,133,134,5,35,0,0,134,135,5,
+        46,0,0,135,146,5,22,0,0,136,137,5,38,0,0,137,143,5,46,0,0,138,139,
+        5,19,0,0,139,140,5,38,0,0,140,142,5,46,0,0,141,138,1,0,0,0,142,145,
+        1,0,0,0,143,141,1,0,0,0,143,144,1,0,0,0,144,147,1,0,0,0,145,143,
+        1,0,0,0,146,136,1,0,0,0,146,147,1,0,0,0,147,148,1,0,0,0,148,150,
+        5,23,0,0,149,151,5,43,0,0,150,149,1,0,0,0,150,151,1,0,0,0,151,152,
+        1,0,0,0,152,153,5,24,0,0,153,154,3,8,4,0,154,155,5,25,0,0,155,157,
+        1,0,0,0,156,112,1,0,0,0,156,133,1,0,0,0,157,11,1,0,0,0,158,160,5,
+        37,0,0,159,161,3,36,18,0,160,159,1,0,0,0,160,161,1,0,0,0,161,162,
+        1,0,0,0,162,163,5,21,0,0,163,13,1,0,0,0,164,165,5,46,0,0,165,174,
+        5,22,0,0,166,171,3,36,18,0,167,168,5,19,0,0,168,170,3,36,18,0,169,
+        167,1,0,0,0,170,173,1,0,0,0,171,169,1,0,0,0,171,172,1,0,0,0,172,
+        175,1,0,0,0,173,171,1,0,0,0,174,166,1,0,0,0,174,175,1,0,0,0,175,
+        176,1,0,0,0,176,177,5,23,0,0,177,15,1,0,0,0,178,179,5,29,0,0,179,
+        180,5,46,0,0,180,181,5,34,0,0,181,182,5,3,0,0,182,186,5,22,0,0,183,
+        184,3,36,18,0,184,185,5,19,0,0,185,187,1,0,0,0,186,183,1,0,0,0,186,
+        187,1,0,0,0,187,188,1,0,0,0,188,189,3,36,18,0,189,190,5,23,0,0,190,
+        191,5,20,0,0,191,192,3,8,4,0,192,193,5,25,0,0,193,17,1,0,0,0,194,
+        195,5,33,0,0,195,196,5,22,0,0,196,197,3,36,18,0,197,198,5,23,0,0,
+        198,199,5,24,0,0,199,200,3,8,4,0,200,201,5,25,0,0,201,19,1,0,0,0,
+        202,203,5,30,0,0,203,204,5,21,0,0,204,21,1,0,0,0,205,206,5,31,0,
+        0,206,207,5,22,0,0,207,208,3,36,18,0,208,209,5,23,0,0,209,210,5,
+        24,0,0,210,211,3,8,4,0,211,212,5,25,0,0,212,23,1,0,0,0,213,214,5,
+        32,0,0,214,215,5,24,0,0,215,216,3,8,4,0,216,217,5,25,0,0,217,25,
+        1,0,0,0,218,219,5,1,0,0,219,228,5,22,0,0,220,225,3,36,18,0,221,222,
+        5,19,0,0,222,224,3,36,18,0,223,221,1,0,0,0,224,227,1,0,0,0,225,223,
+        1,0,0,0,225,226,1,0,0,0,226,229,1,0,0,0,227,225,1,0,0,0,228,220,
+        1,0,0,0,228,229,1,0,0,0,229,230,1,0,0,0,230,231,5,23,0,0,231,232,
+        5,21,0,0,232,27,1,0,0,0,233,236,3,30,15,0,234,236,3,32,16,0,235,
+        233,1,0,0,0,235,234,1,0,0,0,236,29,1,0,0,0,237,238,5,38,0,0,238,
+        241,5,46,0,0,239,240,5,8,0,0,240,242,3,36,18,0,241,239,1,0,0,0,241,
+        242,1,0,0,0,242,243,1,0,0,0,243,244,5,21,0,0,244,31,1,0,0,0,245,
+        246,5,38,0,0,246,251,5,46,0,0,247,248,5,19,0,0,248,250,5,46,0,0,
+        249,247,1,0,0,0,250,253,1,0,0,0,251,249,1,0,0,0,251,252,1,0,0,0,
+        252,263,1,0,0,0,253,251,1,0,0,0,254,255,5,8,0,0,255,260,3,36,18,
+        0,256,257,5,19,0,0,257,259,3,36,18,0,258,256,1,0,0,0,259,262,1,0,
+        0,0,260,258,1,0,0,0,260,261,1,0,0,0,261,264,1,0,0,0,262,260,1,0,
+        0,0,263,254,1,0,0,0,263,264,1,0,0,0,264,265,1,0,0,0,265,266,5,21,
+        0,0,266,33,1,0,0,0,267,268,5,46,0,0,268,269,5,8,0,0,269,270,3,36,
+        18,0,270,271,5,21,0,0,271,278,1,0,0,0,272,273,5,46,0,0,273,274,5,
+        8,0,0,274,275,3,52,26,0,275,276,5,21,0,0,276,278,1,0,0,0,277,267,
+        1,0,0,0,277,272,1,0,0,0,278,35,1,0,0,0,279,280,6,18,-1,0,280,281,
+        3,38,19,0,281,287,1,0,0,0,282,283,10,2,0,0,283,284,5,26,0,0,284,
+        286,3,38,19,0,285,282,1,0,0,0,286,289,1,0,0,0,287,285,1,0,0,0,287,
+        288,1,0,0,0,288,37,1,0,0,0,289,287,1,0,0,0,290,291,6,19,-1,0,291,
+        292,3,40,20,0,292,298,1,0,0,0,293,294,10,2,0,0,294,295,5,27,0,0,
+        295,297,3,40,20,0,296,293,1,0,0,0,297,300,1,0,0,0,298,296,1,0,0,
+        0,298,299,1,0,0,0,299,39,1,0,0,0,300,298,1,0,0,0,301,302,6,20,-1,
+        0,302,303,3,42,21,0,303,309,1,0,0,0,304,305,10,2,0,0,305,306,7,0,
+        0,0,306,308,3,42,21,0,307,304,1,0,0,0,308,311,1,0,0,0,309,307,1,
+        0,0,0,309,310,1,0,0,0,310,41,1,0,0,0,311,309,1,0,0,0,312,313,6,21,
+        -1,0,313,314,3,44,22,0,314,320,1,0,0,0,315,316,10,2,0,0,316,317,
+        7,1,0,0,317,319,3,44,22,0,318,315,1,0,0,0,319,322,1,0,0,0,320,318,
+        1,0,0,0,320,321,1,0,0,0,321,43,1,0,0,0,322,320,1,0,0,0,323,324,6,
+        22,-1,0,324,325,3,46,23,0,325,331,1,0,0,0,326,327,10,2,0,0,327,328,
+        7,2,0,0,328,330,3,46,23,0,329,326,1,0,0,0,330,333,1,0,0,0,331,329,
+        1,0,0,0,331,332,1,0,0,0,332,45,1,0,0,0,333,331,1,0,0,0,334,335,6,
+        23,-1,0,335,336,3,48,24,0,336,342,1,0,0,0,337,338,10,2,0,0,338,339,
+        7,3,0,0,339,341,3,48,24,0,340,337,1,0,0,0,341,344,1,0,0,0,342,340,
+        1,0,0,0,342,343,1,0,0,0,343,47,1,0,0,0,344,342,1,0,0,0,345,346,7,
+        4,0,0,346,349,3,48,24,0,347,349,3,50,25,0,348,345,1,0,0,0,348,347,
+        1,0,0,0,349,49,1,0,0,0,350,351,5,22,0,0,351,352,3,36,18,0,352,353,
+        5,23,0,0,353,361,1,0,0,0,354,361,3,14,7,0,355,361,5,46,0,0,356,361,
+        5,4,0,0,357,361,5,5,0,0,358,361,5,6,0,0,359,361,5,7,0,0,360,350,
+        1,0,0,0,360,354,1,0,0,0,360,355,1,0,0,0,360,356,1,0,0,0,360,357,
+        1,0,0,0,360,358,1,0,0,0,360,359,1,0,0,0,361,51,1,0,0,0,362,363,5,
+        2,0,0,363,364,5,22,0,0,364,365,5,23,0,0,365,53,1,0,0,0,30,61,67,
+        89,110,122,125,143,146,150,156,160,171,174,186,225,228,235,241,251,
+        260,263,277,287,298,309,320,331,342,348,360
+    ]
 
 class pyGramParser ( Parser ):
 
@@ -170,175 +150,173 @@ class pyGramParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'='", "'>'", "'<'", "'>='", "'<='", "'=='", 
-                     "'!='", "'+'", "'-'", "'*'", "'/'", "','", "':'", "';'", 
-                     "'('", "')'", "'}'", "'or'", "'and'", "'not'", "'for'", 
-                     "'break'", "'if'", "'else'", "'while'", "'in'", "'def'", 
-                     "'main'", "'return'", "'void'", "<INVALID>", "'print'", 
-                     "'input'", "'range'" ]
+    literalNames = [ "<INVALID>", "'print'", "'input'", "'range'", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'='", "'>'", 
+                     "'<'", "'>='", "'<='", "'=='", "'!='", "'+'", "'-'", 
+                     "'*'", "'/'", "','", "':'", "';'", "'('", "')'", "'{'", 
+                     "'}'", "'||'", "'&&'", "'!'", "'for'", "'break'", "'if'", 
+                     "'else'", "'while'", "'in'", "'def'", "'main'", "'return'", 
+                     "<INVALID>", "'int'", "'real'", "'string'", "'bool'", 
+                     "'void'", "'true'", "'false'" ]
 
-    symbolicNames = [ "<INVALID>", "ASSIGNMENT", "GT", "LT", "GE", "LE", 
-                      "EQ", "NE", "PLUS", "MINUS", "TIMES", "DIVIDES", "COMMA", 
-                      "COLON", "SEMI_COLON", "OPEN", "CLOSE", "BRACKET", 
-                      "OR", "AND", "NOT", "FOR", "BREAK", "IF", "ELSE", 
-                      "WHILE", "IN", "DEF", "MAIN", "RETURN", "VOID", "TYPE", 
-                      "PRINT", "INPUT", "RANGE", "INT_VALUE", "FLOAT_VALUE", 
-                      "STR_VALUE", "BOOL_VALUE", "ID", "WS" ]
+    symbolicNames = [ "<INVALID>", "PRINT", "INPUT", "RANGE", "INT_VALUE", 
+                      "FLOAT_VALUE", "STR_VALUE", "BOOL_VALUE", "KW_ASSIGNMENT", 
+                      "KW_GREATERTHAN", "KW_LESSERTHAN", "KW_GREATERQUALTHAN", 
+                      "KW_LESSEREQUALTHAN", "KW_EQUAL", "KW_NOTEQUAL", "KW_PLUS", 
+                      "KW_MINUS", "KW_MULT", "KW_DIV", "KW_COMMA", "KW_COLON", 
+                      "KW_SEMICOLON", "KW_PARENTHESIS_OPEN", "KW_PARENTHESIS_CLOSE", 
+                      "KW_BRACKETS_OPEN", "KW_BRACKETS_CLOSE", "KW_OR", 
+                      "KW_AND", "KW_NOT", "KW_FOR", "KW_BREAK", "KW_IF", 
+                      "KW_ELSE", "KW_WHILE", "KW_IN", "KW_DEF", "KW_MAIN", 
+                      "KW_RETURN", "TYPE", "KW_INT", "KW_FLOAT", "KW_STRING", 
+                      "KW_BOOL", "KW_VOID", "KW_TRUE", "KW_FALSE", "ID", 
+                      "WS" ]
 
-    RULE_prog = 0
-    RULE_main = 1
-    RULE_local = 2
-    RULE_function = 3
-    RULE_r_return = 4
-    RULE_function_call = 5
-    RULE_r_for = 6
-    RULE_r_while = 7
-    RULE_r_break = 8
-    RULE_r_if = 9
-    RULE_r_else = 10
-    RULE_r_print = 11
-    RULE_declaration = 12
-    RULE_assigment = 13
-    RULE_expr = 14
-    RULE_term = 15
-    RULE_term2 = 16
-    RULE_term3 = 17
-    RULE_term4 = 18
-    RULE_term5 = 19
-    RULE_term6 = 20
-    RULE_factor = 21
-    RULE_r_input = 22
+    RULE_program = 0
+    RULE_global_variables_declaration = 1
+    RULE_functions_declaration = 2
+    RULE_main_function = 3
+    RULE_function_body_statements = 4
+    RULE_function_declaration = 5
+    RULE_r_return = 6
+    RULE_function_call = 7
+    RULE_r_for = 8
+    RULE_r_while = 9
+    RULE_r_break = 10
+    RULE_r_if = 11
+    RULE_r_else = 12
+    RULE_r_print = 13
+    RULE_variable_declaration = 14
+    RULE_single_variable_declaration = 15
+    RULE_multiple_variable_declaration = 16
+    RULE_assigment = 17
+    RULE_expr = 18
+    RULE_term = 19
+    RULE_term2 = 20
+    RULE_term3 = 21
+    RULE_term4 = 22
+    RULE_term5 = 23
+    RULE_term6 = 24
+    RULE_factor = 25
+    RULE_r_input = 26
 
-    ruleNames =  [ "prog", "main", "local", "function", "r_return", "function_call", 
-                   "r_for", "r_while", "r_break", "r_if", "r_else", "r_print", 
-                   "declaration", "assigment", "expr", "term", "term2", 
-                   "term3", "term4", "term5", "term6", "factor", "r_input" ]
+    ruleNames =  [ "program", "global_variables_declaration", "functions_declaration", 
+                   "main_function", "function_body_statements", "function_declaration", 
+                   "r_return", "function_call", "r_for", "r_while", "r_break", 
+                   "r_if", "r_else", "r_print", "variable_declaration", 
+                   "single_variable_declaration", "multiple_variable_declaration", 
+                   "assigment", "expr", "term", "term2", "term3", "term4", 
+                   "term5", "term6", "factor", "r_input" ]
 
     EOF = Token.EOF
-    ASSIGNMENT=1
-    GT=2
-    LT=3
-    GE=4
-    LE=5
-    EQ=6
-    NE=7
-    PLUS=8
-    MINUS=9
-    TIMES=10
-    DIVIDES=11
-    COMMA=12
-    COLON=13
-    SEMI_COLON=14
-    OPEN=15
-    CLOSE=16
-    BRACKET=17
-    OR=18
-    AND=19
-    NOT=20
-    FOR=21
-    BREAK=22
-    IF=23
-    ELSE=24
-    WHILE=25
-    IN=26
-    DEF=27
-    MAIN=28
-    RETURN=29
-    VOID=30
-    TYPE=31
-    PRINT=32
-    INPUT=33
-    RANGE=34
-    INT_VALUE=35
-    FLOAT_VALUE=36
-    STR_VALUE=37
-    BOOL_VALUE=38
-    ID=39
-    WS=40
+    PRINT=1
+    INPUT=2
+    RANGE=3
+    INT_VALUE=4
+    FLOAT_VALUE=5
+    STR_VALUE=6
+    BOOL_VALUE=7
+    KW_ASSIGNMENT=8
+    KW_GREATERTHAN=9
+    KW_LESSERTHAN=10
+    KW_GREATERQUALTHAN=11
+    KW_LESSEREQUALTHAN=12
+    KW_EQUAL=13
+    KW_NOTEQUAL=14
+    KW_PLUS=15
+    KW_MINUS=16
+    KW_MULT=17
+    KW_DIV=18
+    KW_COMMA=19
+    KW_COLON=20
+    KW_SEMICOLON=21
+    KW_PARENTHESIS_OPEN=22
+    KW_PARENTHESIS_CLOSE=23
+    KW_BRACKETS_OPEN=24
+    KW_BRACKETS_CLOSE=25
+    KW_OR=26
+    KW_AND=27
+    KW_NOT=28
+    KW_FOR=29
+    KW_BREAK=30
+    KW_IF=31
+    KW_ELSE=32
+    KW_WHILE=33
+    KW_IN=34
+    KW_DEF=35
+    KW_MAIN=36
+    KW_RETURN=37
+    TYPE=38
+    KW_INT=39
+    KW_FLOAT=40
+    KW_STRING=41
+    KW_BOOL=42
+    KW_VOID=43
+    KW_TRUE=44
+    KW_FALSE=45
+    ID=46
+    WS=47
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.9.2")
+        self.checkVersion("4.10.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
 
 
 
-    class ProgContext(ParserRuleContext):
+    class ProgramContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def main(self):
-            return self.getTypedRuleContext(pyGramParser.MainContext,0)
+        def global_variables_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Global_variables_declarationContext,0)
 
 
-        def declaration(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(pyGramParser.DeclarationContext)
-            else:
-                return self.getTypedRuleContext(pyGramParser.DeclarationContext,i)
+        def functions_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Functions_declarationContext,0)
 
 
-        def function(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(pyGramParser.FunctionContext)
-            else:
-                return self.getTypedRuleContext(pyGramParser.FunctionContext,i)
+        def main_function(self):
+            return self.getTypedRuleContext(pyGramParser.Main_functionContext,0)
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_prog
+            return pyGramParser.RULE_program
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProg" ):
-                listener.enterProg(self)
+            if hasattr( listener, "enterProgram" ):
+                listener.enterProgram(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProg" ):
-                listener.exitProg(self)
+            if hasattr( listener, "exitProgram" ):
+                listener.exitProgram(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProg" ):
-                return visitor.visitProg(self)
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def prog(self):
+    def program(self):
 
-        localctx = pyGramParser.ProgContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_prog)
-        self._la = 0 # Token type
+        localctx = pyGramParser.ProgramContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_program)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 49
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==pyGramParser.TYPE:
-                self.state = 46
-                self.declaration()
-                self.state = 51
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
+            self.state = 54
+            self.global_variables_declaration()
             self.state = 55
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==pyGramParser.DEF:
-                self.state = 52
-                self.function()
-                self.state = 57
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 58
-            self.main()
+            self.functions_declaration()
+            self.state = 56
+            self.main_function()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -348,34 +326,164 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class MainContext(ParserRuleContext):
+    class Global_variables_declarationContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def MAIN(self):
-            return self.getToken(pyGramParser.MAIN, 0)
+        def variable_declaration(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(pyGramParser.Variable_declarationContext)
+            else:
+                return self.getTypedRuleContext(pyGramParser.Variable_declarationContext,i)
 
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
-
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
-
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
-
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
-
-
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_main
+            return pyGramParser.RULE_global_variables_declaration
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGlobal_variables_declaration" ):
+                listener.enterGlobal_variables_declaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGlobal_variables_declaration" ):
+                listener.exitGlobal_variables_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGlobal_variables_declaration" ):
+                return visitor.visitGlobal_variables_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def global_variables_declaration(self):
+
+        localctx = pyGramParser.Global_variables_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_global_variables_declaration)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 61
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==pyGramParser.TYPE:
+                self.state = 58
+                self.variable_declaration()
+                self.state = 63
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Functions_declarationContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def function_declaration(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(pyGramParser.Function_declarationContext)
+            else:
+                return self.getTypedRuleContext(pyGramParser.Function_declarationContext,i)
+
+
+        def getRuleIndex(self):
+            return pyGramParser.RULE_functions_declaration
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctions_declaration" ):
+                listener.enterFunctions_declaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctions_declaration" ):
+                listener.exitFunctions_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctions_declaration" ):
+                return visitor.visitFunctions_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def functions_declaration(self):
+
+        localctx = pyGramParser.Functions_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_functions_declaration)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 67
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 64
+                    self.function_declaration() 
+                self.state = 69
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Main_functionContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return pyGramParser.RULE_main_function
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class MainContext(Main_functionContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Main_functionContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def KW_DEF(self):
+            return self.getToken(pyGramParser.KW_DEF, 0)
+        def KW_MAIN(self):
+            return self.getToken(pyGramParser.KW_MAIN, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
+
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMain" ):
@@ -393,25 +501,27 @@ class pyGramParser ( Parser ):
 
 
 
+    def main_function(self):
 
-    def main(self):
-
-        localctx = pyGramParser.MainContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_main)
+        localctx = pyGramParser.Main_functionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_main_function)
         try:
+            localctx = pyGramParser.MainContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
-            self.match(pyGramParser.MAIN)
-            self.state = 61
-            self.match(pyGramParser.OPEN)
-            self.state = 62
-            self.match(pyGramParser.CLOSE)
-            self.state = 63
-            self.match(pyGramParser.COLON)
-            self.state = 64
-            self.local()
-            self.state = 65
-            self.match(pyGramParser.BRACKET)
+            self.state = 70
+            self.match(pyGramParser.KW_DEF)
+            self.state = 71
+            self.match(pyGramParser.KW_MAIN)
+            self.state = 72
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 73
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+            self.state = 74
+            self.match(pyGramParser.KW_BRACKETS_OPEN)
+            self.state = 75
+            self.function_body_statements()
+            self.state = 76
+            self.match(pyGramParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -421,7 +531,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class LocalContext(ParserRuleContext):
+    class Function_body_statementsContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -432,8 +542,8 @@ class pyGramParser ( Parser ):
             return self.getTypedRuleContext(pyGramParser.R_forContext,0)
 
 
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
         def r_break(self):
@@ -460,122 +570,134 @@ class pyGramParser ( Parser ):
             return self.getTypedRuleContext(pyGramParser.AssigmentContext,0)
 
 
+        def variable_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Variable_declarationContext,0)
+
+
         def function_call(self):
             return self.getTypedRuleContext(pyGramParser.Function_callContext,0)
 
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def r_return(self):
             return self.getTypedRuleContext(pyGramParser.R_returnContext,0)
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_local
+            return pyGramParser.RULE_function_body_statements
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLocal" ):
-                listener.enterLocal(self)
+            if hasattr( listener, "enterFunction_body_statements" ):
+                listener.enterFunction_body_statements(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLocal" ):
-                listener.exitLocal(self)
+            if hasattr( listener, "exitFunction_body_statements" ):
+                listener.exitFunction_body_statements(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocal" ):
-                return visitor.visitLocal(self)
+            if hasattr( visitor, "visitFunction_body_statements" ):
+                return visitor.visitFunction_body_statements(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def local(self):
+    def function_body_statements(self):
 
-        localctx = pyGramParser.LocalContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_local)
+        localctx = pyGramParser.Function_body_statementsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_function_body_statements)
         self._la = 0 # Token type
         try:
-            self.state = 96
+            self.state = 110
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 67
+                self.state = 78
                 self.r_for()
-                self.state = 68
-                self.local()
+                self.state = 79
+                self.function_body_statements()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 70
+                self.state = 81
                 self.r_break()
-                self.state = 71
-                self.local()
+                self.state = 82
+                self.function_body_statements()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 73
+                self.state = 84
                 self.r_while()
-                self.state = 74
-                self.local()
+                self.state = 85
+                self.function_body_statements()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 76
+                self.state = 87
                 self.r_if()
-                self.state = 78
+                self.state = 89
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pyGramParser.ELSE:
-                    self.state = 77
+                if _la==pyGramParser.KW_ELSE:
+                    self.state = 88
                     self.r_else()
 
 
-                self.state = 80
-                self.local()
+                self.state = 91
+                self.function_body_statements()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 82
+                self.state = 93
                 self.r_print()
-                self.state = 83
-                self.local()
+                self.state = 94
+                self.function_body_statements()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 85
+                self.state = 96
                 self.assigment()
-                self.state = 86
-                self.local()
+                self.state = 97
+                self.function_body_statements()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 88
-                self.function_call()
-                self.state = 89
-                self.match(pyGramParser.SEMI_COLON)
-                self.state = 90
-                self.local()
+                self.state = 99
+                self.variable_declaration()
+                self.state = 100
+                self.function_body_statements()
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 92
-                self.r_return()
-                self.state = 93
-                self.local()
+                self.state = 102
+                self.function_call()
+                self.state = 103
+                self.match(pyGramParser.KW_SEMICOLON)
+                self.state = 104
+                self.function_body_statements()
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
+                self.state = 106
+                self.r_return()
+                self.state = 107
+                self.function_body_statements()
+                pass
+
+            elif la_ == 10:
+                self.enterOuterAlt(localctx, 10)
 
                 pass
 
@@ -589,7 +711,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class FunctionContext(ParserRuleContext):
+    class Function_declarationContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -598,7 +720,7 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_function
+            return pyGramParser.RULE_function_declaration
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -606,40 +728,40 @@ class pyGramParser ( Parser ):
 
 
 
-    class L_typeContext(FunctionContext):
+    class L_typeContext(Function_declarationContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.FunctionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Function_declarationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def DEF(self):
-            return self.getToken(pyGramParser.DEF, 0)
-        def TYPE(self, i:int=None):
-            if i is None:
-                return self.getTokens(pyGramParser.TYPE)
-            else:
-                return self.getToken(pyGramParser.TYPE, i)
+        def KW_DEF(self):
+            return self.getToken(pyGramParser.KW_DEF, 0)
         def ID(self, i:int=None):
             if i is None:
                 return self.getTokens(pyGramParser.ID)
             else:
                 return self.getToken(pyGramParser.ID, i)
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
-
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
-        def COMMA(self, i:int=None):
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
+        def TYPE(self, i:int=None):
             if i is None:
-                return self.getTokens(pyGramParser.COMMA)
+                return self.getTokens(pyGramParser.TYPE)
             else:
-                return self.getToken(pyGramParser.COMMA, i)
+                return self.getToken(pyGramParser.TYPE, i)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
+
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
+        def KW_COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(pyGramParser.KW_COMMA)
+            else:
+                return self.getToken(pyGramParser.KW_COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_type" ):
@@ -656,42 +778,42 @@ class pyGramParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class L_voidContext(FunctionContext):
+    class L_voidContext(Function_declarationContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.FunctionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Function_declarationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def DEF(self):
-            return self.getToken(pyGramParser.DEF, 0)
-        def VOID(self):
-            return self.getToken(pyGramParser.VOID, 0)
+        def KW_DEF(self):
+            return self.getToken(pyGramParser.KW_DEF, 0)
         def ID(self, i:int=None):
             if i is None:
                 return self.getTokens(pyGramParser.ID)
             else:
                 return self.getToken(pyGramParser.ID, i)
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
         def TYPE(self, i:int=None):
             if i is None:
                 return self.getTokens(pyGramParser.TYPE)
             else:
                 return self.getToken(pyGramParser.TYPE, i)
-        def COMMA(self, i:int=None):
+        def KW_VOID(self):
+            return self.getToken(pyGramParser.KW_VOID, 0)
+        def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pyGramParser.COMMA)
+                return self.getTokens(pyGramParser.KW_COMMA)
             else:
-                return self.getToken(pyGramParser.COMMA, i)
+                return self.getToken(pyGramParser.KW_COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_void" ):
@@ -709,103 +831,109 @@ class pyGramParser ( Parser ):
 
 
 
-    def function(self):
+    def function_declaration(self):
 
-        localctx = pyGramParser.FunctionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_function)
+        localctx = pyGramParser.Function_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_function_declaration)
         self._la = 0 # Token type
         try:
-            self.state = 140
+            self.state = 156
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 localctx = pyGramParser.L_typeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 98
-                self.match(pyGramParser.DEF)
-                self.state = 99
-                self.match(pyGramParser.TYPE)
-                self.state = 100
-                self.match(pyGramParser.ID)
-                self.state = 101
-                self.match(pyGramParser.OPEN)
                 self.state = 112
+                self.match(pyGramParser.KW_DEF)
+                self.state = 113
+                self.match(pyGramParser.ID)
+                self.state = 114
+                self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+                self.state = 125
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==pyGramParser.TYPE:
-                    self.state = 102
+                    self.state = 115
                     self.match(pyGramParser.TYPE)
-                    self.state = 103
+                    self.state = 116
                     self.match(pyGramParser.ID)
-                    self.state = 109
+                    self.state = 122
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==pyGramParser.COMMA:
-                        self.state = 104
-                        self.match(pyGramParser.COMMA)
-                        self.state = 105
+                    while _la==pyGramParser.KW_COMMA:
+                        self.state = 117
+                        self.match(pyGramParser.KW_COMMA)
+                        self.state = 118
                         self.match(pyGramParser.TYPE)
-                        self.state = 106
+                        self.state = 119
                         self.match(pyGramParser.ID)
-                        self.state = 111
+                        self.state = 124
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 114
-                self.match(pyGramParser.CLOSE)
-                self.state = 115
-                self.match(pyGramParser.COLON)
-                self.state = 116
-                self.local()
-                self.state = 117
-                self.match(pyGramParser.BRACKET)
+                self.state = 127
+                self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+                self.state = 128
+                self.match(pyGramParser.TYPE)
+                self.state = 129
+                self.match(pyGramParser.KW_BRACKETS_OPEN)
+                self.state = 130
+                self.function_body_statements()
+                self.state = 131
+                self.match(pyGramParser.KW_BRACKETS_CLOSE)
                 pass
 
             elif la_ == 2:
                 localctx = pyGramParser.L_voidContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 119
-                self.match(pyGramParser.DEF)
-                self.state = 120
-                self.match(pyGramParser.VOID)
-                self.state = 121
-                self.match(pyGramParser.ID)
-                self.state = 122
-                self.match(pyGramParser.OPEN)
                 self.state = 133
+                self.match(pyGramParser.KW_DEF)
+                self.state = 134
+                self.match(pyGramParser.ID)
+                self.state = 135
+                self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+                self.state = 146
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==pyGramParser.TYPE:
-                    self.state = 123
+                    self.state = 136
                     self.match(pyGramParser.TYPE)
-                    self.state = 124
+                    self.state = 137
                     self.match(pyGramParser.ID)
-                    self.state = 130
+                    self.state = 143
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==pyGramParser.COMMA:
-                        self.state = 125
-                        self.match(pyGramParser.COMMA)
-                        self.state = 126
+                    while _la==pyGramParser.KW_COMMA:
+                        self.state = 138
+                        self.match(pyGramParser.KW_COMMA)
+                        self.state = 139
                         self.match(pyGramParser.TYPE)
-                        self.state = 127
+                        self.state = 140
                         self.match(pyGramParser.ID)
-                        self.state = 132
+                        self.state = 145
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 135
-                self.match(pyGramParser.CLOSE)
-                self.state = 136
-                self.match(pyGramParser.COLON)
-                self.state = 137
-                self.local()
-                self.state = 138
-                self.match(pyGramParser.BRACKET)
+                self.state = 148
+                self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+                self.state = 150
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==pyGramParser.KW_VOID:
+                    self.state = 149
+                    self.match(pyGramParser.KW_VOID)
+
+
+                self.state = 152
+                self.match(pyGramParser.KW_BRACKETS_OPEN)
+                self.state = 153
+                self.function_body_statements()
+                self.state = 154
+                self.match(pyGramParser.KW_BRACKETS_CLOSE)
                 pass
 
 
@@ -825,11 +953,11 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def RETURN(self):
-            return self.getToken(pyGramParser.RETURN, 0)
+        def KW_RETURN(self):
+            return self.getToken(pyGramParser.KW_RETURN, 0)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
@@ -858,22 +986,22 @@ class pyGramParser ( Parser ):
     def r_return(self):
 
         localctx = pyGramParser.R_returnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_r_return)
+        self.enterRule(localctx, 12, self.RULE_r_return)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 142
-            self.match(pyGramParser.RETURN)
-            self.state = 144
+            self.state = 158
+            self.match(pyGramParser.KW_RETURN)
+            self.state = 160
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.MINUS) | (1 << pyGramParser.OPEN) | (1 << pyGramParser.NOT) | (1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.ID))) != 0):
-                self.state = 143
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.KW_MINUS) | (1 << pyGramParser.KW_PARENTHESIS_OPEN) | (1 << pyGramParser.KW_NOT) | (1 << pyGramParser.ID))) != 0):
+                self.state = 159
                 self.expr(0)
 
 
-            self.state = 146
-            self.match(pyGramParser.SEMI_COLON)
+            self.state = 162
+            self.match(pyGramParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -889,16 +1017,16 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
         def ID(self):
             return self.getToken(pyGramParser.ID, 0)
 
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
 
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
         def expr(self, i:int=None):
             if i is None:
@@ -907,11 +1035,11 @@ class pyGramParser ( Parser ):
                 return self.getTypedRuleContext(pyGramParser.ExprContext,i)
 
 
-        def COMMA(self, i:int=None):
+        def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pyGramParser.COMMA)
+                return self.getTokens(pyGramParser.KW_COMMA)
             else:
-                return self.getToken(pyGramParser.COMMA, i)
+                return self.getToken(pyGramParser.KW_COMMA, i)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_function_call
@@ -936,36 +1064,36 @@ class pyGramParser ( Parser ):
     def function_call(self):
 
         localctx = pyGramParser.Function_callContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_function_call)
+        self.enterRule(localctx, 14, self.RULE_function_call)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 148
+            self.state = 164
             self.match(pyGramParser.ID)
-            self.state = 149
-            self.match(pyGramParser.OPEN)
-            self.state = 158
+            self.state = 165
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 174
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.MINUS) | (1 << pyGramParser.OPEN) | (1 << pyGramParser.NOT) | (1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.ID))) != 0):
-                self.state = 150
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.KW_MINUS) | (1 << pyGramParser.KW_PARENTHESIS_OPEN) | (1 << pyGramParser.KW_NOT) | (1 << pyGramParser.ID))) != 0):
+                self.state = 166
                 self.expr(0)
-                self.state = 155
+                self.state = 171
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==pyGramParser.COMMA:
-                    self.state = 151
-                    self.match(pyGramParser.COMMA)
-                    self.state = 152
+                while _la==pyGramParser.KW_COMMA:
+                    self.state = 167
+                    self.match(pyGramParser.KW_COMMA)
+                    self.state = 168
                     self.expr(0)
-                    self.state = 157
+                    self.state = 173
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 160
-            self.match(pyGramParser.CLOSE)
+            self.state = 176
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -983,20 +1111,20 @@ class pyGramParser ( Parser ):
             self.parser = parser
             self.idx = None
 
-        def FOR(self):
-            return self.getToken(pyGramParser.FOR, 0)
+        def KW_FOR(self):
+            return self.getToken(pyGramParser.KW_FOR, 0)
 
         def ID(self):
             return self.getToken(pyGramParser.ID, 0)
 
-        def IN(self):
-            return self.getToken(pyGramParser.IN, 0)
+        def KW_IN(self):
+            return self.getToken(pyGramParser.KW_IN, 0)
 
         def RANGE(self):
             return self.getToken(pyGramParser.RANGE, 0)
 
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self, i:int=None):
             if i is None:
@@ -1005,21 +1133,21 @@ class pyGramParser ( Parser ):
                 return self.getTypedRuleContext(pyGramParser.ExprContext,i)
 
 
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
+        def KW_COLON(self):
+            return self.getToken(pyGramParser.KW_COLON, 0)
 
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
-        def COMMA(self):
-            return self.getToken(pyGramParser.COMMA, 0)
+        def KW_COMMA(self):
+            return self.getToken(pyGramParser.KW_COMMA, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_for
@@ -1044,39 +1172,39 @@ class pyGramParser ( Parser ):
     def r_for(self):
 
         localctx = pyGramParser.R_forContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_r_for)
+        self.enterRule(localctx, 16, self.RULE_r_for)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 162
-            self.match(pyGramParser.FOR)
-            self.state = 163
+            self.state = 178
+            self.match(pyGramParser.KW_FOR)
+            self.state = 179
             self.match(pyGramParser.ID)
-            self.state = 164
-            self.match(pyGramParser.IN)
-            self.state = 165
+            self.state = 180
+            self.match(pyGramParser.KW_IN)
+            self.state = 181
             self.match(pyGramParser.RANGE)
-            self.state = 166
-            self.match(pyGramParser.OPEN)
-            self.state = 170
+            self.state = 182
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 186
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
             if la_ == 1:
-                self.state = 167
+                self.state = 183
                 self.expr(0)
-                self.state = 168
-                self.match(pyGramParser.COMMA)
+                self.state = 184
+                self.match(pyGramParser.KW_COMMA)
 
 
-            self.state = 172
+            self.state = 188
             self.expr(0)
-            self.state = 173
-            self.match(pyGramParser.CLOSE)
-            self.state = 174
-            self.match(pyGramParser.COLON)
-            self.state = 175
-            self.local()
-            self.state = 176
-            self.match(pyGramParser.BRACKET)
+            self.state = 189
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+            self.state = 190
+            self.match(pyGramParser.KW_COLON)
+            self.state = 191
+            self.function_body_statements()
+            self.state = 192
+            self.match(pyGramParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1093,22 +1221,28 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def WHILE(self):
-            return self.getToken(pyGramParser.WHILE, 0)
+        def KW_WHILE(self):
+            return self.getToken(pyGramParser.KW_WHILE, 0)
+
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
 
 
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_while
@@ -1133,19 +1267,23 @@ class pyGramParser ( Parser ):
     def r_while(self):
 
         localctx = pyGramParser.R_whileContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_r_while)
+        self.enterRule(localctx, 18, self.RULE_r_while)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 178
-            self.match(pyGramParser.WHILE)
-            self.state = 179
+            self.state = 194
+            self.match(pyGramParser.KW_WHILE)
+            self.state = 195
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 196
             self.expr(0)
-            self.state = 180
-            self.match(pyGramParser.COLON)
-            self.state = 181
-            self.local()
-            self.state = 182
-            self.match(pyGramParser.BRACKET)
+            self.state = 197
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+            self.state = 198
+            self.match(pyGramParser.KW_BRACKETS_OPEN)
+            self.state = 199
+            self.function_body_statements()
+            self.state = 200
+            self.match(pyGramParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1162,11 +1300,11 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def BREAK(self):
-            return self.getToken(pyGramParser.BREAK, 0)
+        def KW_BREAK(self):
+            return self.getToken(pyGramParser.KW_BREAK, 0)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_break
@@ -1191,13 +1329,13 @@ class pyGramParser ( Parser ):
     def r_break(self):
 
         localctx = pyGramParser.R_breakContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_r_break)
+        self.enterRule(localctx, 20, self.RULE_r_break)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 184
-            self.match(pyGramParser.BREAK)
-            self.state = 185
-            self.match(pyGramParser.SEMI_COLON)
+            self.state = 202
+            self.match(pyGramParser.KW_BREAK)
+            self.state = 203
+            self.match(pyGramParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1214,22 +1352,28 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IF(self):
-            return self.getToken(pyGramParser.IF, 0)
+        def KW_IF(self):
+            return self.getToken(pyGramParser.KW_IF, 0)
+
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
 
 
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
+
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_if
@@ -1254,19 +1398,23 @@ class pyGramParser ( Parser ):
     def r_if(self):
 
         localctx = pyGramParser.R_ifContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_r_if)
+        self.enterRule(localctx, 22, self.RULE_r_if)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 187
-            self.match(pyGramParser.IF)
-            self.state = 188
+            self.state = 205
+            self.match(pyGramParser.KW_IF)
+            self.state = 206
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 207
             self.expr(0)
-            self.state = 189
-            self.match(pyGramParser.COLON)
-            self.state = 190
-            self.local()
-            self.state = 191
-            self.match(pyGramParser.BRACKET)
+            self.state = 208
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+            self.state = 209
+            self.match(pyGramParser.KW_BRACKETS_OPEN)
+            self.state = 210
+            self.function_body_statements()
+            self.state = 211
+            self.match(pyGramParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1283,18 +1431,18 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ELSE(self):
-            return self.getToken(pyGramParser.ELSE, 0)
+        def KW_ELSE(self):
+            return self.getToken(pyGramParser.KW_ELSE, 0)
 
-        def COLON(self):
-            return self.getToken(pyGramParser.COLON, 0)
+        def KW_BRACKETS_OPEN(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_OPEN, 0)
 
-        def local(self):
-            return self.getTypedRuleContext(pyGramParser.LocalContext,0)
+        def function_body_statements(self):
+            return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
-        def BRACKET(self):
-            return self.getToken(pyGramParser.BRACKET, 0)
+        def KW_BRACKETS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_else
@@ -1319,17 +1467,17 @@ class pyGramParser ( Parser ):
     def r_else(self):
 
         localctx = pyGramParser.R_elseContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_r_else)
+        self.enterRule(localctx, 24, self.RULE_r_else)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 193
-            self.match(pyGramParser.ELSE)
-            self.state = 194
-            self.match(pyGramParser.COLON)
-            self.state = 195
-            self.local()
-            self.state = 196
-            self.match(pyGramParser.BRACKET)
+            self.state = 213
+            self.match(pyGramParser.KW_ELSE)
+            self.state = 214
+            self.match(pyGramParser.KW_BRACKETS_OPEN)
+            self.state = 215
+            self.function_body_statements()
+            self.state = 216
+            self.match(pyGramParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1349,8 +1497,14 @@ class pyGramParser ( Parser ):
         def PRINT(self):
             return self.getToken(pyGramParser.PRINT, 0)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
+
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
+
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def expr(self, i:int=None):
             if i is None:
@@ -1359,11 +1513,11 @@ class pyGramParser ( Parser ):
                 return self.getTypedRuleContext(pyGramParser.ExprContext,i)
 
 
-        def COMMA(self, i:int=None):
+        def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pyGramParser.COMMA)
+                return self.getTokens(pyGramParser.KW_COMMA)
             else:
-                return self.getToken(pyGramParser.COMMA, i)
+                return self.getToken(pyGramParser.KW_COMMA, i)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_print
@@ -1388,34 +1542,38 @@ class pyGramParser ( Parser ):
     def r_print(self):
 
         localctx = pyGramParser.R_printContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_r_print)
+        self.enterRule(localctx, 26, self.RULE_r_print)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 198
+            self.state = 218
             self.match(pyGramParser.PRINT)
-            self.state = 207
+            self.state = 219
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 228
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.MINUS) | (1 << pyGramParser.OPEN) | (1 << pyGramParser.NOT) | (1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.ID))) != 0):
-                self.state = 199
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.INT_VALUE) | (1 << pyGramParser.FLOAT_VALUE) | (1 << pyGramParser.STR_VALUE) | (1 << pyGramParser.BOOL_VALUE) | (1 << pyGramParser.KW_MINUS) | (1 << pyGramParser.KW_PARENTHESIS_OPEN) | (1 << pyGramParser.KW_NOT) | (1 << pyGramParser.ID))) != 0):
+                self.state = 220
                 self.expr(0)
-                self.state = 204
+                self.state = 225
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==pyGramParser.COMMA:
-                    self.state = 200
-                    self.match(pyGramParser.COMMA)
-                    self.state = 201
+                while _la==pyGramParser.KW_COMMA:
+                    self.state = 221
+                    self.match(pyGramParser.KW_COMMA)
+                    self.state = 222
                     self.expr(0)
-                    self.state = 206
+                    self.state = 227
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 209
-            self.match(pyGramParser.SEMI_COLON)
+            self.state = 230
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
+            self.state = 231
+            self.match(pyGramParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1425,7 +1583,147 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class DeclarationContext(ParserRuleContext):
+    class Variable_declarationContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def single_variable_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Single_variable_declarationContext,0)
+
+
+        def multiple_variable_declaration(self):
+            return self.getTypedRuleContext(pyGramParser.Multiple_variable_declarationContext,0)
+
+
+        def getRuleIndex(self):
+            return pyGramParser.RULE_variable_declaration
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVariable_declaration" ):
+                listener.enterVariable_declaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVariable_declaration" ):
+                listener.exitVariable_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariable_declaration" ):
+                return visitor.visitVariable_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def variable_declaration(self):
+
+        localctx = pyGramParser.Variable_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_variable_declaration)
+        try:
+            self.state = 235
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 233
+                self.single_variable_declaration()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 234
+                self.multiple_variable_declaration()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Single_variable_declarationContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def TYPE(self):
+            return self.getToken(pyGramParser.TYPE, 0)
+
+        def ID(self):
+            return self.getToken(pyGramParser.ID, 0)
+
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
+
+        def KW_ASSIGNMENT(self):
+            return self.getToken(pyGramParser.KW_ASSIGNMENT, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(pyGramParser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return pyGramParser.RULE_single_variable_declaration
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSingle_variable_declaration" ):
+                listener.enterSingle_variable_declaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSingle_variable_declaration" ):
+                listener.exitSingle_variable_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSingle_variable_declaration" ):
+                return visitor.visitSingle_variable_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def single_variable_declaration(self):
+
+        localctx = pyGramParser.Single_variable_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_single_variable_declaration)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 237
+            self.match(pyGramParser.TYPE)
+            self.state = 238
+            self.match(pyGramParser.ID)
+            self.state = 241
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==pyGramParser.KW_ASSIGNMENT:
+                self.state = 239
+                self.match(pyGramParser.KW_ASSIGNMENT)
+                self.state = 240
+                self.expr(0)
+
+
+            self.state = 243
+            self.match(pyGramParser.KW_SEMICOLON)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Multiple_variable_declarationContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1441,14 +1739,17 @@ class pyGramParser ( Parser ):
             else:
                 return self.getToken(pyGramParser.ID, i)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
-        def ASSIGNMENT(self, i:int=None):
+        def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pyGramParser.ASSIGNMENT)
+                return self.getTokens(pyGramParser.KW_COMMA)
             else:
-                return self.getToken(pyGramParser.ASSIGNMENT, i)
+                return self.getToken(pyGramParser.KW_COMMA, i)
+
+        def KW_ASSIGNMENT(self):
+            return self.getToken(pyGramParser.KW_ASSIGNMENT, 0)
 
         def expr(self, i:int=None):
             if i is None:
@@ -1457,77 +1758,73 @@ class pyGramParser ( Parser ):
                 return self.getTypedRuleContext(pyGramParser.ExprContext,i)
 
 
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(pyGramParser.COMMA)
-            else:
-                return self.getToken(pyGramParser.COMMA, i)
-
         def getRuleIndex(self):
-            return pyGramParser.RULE_declaration
+            return pyGramParser.RULE_multiple_variable_declaration
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaration" ):
-                listener.enterDeclaration(self)
+            if hasattr( listener, "enterMultiple_variable_declaration" ):
+                listener.enterMultiple_variable_declaration(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaration" ):
-                listener.exitDeclaration(self)
+            if hasattr( listener, "exitMultiple_variable_declaration" ):
+                listener.exitMultiple_variable_declaration(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclaration" ):
-                return visitor.visitDeclaration(self)
+            if hasattr( visitor, "visitMultiple_variable_declaration" ):
+                return visitor.visitMultiple_variable_declaration(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def declaration(self):
+    def multiple_variable_declaration(self):
 
-        localctx = pyGramParser.DeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_declaration)
+        localctx = pyGramParser.Multiple_variable_declarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_multiple_variable_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 211
+            self.state = 245
             self.match(pyGramParser.TYPE)
-            self.state = 212
+            self.state = 246
             self.match(pyGramParser.ID)
-            self.state = 215
+            self.state = 251
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pyGramParser.ASSIGNMENT:
-                self.state = 213
-                self.match(pyGramParser.ASSIGNMENT)
-                self.state = 214
-                self.expr(0)
-
-
-            self.state = 225
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==pyGramParser.COMMA:
-                self.state = 217
-                self.match(pyGramParser.COMMA)
-                self.state = 218
+            while _la==pyGramParser.KW_COMMA:
+                self.state = 247
+                self.match(pyGramParser.KW_COMMA)
+                self.state = 248
                 self.match(pyGramParser.ID)
-                self.state = 221
+                self.state = 253
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pyGramParser.ASSIGNMENT:
-                    self.state = 219
-                    self.match(pyGramParser.ASSIGNMENT)
-                    self.state = 220
+
+            self.state = 263
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==pyGramParser.KW_ASSIGNMENT:
+                self.state = 254
+                self.match(pyGramParser.KW_ASSIGNMENT)
+                self.state = 255
+                self.expr(0)
+                self.state = 260
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==pyGramParser.KW_COMMA:
+                    self.state = 256
+                    self.match(pyGramParser.KW_COMMA)
+                    self.state = 257
                     self.expr(0)
+                    self.state = 262
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
 
 
-                self.state = 227
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
 
-            self.state = 228
-            self.match(pyGramParser.SEMI_COLON)
+            self.state = 265
+            self.match(pyGramParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1562,13 +1859,13 @@ class pyGramParser ( Parser ):
 
         def ID(self):
             return self.getToken(pyGramParser.ID, 0)
-        def ASSIGNMENT(self):
-            return self.getToken(pyGramParser.ASSIGNMENT, 0)
+        def KW_ASSIGNMENT(self):
+            return self.getToken(pyGramParser.KW_ASSIGNMENT, 0)
         def r_input(self):
             return self.getTypedRuleContext(pyGramParser.R_inputContext,0)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInput" ):
@@ -1593,13 +1890,13 @@ class pyGramParser ( Parser ):
 
         def ID(self):
             return self.getToken(pyGramParser.ID, 0)
-        def ASSIGNMENT(self):
-            return self.getToken(pyGramParser.ASSIGNMENT, 0)
+        def KW_ASSIGNMENT(self):
+            return self.getToken(pyGramParser.KW_ASSIGNMENT, 0)
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
 
-        def SEMI_COLON(self):
-            return self.getToken(pyGramParser.SEMI_COLON, 0)
+        def KW_SEMICOLON(self):
+            return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterE_assigment" ):
@@ -1620,35 +1917,35 @@ class pyGramParser ( Parser ):
     def assigment(self):
 
         localctx = pyGramParser.AssigmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_assigment)
+        self.enterRule(localctx, 34, self.RULE_assigment)
         try:
-            self.state = 240
+            self.state = 277
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
                 localctx = pyGramParser.E_assigmentContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 230
+                self.state = 267
                 self.match(pyGramParser.ID)
-                self.state = 231
-                self.match(pyGramParser.ASSIGNMENT)
-                self.state = 232
+                self.state = 268
+                self.match(pyGramParser.KW_ASSIGNMENT)
+                self.state = 269
                 self.expr(0)
-                self.state = 233
-                self.match(pyGramParser.SEMI_COLON)
+                self.state = 270
+                self.match(pyGramParser.KW_SEMICOLON)
                 pass
 
             elif la_ == 2:
                 localctx = pyGramParser.InputContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 235
+                self.state = 272
                 self.match(pyGramParser.ID)
-                self.state = 236
-                self.match(pyGramParser.ASSIGNMENT)
-                self.state = 237
+                self.state = 273
+                self.match(pyGramParser.KW_ASSIGNMENT)
+                self.state = 274
                 self.r_input()
-                self.state = 238
-                self.match(pyGramParser.SEMI_COLON)
+                self.state = 275
+                self.match(pyGramParser.KW_SEMICOLON)
                 pass
 
 
@@ -1667,7 +1964,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
             self.inh_type = None
 
 
@@ -1677,7 +1974,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
             self.inh_type = ctx.inh_type
 
 
@@ -1690,8 +1987,8 @@ class pyGramParser ( Parser ):
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
 
-        def OR(self):
-            return self.getToken(pyGramParser.OR, 0)
+        def KW_OR(self):
+            return self.getToken(pyGramParser.KW_OR, 0)
         def term(self):
             return self.getTypedRuleContext(pyGramParser.TermContext,0)
 
@@ -1742,20 +2039,20 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 28
-        self.enterRecursionRule(localctx, 28, self.RULE_expr, _p)
+        _startState = 36
+        self.enterRecursionRule(localctx, 36, self.RULE_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
             localctx = pyGramParser.E_termContext(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 243
+            self.state = 280
             self.term(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 250
+            self.state = 287
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,19,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -1763,17 +2060,17 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.Or_logicContext(self, pyGramParser.ExprContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                    self.state = 245
+                    self.state = 282
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 246
-                    self.match(pyGramParser.OR)
-                    self.state = 247
+                    self.state = 283
+                    self.match(pyGramParser.KW_OR)
+                    self.state = 284
                     self.term(0) 
-                self.state = 252
+                self.state = 289
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,19,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1790,7 +2087,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -1799,7 +2096,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
     class And_logicContext(TermContext):
@@ -1811,8 +2108,8 @@ class pyGramParser ( Parser ):
         def term(self):
             return self.getTypedRuleContext(pyGramParser.TermContext,0)
 
-        def AND(self):
-            return self.getToken(pyGramParser.AND, 0)
+        def KW_AND(self):
+            return self.getToken(pyGramParser.KW_AND, 0)
         def term2(self):
             return self.getTypedRuleContext(pyGramParser.Term2Context,0)
 
@@ -1863,20 +2160,20 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.TermContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 30
-        self.enterRecursionRule(localctx, 30, self.RULE_term, _p)
+        _startState = 38
+        self.enterRecursionRule(localctx, 38, self.RULE_term, _p)
         try:
             self.enterOuterAlt(localctx, 1)
             localctx = pyGramParser.E_term2Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 254
+            self.state = 291
             self.term2(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 261
+            self.state = 298
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -1884,17 +2181,17 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.And_logicContext(self, pyGramParser.TermContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term)
-                    self.state = 256
+                    self.state = 293
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 257
-                    self.match(pyGramParser.AND)
-                    self.state = 258
+                    self.state = 294
+                    self.match(pyGramParser.KW_AND)
+                    self.state = 295
                     self.term2(0) 
-                self.state = 263
+                self.state = 300
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1911,7 +2208,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -1920,7 +2217,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
     class Comp_logicContext(Term2Context):
@@ -1936,14 +2233,14 @@ class pyGramParser ( Parser ):
         def term3(self):
             return self.getTypedRuleContext(pyGramParser.Term3Context,0)
 
-        def GT(self):
-            return self.getToken(pyGramParser.GT, 0)
-        def LT(self):
-            return self.getToken(pyGramParser.LT, 0)
-        def LE(self):
-            return self.getToken(pyGramParser.LE, 0)
-        def GE(self):
-            return self.getToken(pyGramParser.GE, 0)
+        def KW_GREATERTHAN(self):
+            return self.getToken(pyGramParser.KW_GREATERTHAN, 0)
+        def KW_LESSERTHAN(self):
+            return self.getToken(pyGramParser.KW_LESSERTHAN, 0)
+        def KW_LESSEREQUALTHAN(self):
+            return self.getToken(pyGramParser.KW_LESSEREQUALTHAN, 0)
+        def KW_GREATERQUALTHAN(self):
+            return self.getToken(pyGramParser.KW_GREATERQUALTHAN, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_logic" ):
@@ -1991,8 +2288,8 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.Term2Context(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 32
-        self.enterRecursionRule(localctx, 32, self.RULE_term2, _p)
+        _startState = 40
+        self.enterRecursionRule(localctx, 40, self.RULE_term2, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2000,12 +2297,12 @@ class pyGramParser ( Parser ):
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 265
+            self.state = 302
             self.term3(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 272
+            self.state = 309
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -2013,23 +2310,23 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.Comp_logicContext(self, pyGramParser.Term2Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term2)
-                    self.state = 267
+                    self.state = 304
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 268
+                    self.state = 305
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.GT) | (1 << pyGramParser.LT) | (1 << pyGramParser.GE) | (1 << pyGramParser.LE))) != 0)):
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pyGramParser.KW_GREATERTHAN) | (1 << pyGramParser.KW_LESSERTHAN) | (1 << pyGramParser.KW_GREATERQUALTHAN) | (1 << pyGramParser.KW_LESSEREQUALTHAN))) != 0)):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 269
+                    self.state = 306
                     self.term3(0) 
-                self.state = 274
+                self.state = 311
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2046,7 +2343,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -2055,7 +2352,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
     class Eq_logicContext(Term3Context):
@@ -2071,10 +2368,10 @@ class pyGramParser ( Parser ):
         def term4(self):
             return self.getTypedRuleContext(pyGramParser.Term4Context,0)
 
-        def EQ(self):
-            return self.getToken(pyGramParser.EQ, 0)
-        def NE(self):
-            return self.getToken(pyGramParser.NE, 0)
+        def KW_EQUAL(self):
+            return self.getToken(pyGramParser.KW_EQUAL, 0)
+        def KW_NOTEQUAL(self):
+            return self.getToken(pyGramParser.KW_NOTEQUAL, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEq_logic" ):
@@ -2122,8 +2419,8 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.Term3Context(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 34
-        self.enterRecursionRule(localctx, 34, self.RULE_term3, _p)
+        _startState = 42
+        self.enterRecursionRule(localctx, 42, self.RULE_term3, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2131,12 +2428,12 @@ class pyGramParser ( Parser ):
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 276
+            self.state = 313
             self.term4(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 283
+            self.state = 320
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -2144,23 +2441,23 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.Eq_logicContext(self, pyGramParser.Term3Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term3)
-                    self.state = 278
+                    self.state = 315
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 279
+                    self.state = 316
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==pyGramParser.EQ or _la==pyGramParser.NE):
+                    if not(_la==pyGramParser.KW_EQUAL or _la==pyGramParser.KW_NOTEQUAL):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 280
+                    self.state = 317
                     self.term4(0) 
-                self.state = 285
+                self.state = 322
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2177,7 +2474,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -2186,7 +2483,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
     class Sum_minusContext(Term4Context):
@@ -2202,10 +2499,10 @@ class pyGramParser ( Parser ):
         def term5(self):
             return self.getTypedRuleContext(pyGramParser.Term5Context,0)
 
-        def PLUS(self):
-            return self.getToken(pyGramParser.PLUS, 0)
-        def MINUS(self):
-            return self.getToken(pyGramParser.MINUS, 0)
+        def KW_PLUS(self):
+            return self.getToken(pyGramParser.KW_PLUS, 0)
+        def KW_MINUS(self):
+            return self.getToken(pyGramParser.KW_MINUS, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSum_minus" ):
@@ -2253,8 +2550,8 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.Term4Context(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 36
-        self.enterRecursionRule(localctx, 36, self.RULE_term4, _p)
+        _startState = 44
+        self.enterRecursionRule(localctx, 44, self.RULE_term4, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2262,12 +2559,12 @@ class pyGramParser ( Parser ):
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 287
+            self.state = 324
             self.term5(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 294
+            self.state = 331
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -2275,23 +2572,23 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.Sum_minusContext(self, pyGramParser.Term4Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term4)
-                    self.state = 289
+                    self.state = 326
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 290
+                    self.state = 327
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==pyGramParser.PLUS or _la==pyGramParser.MINUS):
+                    if not(_la==pyGramParser.KW_PLUS or _la==pyGramParser.KW_MINUS):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 291
+                    self.state = 328
                     self.term5(0) 
-                self.state = 296
+                self.state = 333
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2308,7 +2605,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -2317,7 +2614,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
     class E_term6Context(Term5Context):
@@ -2358,10 +2655,10 @@ class pyGramParser ( Parser ):
         def term6(self):
             return self.getTypedRuleContext(pyGramParser.Term6Context,0)
 
-        def TIMES(self):
-            return self.getToken(pyGramParser.TIMES, 0)
-        def DIVIDES(self):
-            return self.getToken(pyGramParser.DIVIDES, 0)
+        def KW_MULT(self):
+            return self.getToken(pyGramParser.KW_MULT, 0)
+        def KW_DIV(self):
+            return self.getToken(pyGramParser.KW_DIV, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTime_div" ):
@@ -2384,8 +2681,8 @@ class pyGramParser ( Parser ):
         _parentState = self.state
         localctx = pyGramParser.Term5Context(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 38
-        self.enterRecursionRule(localctx, 38, self.RULE_term5, _p)
+        _startState = 46
+        self.enterRecursionRule(localctx, 46, self.RULE_term5, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2393,12 +2690,12 @@ class pyGramParser ( Parser ):
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 298
+            self.state = 335
             self.term6()
             self._ctx.stop = self._input.LT(-1)
-            self.state = 305
+            self.state = 342
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -2406,23 +2703,23 @@ class pyGramParser ( Parser ):
                     _prevctx = localctx
                     localctx = pyGramParser.Time_divContext(self, pyGramParser.Term5Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term5)
-                    self.state = 300
+                    self.state = 337
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 301
+                    self.state = 338
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==pyGramParser.TIMES or _la==pyGramParser.DIVIDES):
+                    if not(_la==pyGramParser.KW_MULT or _la==pyGramParser.KW_DIV):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 302
+                    self.state = 339
                     self.term6() 
-                self.state = 307
+                self.state = 344
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2439,7 +2736,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -2448,7 +2745,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
 
@@ -2462,10 +2759,10 @@ class pyGramParser ( Parser ):
         def term6(self):
             return self.getTypedRuleContext(pyGramParser.Term6Context,0)
 
-        def MINUS(self):
-            return self.getToken(pyGramParser.MINUS, 0)
-        def NOT(self):
-            return self.getToken(pyGramParser.NOT, 0)
+        def KW_MINUS(self):
+            return self.getToken(pyGramParser.KW_MINUS, 0)
+        def KW_NOT(self):
+            return self.getToken(pyGramParser.KW_NOT, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMinus_not" ):
@@ -2511,30 +2808,30 @@ class pyGramParser ( Parser ):
     def term6(self):
 
         localctx = pyGramParser.Term6Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_term6)
+        self.enterRule(localctx, 48, self.RULE_term6)
         self._la = 0 # Token type
         try:
-            self.state = 311
+            self.state = 348
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pyGramParser.MINUS, pyGramParser.NOT]:
+            if token in [pyGramParser.KW_MINUS, pyGramParser.KW_NOT]:
                 localctx = pyGramParser.Minus_notContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 308
+                self.state = 345
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==pyGramParser.MINUS or _la==pyGramParser.NOT):
+                if not(_la==pyGramParser.KW_MINUS or _la==pyGramParser.KW_NOT):
                     localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 309
+                self.state = 346
                 self.term6()
                 pass
-            elif token in [pyGramParser.OPEN, pyGramParser.INT_VALUE, pyGramParser.FLOAT_VALUE, pyGramParser.STR_VALUE, pyGramParser.BOOL_VALUE, pyGramParser.ID]:
+            elif token in [pyGramParser.INT_VALUE, pyGramParser.FLOAT_VALUE, pyGramParser.STR_VALUE, pyGramParser.BOOL_VALUE, pyGramParser.KW_PARENTHESIS_OPEN, pyGramParser.ID]:
                 localctx = pyGramParser.E_factorContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 310
+                self.state = 347
                 self.factor()
                 pass
             else:
@@ -2555,7 +2852,7 @@ class pyGramParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.type = None
+            self.type_ = None
 
 
         def getRuleIndex(self):
@@ -2564,7 +2861,7 @@ class pyGramParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-            self.type = ctx.type
+            self.type_ = ctx.type_
 
 
 
@@ -2694,13 +2991,13 @@ class pyGramParser ( Parser ):
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
         def expr(self):
             return self.getTypedRuleContext(pyGramParser.ExprContext,0)
 
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_expr" ):
@@ -2746,61 +3043,61 @@ class pyGramParser ( Parser ):
     def factor(self):
 
         localctx = pyGramParser.FactorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_factor)
+        self.enterRule(localctx, 50, self.RULE_factor)
         try:
-            self.state = 323
+            self.state = 360
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,29,self._ctx)
             if la_ == 1:
                 localctx = pyGramParser.L_exprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 313
-                self.match(pyGramParser.OPEN)
-                self.state = 314
+                self.state = 350
+                self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+                self.state = 351
                 self.expr(0)
-                self.state = 315
-                self.match(pyGramParser.CLOSE)
+                self.state = 352
+                self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
                 pass
 
             elif la_ == 2:
                 localctx = pyGramParser.L_function_callContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 317
+                self.state = 354
                 self.function_call()
                 pass
 
             elif la_ == 3:
                 localctx = pyGramParser.L_idContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 318
+                self.state = 355
                 self.match(pyGramParser.ID)
                 pass
 
             elif la_ == 4:
                 localctx = pyGramParser.L_int_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
-                self.state = 319
+                self.state = 356
                 self.match(pyGramParser.INT_VALUE)
                 pass
 
             elif la_ == 5:
                 localctx = pyGramParser.L_float_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
-                self.state = 320
+                self.state = 357
                 self.match(pyGramParser.FLOAT_VALUE)
                 pass
 
             elif la_ == 6:
                 localctx = pyGramParser.L_str_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
-                self.state = 321
+                self.state = 358
                 self.match(pyGramParser.STR_VALUE)
                 pass
 
             elif la_ == 7:
                 localctx = pyGramParser.L_bool_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
-                self.state = 322
+                self.state = 359
                 self.match(pyGramParser.BOOL_VALUE)
                 pass
 
@@ -2824,11 +3121,11 @@ class pyGramParser ( Parser ):
         def INPUT(self):
             return self.getToken(pyGramParser.INPUT, 0)
 
-        def OPEN(self):
-            return self.getToken(pyGramParser.OPEN, 0)
+        def KW_PARENTHESIS_OPEN(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_OPEN, 0)
 
-        def CLOSE(self):
-            return self.getToken(pyGramParser.CLOSE, 0)
+        def KW_PARENTHESIS_CLOSE(self):
+            return self.getToken(pyGramParser.KW_PARENTHESIS_CLOSE, 0)
 
         def getRuleIndex(self):
             return pyGramParser.RULE_r_input
@@ -2853,15 +3150,15 @@ class pyGramParser ( Parser ):
     def r_input(self):
 
         localctx = pyGramParser.R_inputContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_r_input)
+        self.enterRule(localctx, 52, self.RULE_r_input)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 325
+            self.state = 362
             self.match(pyGramParser.INPUT)
-            self.state = 326
-            self.match(pyGramParser.OPEN)
-            self.state = 327
-            self.match(pyGramParser.CLOSE)
+            self.state = 363
+            self.match(pyGramParser.KW_PARENTHESIS_OPEN)
+            self.state = 364
+            self.match(pyGramParser.KW_PARENTHESIS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2875,12 +3172,12 @@ class pyGramParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[14] = self.expr_sempred
-        self._predicates[15] = self.term_sempred
-        self._predicates[16] = self.term2_sempred
-        self._predicates[17] = self.term3_sempred
-        self._predicates[18] = self.term4_sempred
-        self._predicates[19] = self.term5_sempred
+        self._predicates[18] = self.expr_sempred
+        self._predicates[19] = self.term_sempred
+        self._predicates[20] = self.term2_sempred
+        self._predicates[21] = self.term3_sempred
+        self._predicates[22] = self.term4_sempred
+        self._predicates[23] = self.term5_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
