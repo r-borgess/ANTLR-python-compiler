@@ -8,7 +8,7 @@ from myListener import myListener
 
 if __name__ == '__main__':
     # TODO : receber arquivo por argumento
-    fileName = 'testfile'
+    fileName = 'input'
     data = FileStream(fileName + ".py")
 
     # Lexer

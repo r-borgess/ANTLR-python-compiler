@@ -172,7 +172,7 @@ class Generator:
                 imul
                 """
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fmul
@@ -189,7 +189,7 @@ class Generator:
                 idiv
                 """
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fdiv
@@ -237,7 +237,7 @@ class Generator:
                 if_icmp{} true{}
                 """.format(cmp[op], label_id)
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 if{} true{}
@@ -273,7 +273,7 @@ class Generator:
                 istore {}
                 """.format(self.top_index)
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fstore {}
@@ -291,7 +291,7 @@ class Generator:
                      iload {}
                      """.format(var_data.address)
                 )
-            elif var_data.type == 'float':
+            elif var_data.type == 'real':
                 self.__write(
                     """
                     fload {}
@@ -316,7 +316,7 @@ class Generator:
                     istore {}
                     """.format(var_data.address, address)
                 )
-            elif var_data.type == 'float':
+            elif var_data.type == 'real':
                 self.__write(
                     """
                     fload {}
@@ -354,7 +354,7 @@ class Generator:
                 invokevirtual java/util/Scanner/nextInt()I
                 """.format(type_convert(self.symbol_table[name].type))
             )
-        elif t == 'float':
+        elif t == 'real':
             self.__write(
                 """
                 invokevirtual java/util/Scanner/nextFloat()F
@@ -378,7 +378,7 @@ class Generator:
                 iadd
                 """
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fadd
@@ -396,7 +396,7 @@ class Generator:
                 isub
                 """
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fsub
@@ -411,7 +411,7 @@ class Generator:
                 iload {}
                 """.format(val)
             )
-        elif type == 'float':
+        elif type == 'real':
             self.__write(
                 """
                 fload {}
@@ -439,7 +439,7 @@ class Generator:
             i2f
             """
         )
-        return self.store_val("float")
+        return self.store_val("real")
 
     def enter_while(self, loop_idx):
         self.__write(

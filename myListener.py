@@ -281,14 +281,14 @@ class myListener(pyGramListener):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term4().type)
         elif not self.__is_numeric(ctx.term5().type):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term5().type)
-        elif ctx.term4().type == 'float' and ctx.term5().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term4().type == 'real' and ctx.term5().type == 'real':
+            ctx.type = 'real'
             val1, val2 = ctx.term4().val, ctx.term5().val
-        elif ctx.term4().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term4().type == 'real':
+            ctx.type = 'real'
             val1, val2 = ctx.term4().val, self.jasmin.int_to_float(ctx.term5().val)
-        elif ctx.term5().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term5().type == 'real':
+            ctx.type = 'real'
             val1, val2 = self.jasmin.int_to_float(ctx.term4().val), ctx.term5().val
         else:
             ctx.type = 'int'
@@ -308,14 +308,14 @@ class myListener(pyGramListener):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term5().type)
         if not self.__is_numeric(ctx.term6().type):
             raise ExprTypeError(ctx.start.line, ctx.op.text, ctx.term6().type)
-        elif ctx.term5().type == 'float' and ctx.term6().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term5().type == 'real' and ctx.term6().type == 'real':
+            ctx.type = 'real'
             val1, val2 = ctx.term5().val, ctx.term6().val
-        elif ctx.term5().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term5().type == 'real':
+            ctx.type = 'real'
             val1, val2 = ctx.term5().val, self.jasmin.int_to_float(ctx.term6().val)
-        elif ctx.term6().type == 'float':
-            ctx.type = 'float'
+        elif ctx.term6().type == 'real':
+            ctx.type = 'real'
             val1, val2 = self.jasmin.int_to_float(ctx.term5().val), ctx.term6().val
         else:
             ctx.type = 'int'
@@ -364,7 +364,7 @@ class myListener(pyGramListener):
         ctx.val = self.jasmin.create_temp(ctx.getText(), ctx.type)
 
     def exitL_float_value(self, ctx: pyGramParser.L_float_valueContext):
-        ctx.type = 'float'
+        ctx.type = 'real'
         ctx.val = self.jasmin.create_temp(ctx.getText(), ctx.type)
 
     def exitL_str_value(self, ctx: pyGramParser.L_str_valueContext):
