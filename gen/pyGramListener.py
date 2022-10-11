@@ -71,84 +71,84 @@ class pyGramListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#r_return.
-    def enterR_return(self, ctx:pyGramParser.R_returnContext):
+    # Enter a parse tree produced by pyGramParser#return_statement.
+    def enterReturn_statement(self, ctx:pyGramParser.Return_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#r_return.
-    def exitR_return(self, ctx:pyGramParser.R_returnContext):
-        pass
-
-
-    # Enter a parse tree produced by pyGramParser#function_call.
-    def enterFunction_call(self, ctx:pyGramParser.Function_callContext):
-        pass
-
-    # Exit a parse tree produced by pyGramParser#function_call.
-    def exitFunction_call(self, ctx:pyGramParser.Function_callContext):
+    # Exit a parse tree produced by pyGramParser#return_statement.
+    def exitReturn_statement(self, ctx:pyGramParser.Return_statementContext):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#r_for.
-    def enterR_for(self, ctx:pyGramParser.R_forContext):
+    # Enter a parse tree produced by pyGramParser#function_call_statement.
+    def enterFunction_call_statement(self, ctx:pyGramParser.Function_call_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#r_for.
-    def exitR_for(self, ctx:pyGramParser.R_forContext):
-        pass
-
-
-    # Enter a parse tree produced by pyGramParser#r_while.
-    def enterR_while(self, ctx:pyGramParser.R_whileContext):
-        pass
-
-    # Exit a parse tree produced by pyGramParser#r_while.
-    def exitR_while(self, ctx:pyGramParser.R_whileContext):
+    # Exit a parse tree produced by pyGramParser#function_call_statement.
+    def exitFunction_call_statement(self, ctx:pyGramParser.Function_call_statementContext):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#r_break.
-    def enterR_break(self, ctx:pyGramParser.R_breakContext):
+    # Enter a parse tree produced by pyGramParser#forloop_statement.
+    def enterForloop_statement(self, ctx:pyGramParser.Forloop_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#r_break.
-    def exitR_break(self, ctx:pyGramParser.R_breakContext):
-        pass
-
-
-    # Enter a parse tree produced by pyGramParser#r_if.
-    def enterR_if(self, ctx:pyGramParser.R_ifContext):
-        pass
-
-    # Exit a parse tree produced by pyGramParser#r_if.
-    def exitR_if(self, ctx:pyGramParser.R_ifContext):
+    # Exit a parse tree produced by pyGramParser#forloop_statement.
+    def exitForloop_statement(self, ctx:pyGramParser.Forloop_statementContext):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#r_else.
-    def enterR_else(self, ctx:pyGramParser.R_elseContext):
+    # Enter a parse tree produced by pyGramParser#while_statement.
+    def enterWhile_statement(self, ctx:pyGramParser.While_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#r_else.
-    def exitR_else(self, ctx:pyGramParser.R_elseContext):
-        pass
-
-
-    # Enter a parse tree produced by pyGramParser#r_print.
-    def enterR_print(self, ctx:pyGramParser.R_printContext):
-        pass
-
-    # Exit a parse tree produced by pyGramParser#r_print.
-    def exitR_print(self, ctx:pyGramParser.R_printContext):
+    # Exit a parse tree produced by pyGramParser#while_statement.
+    def exitWhile_statement(self, ctx:pyGramParser.While_statementContext):
         pass
 
 
-    # Enter a parse tree produced by pyGramParser#variable_declaration.
-    def enterVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
+    # Enter a parse tree produced by pyGramParser#break_statement.
+    def enterBreak_statement(self, ctx:pyGramParser.Break_statementContext):
         pass
 
-    # Exit a parse tree produced by pyGramParser#variable_declaration.
-    def exitVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
+    # Exit a parse tree produced by pyGramParser#break_statement.
+    def exitBreak_statement(self, ctx:pyGramParser.Break_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#if_statement.
+    def enterIf_statement(self, ctx:pyGramParser.If_statementContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#if_statement.
+    def exitIf_statement(self, ctx:pyGramParser.If_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#else_statement.
+    def enterElse_statement(self, ctx:pyGramParser.Else_statementContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#else_statement.
+    def exitElse_statement(self, ctx:pyGramParser.Else_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#print_statement.
+    def enterPrint_statement(self, ctx:pyGramParser.Print_statementContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#print_statement.
+    def exitPrint_statement(self, ctx:pyGramParser.Print_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by pyGramParser#variable_declaration_statement.
+    def enterVariable_declaration_statement(self, ctx:pyGramParser.Variable_declaration_statementContext):
+        pass
+
+    # Exit a parse tree produced by pyGramParser#variable_declaration_statement.
+    def exitVariable_declaration_statement(self, ctx:pyGramParser.Variable_declaration_statementContext):
         pass
 
 

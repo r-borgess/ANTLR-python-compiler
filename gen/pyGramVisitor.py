@@ -44,48 +44,48 @@ class pyGramVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_return.
-    def visitR_return(self, ctx:pyGramParser.R_returnContext):
+    # Visit a parse tree produced by pyGramParser#return_statement.
+    def visitReturn_statement(self, ctx:pyGramParser.Return_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#function_call.
-    def visitFunction_call(self, ctx:pyGramParser.Function_callContext):
+    # Visit a parse tree produced by pyGramParser#function_call_statement.
+    def visitFunction_call_statement(self, ctx:pyGramParser.Function_call_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_for.
-    def visitR_for(self, ctx:pyGramParser.R_forContext):
+    # Visit a parse tree produced by pyGramParser#forloop_statement.
+    def visitForloop_statement(self, ctx:pyGramParser.Forloop_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_while.
-    def visitR_while(self, ctx:pyGramParser.R_whileContext):
+    # Visit a parse tree produced by pyGramParser#while_statement.
+    def visitWhile_statement(self, ctx:pyGramParser.While_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_break.
-    def visitR_break(self, ctx:pyGramParser.R_breakContext):
+    # Visit a parse tree produced by pyGramParser#break_statement.
+    def visitBreak_statement(self, ctx:pyGramParser.Break_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_if.
-    def visitR_if(self, ctx:pyGramParser.R_ifContext):
+    # Visit a parse tree produced by pyGramParser#if_statement.
+    def visitIf_statement(self, ctx:pyGramParser.If_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_else.
-    def visitR_else(self, ctx:pyGramParser.R_elseContext):
+    # Visit a parse tree produced by pyGramParser#else_statement.
+    def visitElse_statement(self, ctx:pyGramParser.Else_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#r_print.
-    def visitR_print(self, ctx:pyGramParser.R_printContext):
+    # Visit a parse tree produced by pyGramParser#print_statement.
+    def visitPrint_statement(self, ctx:pyGramParser.Print_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by pyGramParser#variable_declaration.
-    def visitVariable_declaration(self, ctx:pyGramParser.Variable_declarationContext):
+    # Visit a parse tree produced by pyGramParser#variable_declaration_statement.
+    def visitVariable_declaration_statement(self, ctx:pyGramParser.Variable_declaration_statementContext):
         return self.visitChildren(ctx)
 
 

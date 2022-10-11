@@ -2,21 +2,21 @@ grammar pyGram;
 
 program: global_variables_declaration functions_declaration main_function_declaration;
 
-global_variables_declaration: variable_declaration*;
+global_variables_declaration: variable_declaration_statement*;
 functions_declaration: function_declaration*;
 
 main_function_declaration: KW_DEF KW_MAIN KW_PARENTHESIS_OPEN KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE
 ;
 
-function_body_statements: r_for function_body_statements
-| r_break function_body_statements
-| r_while function_body_statements
-| r_if r_else? function_body_statements
-| r_print function_body_statements
-| assigment function_body_statements
-| variable_declaration function_body_statements
-| function_call KW_SEMICOLON function_body_statements
-| r_return function_body_statements
+function_body_statements: forloop_statement function_body_statements
+| break_statement function_body_statements
+| while_statement function_body_statements
+| if_statement else_statement? function_body_statements
+| print_statement function_body_statements
+| assigment_statement function_body_statements
+| variable_declaration_statement function_body_statements
+| function_call_statement KW_SEMICOLON function_body_statements
+| return_statement function_body_statements
 |
 ;
 
@@ -24,30 +24,30 @@ function_declaration: KW_DEF ID KW_PARENTHESIS_OPEN (TYPE ID (KW_COMMA TYPE ID)*
 | KW_DEF ID KW_PARENTHESIS_OPEN (TYPE ID (KW_COMMA TYPE ID)*)? KW_PARENTHESIS_CLOSE (KW_VOID)? KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE #l_void
 ;
 
-r_return : KW_RETURN expr? KW_SEMICOLON;
+return_statement : KW_RETURN expr? KW_SEMICOLON;
 
-function_call returns [type]: ID KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE;
+function_call_statement returns [type]: ID KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE;
 
 // For each
-r_for returns [idx] : KW_FOR ID KW_IN RANGE KW_PARENTHESIS_OPEN (expr KW_COMMA)? expr KW_PARENTHESIS_CLOSE KW_COLON function_body_statements KW_BRACKETS_CLOSE;
+forloop_statement returns [idx] : KW_FOR ID KW_IN RANGE KW_PARENTHESIS_OPEN (expr KW_COMMA)? expr KW_PARENTHESIS_CLOSE KW_COLON function_body_statements KW_BRACKETS_CLOSE;
 
 //while
-r_while: KW_WHILE KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
-r_break : KW_BREAK KW_SEMICOLON;
+while_statement: KW_WHILE KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
+break_statement : KW_BREAK KW_SEMICOLON;
 
 // if
-r_if: KW_IF KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
+if_statement: KW_IF KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
 
-r_else: KW_ELSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
+else_statement: KW_ELSE KW_BRACKETS_OPEN function_body_statements KW_BRACKETS_CLOSE;
 
 // print
-r_print: PRINT KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE KW_SEMICOLON;
+print_statement: PRINT KW_PARENTHESIS_OPEN (expr (KW_COMMA expr)*)? KW_PARENTHESIS_CLOSE KW_SEMICOLON;
 
-variable_declaration: single_variable_declaration | multiple_variable_declaration;
+variable_declaration_statement: single_variable_declaration | multiple_variable_declaration;
 single_variable_declaration: TYPE ID (KW_ASSIGNMENT expr)? KW_SEMICOLON;
 multiple_variable_declaration: TYPE ID (KW_COMMA ID)* (KW_ASSIGNMENT expr (KW_COMMA expr)*)? KW_SEMICOLON;
 
-assigment: ID KW_ASSIGNMENT expr KW_SEMICOLON #e_assigment
+assigment_statement: ID KW_ASSIGNMENT expr KW_SEMICOLON #e_assigment
 | ID KW_ASSIGNMENT r_input KW_SEMICOLON #input
 ;
 
@@ -89,7 +89,7 @@ term6 returns [type]
 
 factor  returns [type]
         : KW_PARENTHESIS_OPEN expr KW_PARENTHESIS_CLOSE #l_expr// expr.type
-        | function_call #l_function_call//function_call.type
+        | function_call_statement #l_function_call//function_call.type
         | ID #l_id//symbol_table
         | INT_VALUE #l_int_value //integer
         | FLOAT_VALUE #l_float_value//float

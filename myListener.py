@@ -69,23 +69,23 @@ class myListener(pyGramListener):
         self.functions_args[function_id] = args
         self.jasmin.enter_function(function_id, args_names)
 
-    def enterR_return(self, ctx: pyGramParser.R_returnContext):
+    def enterReturn_statement(self, ctx: pyGramParser.Return_statementContext):
         if not self.__is_inside_function():
             raise ReturnException(ctx.start.line)
 
-    def exitR_return(self, ctx: pyGramParser.R_returnContext):
+    def exitReturn_statement(self, ctx: pyGramParser.Return_statementContext):
         # TODO : conferir se o tipo do retorno bate com o da função
         self.jasmin.do_return(ctx.expr().val, ctx.expr().type)
 
-    def enterFunction_call(self, ctx: pyGramParser.Function_callContext):
+    def enterFunction_call_statement(self, ctx: pyGramParser.Function_call_statementContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise UndeclaredVariable(ctx.start.line, ctx_id)
 
-    def enterR_if(self, ctx:pyGramParser.R_ifContext):
+    def enterIf_statement(self, ctx:pyGramParser.If_statementContext):
         ctx.expr().inh_type = 'if'
 
-    def enterR_for(self, ctx: pyGramParser.R_forContext):
+    def enterForloop_statement(self, ctx: pyGramParser.Forloop_statementContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise UndeclaredVariable(ctx.start.line, ctx_id)
@@ -106,19 +106,19 @@ class myListener(pyGramListener):
 
         self.stack_block.append('loop')
 
-    def enterR_while(self, ctx: pyGramParser.R_whileContext):
+    def enterWhile_statement(self, ctx: pyGramParser.While_statementContext):
         ctx.expr().inh_type = 'while'
         ctx.expr().inh = self.jasmin.enter_while(len(self.stack_block))
         self.stack_block.append('loop')
 
-    def enterR_break(self, ctx: pyGramParser.R_breakContext):
+    def enterBreak_statement(self, ctx: pyGramParser.Break_statementContext):
         if 'loop' not in self.stack_block:
             raise BreakException(ctx.start.line)
 
     def exitMain_function_declaration(self, ctx: pyGramParser.Main_function_declarationContext):
         self.jasmin.exit_main()
 
-    def exitR_if(self, ctx: pyGramParser.R_ifContext):
+    def exitIf_statement(self, ctx: pyGramParser.If_statementContext):
         if ctx.expr().type != 'boolean':
             raise UnexpectedTypeError(ctx.start.line, 'boolean', ctx.expr().type)
         self.jasmin.make_label('if_' + str(ctx.expr().end_label))
@@ -141,7 +141,7 @@ class myListener(pyGramListener):
         # for arg_id in ctx.ID()[1:]:
         #     del self.symbol_table[arg_id.getText()]
 
-    def exitFunction_call(self, ctx: pyGramParser.Function_callContext):
+    def exitFunction_call_statement(self, ctx: pyGramParser.Function_call_statementContext):
         function_id = ctx.ID().getText()
 
         if len(self.functions_args[function_id]) != len(ctx.expr()):
@@ -153,7 +153,7 @@ class myListener(pyGramListener):
 
         ctx.type = self.symbol_table[ctx.ID().getText()].type
 
-    def exitR_for(self, ctx: pyGramParser.R_forContext):
+    def exitForloop_statement(self, ctx: pyGramParser.Forloop_statementContext):
         self.stack_block.pop()
 
         ctx_id = ctx.ID().getText()
@@ -162,7 +162,7 @@ class myListener(pyGramListener):
         else:
             self.jasmin.exit_for(ctx_id, ctx.expr()[1].val, ctx.stack_idx)
 
-    def exitR_while(self, ctx: pyGramParser.R_whileContext):
+    def exitWhile_statement(self, ctx:pyGramParser.While_statementContext):
         if ctx.expr().type != 'boolean':
             raise UnexpectedTypeError(ctx.start.line, 'boolean', ctx.expr().type)
         self.stack_block.pop()
@@ -207,7 +207,7 @@ class myListener(pyGramListener):
 
         self.jasmin.input(ctx_id)
 
-    def exitR_print(self, ctx: pyGramParser.R_printContext):
+    def exitPrint_statement(self, ctx:pyGramParser.Print_statementContext):
         type_val = []
         for expr in ctx.expr():
             type_val.append((expr.type, expr.val))
@@ -390,5 +390,5 @@ class myListener(pyGramListener):
     def exitProgram(self, ctx: pyGramParser.ProgramContext):
         self.jasmin.close_file()
 
-    def exitR_break(self, ctx: pyGramParser.R_breakContext):
+    def exitBreak_statement(self, ctx:pyGramParser.Break_statementContext):
         self.jasmin.break_loop(len(self.stack_block) - 1)

@@ -178,18 +178,18 @@ class pyGramParser ( Parser ):
     RULE_main_function_declaration = 3
     RULE_function_body_statements = 4
     RULE_function_declaration = 5
-    RULE_r_return = 6
-    RULE_function_call = 7
-    RULE_r_for = 8
-    RULE_r_while = 9
-    RULE_r_break = 10
-    RULE_r_if = 11
-    RULE_r_else = 12
-    RULE_r_print = 13
-    RULE_variable_declaration = 14
+    RULE_return_statement = 6
+    RULE_function_call_statement = 7
+    RULE_forloop_statement = 8
+    RULE_while_statement = 9
+    RULE_break_statement = 10
+    RULE_if_statement = 11
+    RULE_else_statement = 12
+    RULE_print_statement = 13
+    RULE_variable_declaration_statement = 14
     RULE_single_variable_declaration = 15
     RULE_multiple_variable_declaration = 16
-    RULE_assigment = 17
+    RULE_assigment_statement = 17
     RULE_expr = 18
     RULE_term = 19
     RULE_term2 = 20
@@ -202,11 +202,12 @@ class pyGramParser ( Parser ):
 
     ruleNames =  [ "program", "global_variables_declaration", "functions_declaration", 
                    "main_function_declaration", "function_body_statements", 
-                   "function_declaration", "r_return", "function_call", 
-                   "r_for", "r_while", "r_break", "r_if", "r_else", "r_print", 
-                   "variable_declaration", "single_variable_declaration", 
-                   "multiple_variable_declaration", "assigment", "expr", 
-                   "term", "term2", "term3", "term4", "term5", "term6", 
+                   "function_declaration", "return_statement", "function_call_statement", 
+                   "forloop_statement", "while_statement", "break_statement", 
+                   "if_statement", "else_statement", "print_statement", 
+                   "variable_declaration_statement", "single_variable_declaration", 
+                   "multiple_variable_declaration", "assigment_statement", 
+                   "expr", "term", "term2", "term3", "term4", "term5", "term6", 
                    "factor", "r_input" ]
 
     EOF = Token.EOF
@@ -334,11 +335,11 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def variable_declaration(self, i:int=None):
+        def variable_declaration_statement(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pyGramParser.Variable_declarationContext)
+                return self.getTypedRuleContexts(pyGramParser.Variable_declaration_statementContext)
             else:
-                return self.getTypedRuleContext(pyGramParser.Variable_declarationContext,i)
+                return self.getTypedRuleContext(pyGramParser.Variable_declaration_statementContext,i)
 
 
         def getRuleIndex(self):
@@ -373,7 +374,7 @@ class pyGramParser ( Parser ):
             _la = self._input.LA(1)
             while _la==pyGramParser.TYPE:
                 self.state = 58
-                self.variable_declaration()
+                self.variable_declaration_statement()
                 self.state = 63
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -532,51 +533,51 @@ class pyGramParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def r_for(self):
-            return self.getTypedRuleContext(pyGramParser.R_forContext,0)
+        def forloop_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Forloop_statementContext,0)
 
 
         def function_body_statements(self):
             return self.getTypedRuleContext(pyGramParser.Function_body_statementsContext,0)
 
 
-        def r_break(self):
-            return self.getTypedRuleContext(pyGramParser.R_breakContext,0)
+        def break_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Break_statementContext,0)
 
 
-        def r_while(self):
-            return self.getTypedRuleContext(pyGramParser.R_whileContext,0)
+        def while_statement(self):
+            return self.getTypedRuleContext(pyGramParser.While_statementContext,0)
 
 
-        def r_if(self):
-            return self.getTypedRuleContext(pyGramParser.R_ifContext,0)
+        def if_statement(self):
+            return self.getTypedRuleContext(pyGramParser.If_statementContext,0)
 
 
-        def r_else(self):
-            return self.getTypedRuleContext(pyGramParser.R_elseContext,0)
+        def else_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Else_statementContext,0)
 
 
-        def r_print(self):
-            return self.getTypedRuleContext(pyGramParser.R_printContext,0)
+        def print_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Print_statementContext,0)
 
 
-        def assigment(self):
-            return self.getTypedRuleContext(pyGramParser.AssigmentContext,0)
+        def assigment_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Assigment_statementContext,0)
 
 
-        def variable_declaration(self):
-            return self.getTypedRuleContext(pyGramParser.Variable_declarationContext,0)
+        def variable_declaration_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Variable_declaration_statementContext,0)
 
 
-        def function_call(self):
-            return self.getTypedRuleContext(pyGramParser.Function_callContext,0)
+        def function_call_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Function_call_statementContext,0)
 
 
         def KW_SEMICOLON(self):
             return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
-        def r_return(self):
-            return self.getTypedRuleContext(pyGramParser.R_returnContext,0)
+        def return_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Return_statementContext,0)
 
 
         def getRuleIndex(self):
@@ -611,7 +612,7 @@ class pyGramParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 78
-                self.r_for()
+                self.forloop_statement()
                 self.state = 79
                 self.function_body_statements()
                 pass
@@ -619,7 +620,7 @@ class pyGramParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 81
-                self.r_break()
+                self.break_statement()
                 self.state = 82
                 self.function_body_statements()
                 pass
@@ -627,7 +628,7 @@ class pyGramParser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 84
-                self.r_while()
+                self.while_statement()
                 self.state = 85
                 self.function_body_statements()
                 pass
@@ -635,13 +636,13 @@ class pyGramParser ( Parser ):
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 87
-                self.r_if()
+                self.if_statement()
                 self.state = 89
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==pyGramParser.KW_ELSE:
                     self.state = 88
-                    self.r_else()
+                    self.else_statement()
 
 
                 self.state = 91
@@ -651,7 +652,7 @@ class pyGramParser ( Parser ):
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 93
-                self.r_print()
+                self.print_statement()
                 self.state = 94
                 self.function_body_statements()
                 pass
@@ -659,7 +660,7 @@ class pyGramParser ( Parser ):
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 96
-                self.assigment()
+                self.assigment_statement()
                 self.state = 97
                 self.function_body_statements()
                 pass
@@ -667,7 +668,7 @@ class pyGramParser ( Parser ):
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 99
-                self.variable_declaration()
+                self.variable_declaration_statement()
                 self.state = 100
                 self.function_body_statements()
                 pass
@@ -675,7 +676,7 @@ class pyGramParser ( Parser ):
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 102
-                self.function_call()
+                self.function_call_statement()
                 self.state = 103
                 self.match(pyGramParser.KW_SEMICOLON)
                 self.state = 104
@@ -685,7 +686,7 @@ class pyGramParser ( Parser ):
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 106
-                self.r_return()
+                self.return_statement()
                 self.state = 107
                 self.function_body_statements()
                 pass
@@ -940,7 +941,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_returnContext(ParserRuleContext):
+    class Return_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -958,29 +959,29 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_return
+            return pyGramParser.RULE_return_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_return" ):
-                listener.enterR_return(self)
+            if hasattr( listener, "enterReturn_statement" ):
+                listener.enterReturn_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_return" ):
-                listener.exitR_return(self)
+            if hasattr( listener, "exitReturn_statement" ):
+                listener.exitReturn_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_return" ):
-                return visitor.visitR_return(self)
+            if hasattr( visitor, "visitReturn_statement" ):
+                return visitor.visitReturn_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_return(self):
+    def return_statement(self):
 
-        localctx = pyGramParser.R_returnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_r_return)
+        localctx = pyGramParser.Return_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_return_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1005,7 +1006,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class Function_callContext(ParserRuleContext):
+    class Function_call_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1036,29 +1037,29 @@ class pyGramParser ( Parser ):
                 return self.getToken(pyGramParser.KW_COMMA, i)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_function_call
+            return pyGramParser.RULE_function_call_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunction_call" ):
-                listener.enterFunction_call(self)
+            if hasattr( listener, "enterFunction_call_statement" ):
+                listener.enterFunction_call_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunction_call" ):
-                listener.exitFunction_call(self)
+            if hasattr( listener, "exitFunction_call_statement" ):
+                listener.exitFunction_call_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunction_call" ):
-                return visitor.visitFunction_call(self)
+            if hasattr( visitor, "visitFunction_call_statement" ):
+                return visitor.visitFunction_call_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def function_call(self):
+    def function_call_statement(self):
 
-        localctx = pyGramParser.Function_callContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_function_call)
+        localctx = pyGramParser.Function_call_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_function_call_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1097,7 +1098,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_forContext(ParserRuleContext):
+    class Forloop_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1144,29 +1145,29 @@ class pyGramParser ( Parser ):
             return self.getToken(pyGramParser.KW_COMMA, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_for
+            return pyGramParser.RULE_forloop_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_for" ):
-                listener.enterR_for(self)
+            if hasattr( listener, "enterForloop_statement" ):
+                listener.enterForloop_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_for" ):
-                listener.exitR_for(self)
+            if hasattr( listener, "exitForloop_statement" ):
+                listener.exitForloop_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_for" ):
-                return visitor.visitR_for(self)
+            if hasattr( visitor, "visitForloop_statement" ):
+                return visitor.visitForloop_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_for(self):
+    def forloop_statement(self):
 
-        localctx = pyGramParser.R_forContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_r_for)
+        localctx = pyGramParser.Forloop_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_forloop_statement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 178
@@ -1208,7 +1209,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_whileContext(ParserRuleContext):
+    class While_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1239,29 +1240,29 @@ class pyGramParser ( Parser ):
             return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_while
+            return pyGramParser.RULE_while_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_while" ):
-                listener.enterR_while(self)
+            if hasattr( listener, "enterWhile_statement" ):
+                listener.enterWhile_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_while" ):
-                listener.exitR_while(self)
+            if hasattr( listener, "exitWhile_statement" ):
+                listener.exitWhile_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_while" ):
-                return visitor.visitR_while(self)
+            if hasattr( visitor, "visitWhile_statement" ):
+                return visitor.visitWhile_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_while(self):
+    def while_statement(self):
 
-        localctx = pyGramParser.R_whileContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_r_while)
+        localctx = pyGramParser.While_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_while_statement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 194
@@ -1287,7 +1288,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_breakContext(ParserRuleContext):
+    class Break_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1301,29 +1302,29 @@ class pyGramParser ( Parser ):
             return self.getToken(pyGramParser.KW_SEMICOLON, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_break
+            return pyGramParser.RULE_break_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_break" ):
-                listener.enterR_break(self)
+            if hasattr( listener, "enterBreak_statement" ):
+                listener.enterBreak_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_break" ):
-                listener.exitR_break(self)
+            if hasattr( listener, "exitBreak_statement" ):
+                listener.exitBreak_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_break" ):
-                return visitor.visitR_break(self)
+            if hasattr( visitor, "visitBreak_statement" ):
+                return visitor.visitBreak_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_break(self):
+    def break_statement(self):
 
-        localctx = pyGramParser.R_breakContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_r_break)
+        localctx = pyGramParser.Break_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_break_statement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 202
@@ -1339,7 +1340,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_ifContext(ParserRuleContext):
+    class If_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1370,29 +1371,29 @@ class pyGramParser ( Parser ):
             return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_if
+            return pyGramParser.RULE_if_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_if" ):
-                listener.enterR_if(self)
+            if hasattr( listener, "enterIf_statement" ):
+                listener.enterIf_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_if" ):
-                listener.exitR_if(self)
+            if hasattr( listener, "exitIf_statement" ):
+                listener.exitIf_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_if" ):
-                return visitor.visitR_if(self)
+            if hasattr( visitor, "visitIf_statement" ):
+                return visitor.visitIf_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_if(self):
+    def if_statement(self):
 
-        localctx = pyGramParser.R_ifContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_r_if)
+        localctx = pyGramParser.If_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_if_statement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 205
@@ -1418,7 +1419,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_elseContext(ParserRuleContext):
+    class Else_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1439,29 +1440,29 @@ class pyGramParser ( Parser ):
             return self.getToken(pyGramParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_else
+            return pyGramParser.RULE_else_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_else" ):
-                listener.enterR_else(self)
+            if hasattr( listener, "enterElse_statement" ):
+                listener.enterElse_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_else" ):
-                listener.exitR_else(self)
+            if hasattr( listener, "exitElse_statement" ):
+                listener.exitElse_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_else" ):
-                return visitor.visitR_else(self)
+            if hasattr( visitor, "visitElse_statement" ):
+                return visitor.visitElse_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_else(self):
+    def else_statement(self):
 
-        localctx = pyGramParser.R_elseContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_r_else)
+        localctx = pyGramParser.Else_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_else_statement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 213
@@ -1481,7 +1482,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class R_printContext(ParserRuleContext):
+    class Print_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1514,29 +1515,29 @@ class pyGramParser ( Parser ):
                 return self.getToken(pyGramParser.KW_COMMA, i)
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_r_print
+            return pyGramParser.RULE_print_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterR_print" ):
-                listener.enterR_print(self)
+            if hasattr( listener, "enterPrint_statement" ):
+                listener.enterPrint_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitR_print" ):
-                listener.exitR_print(self)
+            if hasattr( listener, "exitPrint_statement" ):
+                listener.exitPrint_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitR_print" ):
-                return visitor.visitR_print(self)
+            if hasattr( visitor, "visitPrint_statement" ):
+                return visitor.visitPrint_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def r_print(self):
+    def print_statement(self):
 
-        localctx = pyGramParser.R_printContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_r_print)
+        localctx = pyGramParser.Print_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_print_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1577,7 +1578,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class Variable_declarationContext(ParserRuleContext):
+    class Variable_declaration_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1593,29 +1594,29 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_variable_declaration
+            return pyGramParser.RULE_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariable_declaration" ):
-                listener.enterVariable_declaration(self)
+            if hasattr( listener, "enterVariable_declaration_statement" ):
+                listener.enterVariable_declaration_statement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariable_declaration" ):
-                listener.exitVariable_declaration(self)
+            if hasattr( listener, "exitVariable_declaration_statement" ):
+                listener.exitVariable_declaration_statement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariable_declaration" ):
-                return visitor.visitVariable_declaration(self)
+            if hasattr( visitor, "visitVariable_declaration_statement" ):
+                return visitor.visitVariable_declaration_statement(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def variable_declaration(self):
+    def variable_declaration_statement(self):
 
-        localctx = pyGramParser.Variable_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_variable_declaration)
+        localctx = pyGramParser.Variable_declaration_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_variable_declaration_statement)
         try:
             self.state = 235
             self._errHandler.sync(self)
@@ -1828,7 +1829,7 @@ class pyGramParser ( Parser ):
         return localctx
 
 
-    class AssigmentContext(ParserRuleContext):
+    class Assigment_statementContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1837,7 +1838,7 @@ class pyGramParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return pyGramParser.RULE_assigment
+            return pyGramParser.RULE_assigment_statement
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -1845,9 +1846,9 @@ class pyGramParser ( Parser ):
 
 
 
-    class InputContext(AssigmentContext):
+    class InputContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.AssigmentContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
@@ -1876,9 +1877,9 @@ class pyGramParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class E_assigmentContext(AssigmentContext):
+    class E_assigmentContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.AssigmentContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a pyGramParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
@@ -1908,10 +1909,10 @@ class pyGramParser ( Parser ):
 
 
 
-    def assigment(self):
+    def assigment_statement(self):
 
-        localctx = pyGramParser.AssigmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_assigment)
+        localctx = pyGramParser.Assigment_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_assigment_statement)
         try:
             self.state = 277
             self._errHandler.sync(self)
@@ -3014,8 +3015,8 @@ class pyGramParser ( Parser ):
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def function_call(self):
-            return self.getTypedRuleContext(pyGramParser.Function_callContext,0)
+        def function_call_statement(self):
+            return self.getTypedRuleContext(pyGramParser.Function_call_statementContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -3057,7 +3058,7 @@ class pyGramParser ( Parser ):
                 localctx = pyGramParser.L_function_callContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 354
-                self.function_call()
+                self.function_call_statement()
                 pass
 
             elif la_ == 3:
