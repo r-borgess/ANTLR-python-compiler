@@ -6,22 +6,31 @@ class Id:
         self.local = local
 
 
-def type_convert(type):
-    descriptor = {'int': 'I', 'real': 'F', 'float': 'F', 'string': 'Ljava/lang/String;', 'boolean': 'Z', 'NoneType': 'V',
-                  'integer': 'I'}
+def translate_type_name(type):
+    descriptor = {
+        'NoneType': 'V',
+        'boolean': 'Z',
+        'int': 'I',
+        'integer': 'I',
+        'real': 'F',
+        'float': 'F',
+        'string': 'Ljava/lang/String;',
+    }
     return descriptor[type]
 
 
 class JasminCodeGenerator:
-    MAX_LOCALS = 100
+    MAX_LOCAL_NUMBER = 100
 
     def __init__(self, name, symbol_table):
         self.name = name
-        self.file = open(name + '.j', 'w+')
-        self.start_file()
-        self.symbol_table = symbol_table
-        self.top_index = 0
-        self.label_count = 0
+        self.file = self.initialize_file(f"{name}.j", symbol_table)
+
+    def initialize_file(self, filename, symbol_table):
+        self.file = open(filename, 'w+')
+        self.write_jasmin_header()
+        self.symbol_table =
+        self.top_index, self.label_count = 0, 0
 
     def close_file(self):
         self.file.close()
@@ -36,13 +45,13 @@ class JasminCodeGenerator:
         self.__write(
             """
             .field public static {} {}
-            """.format(var_name, type_convert(var_type))
+            """.format(var_name, translate_type_name(var_type))
         )
 
     def create_local(self, var_name, var_type):
-        self.store_var(var_name, 0)
+        self.write_variable_store(var_name, 0)
 
-    def start_file(self):
+    def write_jasmin_header(self):
         self.__write(
             """
             .class public {}
@@ -50,16 +59,16 @@ class JasminCodeGenerator:
             """.format(self.name)
         )
 
-    def enter_main(self):
+    def write_main_function_declaration(self):
         self.__write(
             """
             .method public static main([Ljava/lang/String;)V
             .limit stack 10
             .limit locals {}
-            """.format(self.MAX_LOCALS)
+            """.format(self.MAX_LOCAL_NUMBER)
         )
 
-    def exit_main(self):
+    def write_main_function_end(self):
         self.__write(
             """
             return
@@ -67,43 +76,43 @@ class JasminCodeGenerator:
             """
         )
 
-    def enter_function(self, name, parameters):  # TODO: receive parameters
+    def write_function_declaration(self, name, parameters):
         param = ''
         for p in parameters:
-            param += type_convert(self.symbol_table[p].type)
+            param += translate_type_name(self.symbol_table[p].type)
         self.__write(
             """
             .method public static {}({}){}
             .limit stack 5
             .limit locals {}
-            """.format(name, param, type_convert(self.symbol_table[name].type), self.MAX_LOCALS)
+            """.format(name, param, translate_type_name(self.symbol_table[name].type), self.MAX_LOCAL_NUMBER)
         )
         for idx, p in enumerate(parameters):
             self.symbol_table[p].address = idx
             self.symbol_table[p].local = True
 
-    def exit_function(self):
+    def write_function_end(self):
         self.__write(
             """
             .end method
             """
         )
 
-    def function_call(self, func_name, params, types):
+    def write_function_call(self, func_name, params, types):
         func_type = self.symbol_table[func_name].type
         args = ''
         for p, t in zip(params, types):
-            self.load_temp(p, t)
-            args += type_convert(t)
+            self.write_loadimmediate_code(p, t)
+            args += translate_type_name(t)
         self.__write(
             """
             invokestatic {}.{}({}){}
-            """.format(self.name, func_name, args, type_convert(func_type))
+            """.format(self.name, func_name, args, translate_type_name(func_type))
         )
-        return self.store_val(func_type)
+        return self.write_value_store(func_type)
 
-    def do_return(self, val, type):
-        return_type = type_convert(type)
+    def write_function_return(self, val, type):
+        return_type = translate_type_name(type)
         if (return_type == 'V'):
             self.__write(
                 """
@@ -111,8 +120,7 @@ class JasminCodeGenerator:
                 """
             )
             return
-
-        self.load_temp(val, type)
+        self.write_loadimmediate_code(val, type)
         if return_type == 'I':
             self.__write(
                 """
@@ -145,11 +153,11 @@ class JasminCodeGenerator:
                 getstatic java/lang/System/out Ljava/io/PrintStream;
                 """
             )
-            self.load_temp(val, type)
+            self.write_loadimmediate_code(val, type)
             self.__write(
                 """
                 invokevirtual java/io/PrintStream/print({})V
-                """.format(type_convert(type))
+                """.format(translate_type_name(type))
             )
             self.__write(
                 """
@@ -166,9 +174,9 @@ class JasminCodeGenerator:
             """
         )
 
-    def mul(self, type, add1, add2):
-        self.load_temp(add1, type)
-        self.load_temp(add2, type)
+    def write_multiplication_code(self, type, add1, add2):
+        self.write_loadimmediate_code(add1, type)
+        self.write_loadimmediate_code(add2, type)
         if type == 'int' or type == 'integer':
             self.__write(
                 """
@@ -181,11 +189,11 @@ class JasminCodeGenerator:
                 fmul
                 """
             )
-        return self.store_val(type)
+        return self.write_value_store(type)
 
-    def div(self, type, add1, add2):
-        self.load_temp(add1, type)
-        self.load_temp(add2, type)
+    def write_division_code(self, type, add1, add2):
+        self.write_loadimmediate_code(add1, type)
+        self.write_loadimmediate_code(add2, type)
         if type == 'int':
             self.__write(
                 """
@@ -198,49 +206,49 @@ class JasminCodeGenerator:
                 fdiv
                 """
             )
-        return self.store_val(type)
+        return self.write_value_store(type)
 
-    def calc_not(self, val):
-        self.load_temp(val, 'boolean')
+    def write_notoperator_code(self, val):
+        self.write_loadimmediate_code(val, 'boolean')
         self.__write(
             """
             ldc 1
             ixor
             """
         )
-        return self.store_val('boolean')
+        return self.write_value_store('boolean')
 
-    def calc_and(self, val1, val2):
-        self.load_temp(val1, 'boolean')
-        self.load_temp(val2, 'boolean')
+    def write_andoperator_code(self, val1, val2):
+        self.write_loadimmediate_code(val1, 'boolean')
+        self.write_loadimmediate_code(val2, 'boolean')
         self.__write(
             """
             iand
             """
         )
-        return self.store_val('boolean')
+        return self.write_value_store('boolean')
 
-    def calc_or(self, val1, val2):
-        self.load_temp(val1, 'boolean')
-        self.load_temp(val2, 'boolean')
+    def write_oroperator_code(self, val1, val2):
+        self.write_loadimmediate_code(val1, 'boolean')
+        self.write_loadimmediate_code(val2, 'boolean')
         self.__write(
             """
             ior
             """
         )
-        return self.store_val('boolean')
+        return self.write_value_store('boolean')
 
-    def calc_eq(self, type, val1, val2, label_id, op):
+    def write_equaloperator_code(self, type, val1, val2, label_id, op):
         cmp = {
-            '==': 'eq',
             '!=': 'ne',
+            '==': 'eq',
+            '<=': 'le',
             '>=': 'ge',
             '>': 'gt',
-            '<=': 'le',
-            '<': 'lt'
+            '<': 'lt',
         }
-        self.load_temp(val1, type)
-        self.load_temp(val2, type)
+        self.write_loadimmediate_code(val1, type)
+        self.write_loadimmediate_code(val2, type)
         if type in ['int', 'integer', 'boolean']:
             self.__write(
                 """
@@ -268,9 +276,9 @@ class JasminCodeGenerator:
             cmp_end{}:
             """.format(label_id, label_id, label_id, label_id)
         )
-        return self.store_val('boolean')
+        return self.write_value_store('boolean')
 
-    def store_val(self, type):
+    def write_value_store(self, type):
         if type == 'string':
             self.__write(
                 """
@@ -292,7 +300,7 @@ class JasminCodeGenerator:
         self.top_index += 1
         return self.top_index - 1
 
-    def load_var(self, var):
+    def write_variable_load(self, var):
         var_data = self.symbol_table[var]
         if var_data.local:  # local var
             if var_data.type == 'int' or var_data.type == 'boolean':
@@ -317,11 +325,11 @@ class JasminCodeGenerator:
             self.__write(
                 """
                 getstatic {}/{} {}
-                """.format(self.name, var, type_convert(self.symbol_table[var].type))
+                """.format(self.name, var, translate_type_name(self.symbol_table[var].type))
             )
-        return self.store_val(var_data.type)
+        return self.write_value_store(var_data.type)
 
-    def store_var(self, var, address):
+    def write_variable_store(self, var, address):
         var_data = self.symbol_table[var]
         if var_data.local == True:  # local var
             if var_data.type == 'int' or var_data.type == 'boolean':
@@ -340,14 +348,14 @@ class JasminCodeGenerator:
                 )
             # TODO: tratar string
         else:  # global var
-            self.load_temp(address, self.symbol_table[var].type)
+            self.write_loadimmediate_code(address, self.symbol_table[var].type)
             self.__write(
                 """
                 putstatic {}/{} {}
-                """.format(self.name, var, type_convert(self.symbol_table[var].type))
+                """.format(self.name, var, translate_type_name(self.symbol_table[var].type))
             )
 
-    def input(self, name):
+    def write_inputfunction_code(self, name):
         t = self.symbol_table[name].type
         self.__write(
             """
@@ -367,26 +375,26 @@ class JasminCodeGenerator:
             self.__write(
                 """
                 invokevirtual java/util/Scanner/nextInt()I
-                """.format(type_convert(self.symbol_table[name].type))
+                """.format(translate_type_name(self.symbol_table[name].type))
             )
         elif t == 'real':
             self.__write(
                 """
                 invokevirtual java/util/Scanner/nextFloat()F
-                """.format(type_convert(self.symbol_table[name].type))
+                """.format(translate_type_name(self.symbol_table[name].type))
             )
         elif t == 'boolean':
             self.__write(
                 """
                 invokevirtual java/util/Scanner/nextBoolean()Z
-                """.format(type_convert(self.symbol_table[name].type))
+                """.format(translate_type_name(self.symbol_table[name].type))
             )
-        addr = self.store_val(self.symbol_table[name].type)
-        self.store_var(name, addr)
+        addr = self.write_value_store(self.symbol_table[name].type)
+        self.write_variable_store(name, addr)
 
-    def add(self, type, add1, add2):
-        self.load_temp(add1, type)
-        self.load_temp(add2, type)
+    def write_addoperator_code(self, type, add1, add2):
+        self.write_loadimmediate_code(add1, type)
+        self.write_loadimmediate_code(add2, type)
         if type == 'int':
             self.__write(
                 """
@@ -400,11 +408,11 @@ class JasminCodeGenerator:
                 """
             )
         # TODO : soma de string
-        return self.store_val(type)
+        return self.write_value_store(type)
 
-    def sub(self, type, add1, add2):
-        self.load_temp(add1, type)
-        self.load_temp(add2, type)
+    def write_suboperator_code(self, type, add1, add2):
+        self.write_loadimmediate_code(add1, type)
+        self.write_loadimmediate_code(add2, type)
         if type == 'int':
             self.__write(
                 """
@@ -417,9 +425,9 @@ class JasminCodeGenerator:
                 fsub
                 """
             )
-        return self.store_val(type)
+        return self.write_value_store(type)
 
-    def load_temp(self, val, type):
+    def write_loadimmediate_code(self, val, type):
         if type == 'int' or type == 'integer' or type == 'boolean':
             self.__write(
                 """
@@ -439,24 +447,24 @@ class JasminCodeGenerator:
                 """.format(val)
             )
 
-    def create_temp(self, val, type):
+    def write_store_code(self, val, type):
         self.__write(
             """
             ldc {}
             """.format(val)
         )
-        return self.store_val(type)
+        return self.write_value_store(type)
 
-    def int_to_real(self, val):
-        self.load_temp(val, "int")
+    def write_integertofloat_code(self, val):
+        self.write_loadimmediate_code(val, "int")
         self.__write(
             """
             i2f
             """
         )
-        return self.store_val("real")
+        return self.write_value_store("real")
 
-    def enter_while(self, loop_idx):
+    def write_dowhileenter_code(self, loop_idx):
         self.__write(
             """
             enter_while{}:
@@ -464,7 +472,7 @@ class JasminCodeGenerator:
         )
         return "iload {}\n" + "ldc 1\nif_icmpne break{}".format(loop_idx)
 
-    def exit_while(self, loop_idx):
+    def write_dowhileexit_code(self, loop_idx):
         self.__write(
             """
             goto enter_while{}
@@ -472,7 +480,7 @@ class JasminCodeGenerator:
             """.format(loop_idx, loop_idx)
         )
 
-    def enter_for(self, loop_idx, one_expr, id):
+    def write_forenter_code(self, loop_idx, one_expr, id):
         if one_expr:
             self.__write(
             """
@@ -482,29 +490,29 @@ class JasminCodeGenerator:
             self.__write(
                 """
                 putstatic {}/{} {}
-                """.format(self.name, id, type_convert(self.symbol_table[id].type))
+                """.format(self.name, id, translate_type_name(self.symbol_table[id].type))
             )
             return "for{}:\n goto test_for{}\n enter_for{}:\n".format(loop_idx, loop_idx, loop_idx)
         else:
             return "for{}:\n goto test_for{}\n enter_for{}:\n".format(loop_idx, loop_idx, loop_idx)
 
-    def exit_for(self, id, end, loop_idx):
-        val = self.load_var(id)
+    def write_forexit_code(self, id, end, loop_idx):
+        val = self.write_variable_load(id)
         self.__write(
             """
             iinc {} +1
             """.format(val)
         )
-        self.store_var(id, val)
+        self.write_variable_store(id, val)
         self.__write(
             """
             goto for{}
             test_for{}:
             """.format(loop_idx, loop_idx)
         )
-        val = self.load_var(id)
-        self.load_temp(val, 'int')
-        self.load_temp(end, 'int')
+        val = self.write_variable_load(id)
+        self.write_loadimmediate_code(val, 'int')
+        self.write_loadimmediate_code(end, 'int')
         self.__write(
             """
             if_icmpge break{}
@@ -513,7 +521,7 @@ class JasminCodeGenerator:
             """.format(loop_idx, loop_idx, loop_idx)
         )
 
-    def break_loop(self, break_point):
+    def write_loopbreak_code(self, break_point):
         self.__write(
             """
             goto break{}
@@ -523,8 +531,8 @@ class JasminCodeGenerator:
     def write_inh(self, line):
         self.__write(line)
 
-    def enter_if(self, id):
-        self.load_temp(id, 'integer')
+    def write_ifenter_code(self, id):
+        self.write_loadimmediate_code(id, 'integer')
         self.__write(
             """
             ldc 0
@@ -534,7 +542,7 @@ class JasminCodeGenerator:
         self.label_count += 1
         return self.label_count - 1
 
-    def make_label(self, label_name):
+    def write_labelname(self, label_name):
         self.__write(
             """
             {}:
