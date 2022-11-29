@@ -1,4 +1,4 @@
-grammar Raimundo;
+grammar PythonS;
 
 program: global_variables_declaration functions_declaration main_function_declaration;
 
