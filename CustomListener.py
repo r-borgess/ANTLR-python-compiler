@@ -1,10 +1,10 @@
-from gen.RaimundoParser import RaimundoParser as RaimundoParserLib
+from gen.PythonSParser import PythonSParser as PythonSParserLib
 from JasminGenerator import JasminCodeGenerator, CustomListener
-from gen.RaimundoListener import RaimundoListener as RaimundoListenerLib
+from gen.PythonSListener import PythonSListener as PythonSListenerLib
 from CustomExceptions import *
 
 
-class CustomListener(RaimundoListenerLib):
+class CustomListener(PythonSListenerLib):
     symbol_table = {}
     functions_args = {}
     stack_block = []
@@ -19,10 +19,10 @@ class CustomListener(RaimundoListenerLib):
     def __is_inside_function(self):
         return 'function' in self.stack_block
 
-    def enterMain_function_declaration(self, ctx: RaimundoParserLib.Main_function_declarationContext):
+    def enterMain_function_declaration(self, ctx: PythonSParserLib.Main_function_declarationContext):
         self.jasmin.write_main_function_declaration()
 
-    def enterL_type(self, ctx: RaimundoParserLib.L_typeContext):
+    def enterL_type(self, ctx: PythonSParserLib.L_typeContext):
         self.stack_block.append('function')
         function_id = ctx.ID(0).getText()
         if function_id in self.symbol_table:
@@ -43,7 +43,7 @@ class CustomListener(RaimundoListenerLib):
         self.functions_args[function_id] = args
         self.jasmin.write_function_declaration(function_id, args_names)
 
-    def enterL_void(self, ctx: RaimundoParserLib.L_voidContext):
+    def enterL_void(self, ctx: PythonSParserLib.L_voidContext):
         self.stack_block.append('function')
         function_id = ctx.ID(0).getText()
         if function_id in self.symbol_table:
@@ -63,22 +63,22 @@ class CustomListener(RaimundoListenerLib):
         self.functions_args[function_id] = args
         self.jasmin.write_function_declaration(function_id, args_names)
 
-    def enterReturn_statement(self, ctx: RaimundoParserLib.Return_statementContext):
+    def enterReturn_statement(self, ctx: PythonSParserLib.Return_statementContext):
         if not self.__is_inside_function():
             raise ReturnException(ctx.start.line)
 
-    def exitReturn_statement(self, ctx: RaimundoParserLib.Return_statementContext):
+    def exitReturn_statement(self, ctx: PythonSParserLib.Return_statementContext):
         self.jasmin.write_function_return(ctx.expr().val, ctx.expr().type)
 
-    def enterFunction_call_statement(self, ctx: RaimundoParserLib.Function_call_statementContext):
+    def enterFunction_call_statement(self, ctx: PythonSParserLib.Function_call_statementContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
 
-    def enterIf_statement(self, ctx:RaimundoParserLib.If_statementContext):
+    def enterIf_statement(self, ctx:PythonSParserLib.If_statementContext):
         ctx.expr().inh_type = 'if'
 
-    def enterForloop_statement(self, ctx: RaimundoParserLib.Forloop_statementContext):
+    def enterForloop_statement(self, ctx: PythonSParserLib.Forloop_statementContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -98,34 +98,34 @@ class CustomListener(RaimundoListenerLib):
 
         self.stack_block.append('loop')
 
-    def enterWhile_statement(self, ctx: RaimundoParserLib.While_statementContext):
+    def enterWhile_statement(self, ctx: PythonSParserLib.While_statementContext):
         ctx.expr().inh_type = 'while'
         ctx.expr().inh = self.jasmin.write_dowhileenter_code(len(self.stack_block))
         self.stack_block.append('loop')
 
-    def enterBreak_statement(self, ctx: RaimundoParserLib.Break_statementContext):
+    def enterBreak_statement(self, ctx: PythonSParserLib.Break_statementContext):
         if 'loop' not in self.stack_block:
             raise BreakException(ctx.start.line)
 
-    def exitMain_function_declaration(self, ctx: RaimundoParserLib.Main_function_declarationContext):
+    def exitMain_function_declaration(self, ctx: PythonSParserLib.Main_function_declarationContext):
         self.jasmin.write_main_function_end()
 
-    def exitIf_statement(self, ctx: RaimundoParserLib.If_statementContext):
+    def exitIf_statement(self, ctx: PythonSParserLib.If_statementContext):
         if ctx.expr().type != 'boolean':
             raise UnexpectedTypeError(ctx.start.line, 'boolean', ctx.expr().type)
         self.jasmin.write_labelname('if_' + str(ctx.expr().end_label))
 
-    def exitL_type(self, ctx: RaimundoParserLib.L_typeContext):
+    def exitL_type(self, ctx: PythonSParserLib.L_typeContext):
         self.jasmin.write_function_end()
         self.stack_block.pop()
 
-    def exitL_void(self, ctx: RaimundoParserLib.L_voidContext):
+    def exitL_void(self, ctx: PythonSParserLib.L_voidContext):
         self.jasmin.write_function_return(None, 'NoneType')
         self.jasmin.write_function_end()
         self.stack_block.pop()
 
 
-    def exitFunction_call_statement(self, ctx: RaimundoParserLib.Function_call_statementContext):
+    def exitFunction_call_statement(self, ctx: PythonSParserLib.Function_call_statementContext):
         function_id = ctx.ID().getText()
 
         if len(self.functions_args[function_id]) != len(ctx.expr()):
@@ -137,7 +137,7 @@ class CustomListener(RaimundoListenerLib):
 
         ctx.type = self.symbol_table[ctx.ID().getText()].type
 
-    def exitForloop_statement(self, ctx: RaimundoParserLib.Forloop_statementContext):
+    def exitForloop_statement(self, ctx: PythonSParserLib.Forloop_statementContext):
         self.stack_block.pop()
 
         ctx_id = ctx.ID().getText()
@@ -146,42 +146,42 @@ class CustomListener(RaimundoListenerLib):
         else:
             self.jasmin.write_forexit_code(ctx_id, ctx.expr()[1].val, ctx.stack_idx)
 
-    def exitWhile_statement(self, ctx:RaimundoParserLib.While_statementContext):
+    def exitWhile_statement(self, ctx:PythonSParserLib.While_statementContext):
         if ctx.expr().type != 'boolean':
             raise UnexpectedTypeError(ctx.start.line, 'boolean', ctx.expr().type)
         self.stack_block.pop()
         self.jasmin.write_dowhileexit_code(len(self.stack_block))
 
 
-    def exitGlobal_single_variable_declaration_statement(self, ctx:RaimundoParserLib.Global_single_variable_declaration_statementContext):
+    def exitGlobal_single_variable_declaration_statement(self, ctx:PythonSParserLib.Global_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
         self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
         self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitGlobal_multiple_variable_declaration_statement(self, ctx:RaimundoParserLib.Global_multiple_variable_declaration_statementContext):
+    def exitGlobal_multiple_variable_declaration_statement(self, ctx:PythonSParserLib.Global_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
             self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
             self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitLocal_single_variable_declaration_statement(self, ctx:RaimundoParserLib.Local_single_variable_declaration_statementContext):
+    def exitLocal_single_variable_declaration_statement(self, ctx:PythonSParserLib.Local_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
         self.symbol_table[token.getText()] = CustomListener(address=0, type=ctx.TYPE().getText(), local=True)
         self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
-    def exitLocal_multiple_variable_declaration_statement(self, ctx:RaimundoParserLib.Local_multiple_variable_declaration_statementContext):
+    def exitLocal_multiple_variable_declaration_statement(self, ctx:PythonSParserLib.Local_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
             self.symbol_table[token.getText()] = CustomListener(address=0, type=ctx.TYPE().getText(), local=True)
             self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
-    def exitE_assigment(self, ctx: RaimundoParserLib.E_assigmentContext):
+    def exitE_assigment(self, ctx: PythonSParserLib.E_assigmentContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -193,7 +193,7 @@ class CustomListener(RaimundoListenerLib):
 
         self.jasmin.write_variable_store(ctx_id, ctx.expr().val)
 
-    def exitE_plus_assigment(self, ctx:RaimundoParserLib.E_plus_assigmentContext):
+    def exitE_plus_assigment(self, ctx:PythonSParserLib.E_plus_assigmentContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -206,7 +206,7 @@ class CustomListener(RaimundoListenerLib):
         new_value = self.symbol_table[ctx_id].val + ctx.expr().val
         self.jasmin.write_variable_store(ctx_id, new_value)
 
-    def exitE_mult_assigment(self, ctx:RaimundoParserLib.E_mult_assigmentContext):
+    def exitE_mult_assigment(self, ctx:PythonSParserLib.E_mult_assigmentContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -220,20 +220,20 @@ class CustomListener(RaimundoListenerLib):
         self.jasmin.write_variable_store(ctx_id, new_value)
 
     
-    def exitInput(self, ctx: RaimundoParserLib.InputContext):
+    def exitInput(self, ctx: PythonSParserLib.InputContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
 
         self.jasmin.write_inputfunction_code(ctx_id)
 
-    def exitPrint_statement(self, ctx:RaimundoParserLib.Print_statementContext):
+    def exitPrint_statement(self, ctx:PythonSParserLib.Print_statementContext):
         type_val = []
         for expr in ctx.expr():
             type_val.append((expr.type, expr.val))
         self.jasmin.print(type_val)
 
-    def exitOr_logic(self, ctx: RaimundoParserLib.Or_logicContext):
+    def exitOr_logic(self, ctx: PythonSParserLib.Or_logicContext):
         if ctx.expr().type != 'boolean':
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.expr().type)
         elif ctx.term().type != 'boolean':
@@ -246,7 +246,7 @@ class CustomListener(RaimundoListenerLib):
         if ctx.inh_type == 'while':
             self.jasmin.write_inh(ctx.inh.format(ctx.val))
 
-    def exitE_term(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term().type
         ctx.val = ctx.term().val
 
@@ -259,7 +259,7 @@ class CustomListener(RaimundoListenerLib):
         elif ctx.inh_type == 'if':
             ctx.end_label = self.jasmin.write_ifenter_code(ctx.val)
 
-    def exitAnd_logic(self, ctx: RaimundoParserLib.Or_logicContext):
+    def exitAnd_logic(self, ctx: PythonSParserLib.Or_logicContext):
         if ctx.term().type != 'boolean':
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term().type)
         elif ctx.term2().type != 'boolean':
@@ -269,33 +269,33 @@ class CustomListener(RaimundoListenerLib):
 
         ctx.val = self.jasmin.write_andoperator_code(ctx.term().val, ctx.term2().val)
 
-    def exitE_term2(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term2(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term2().type
         ctx.val = ctx.term2().val
 
-    def exitComp_logic(self, ctx: RaimundoParserLib.Comp_logicContext):
+    def exitComp_logic(self, ctx: PythonSParserLib.Comp_logicContext):
         if ctx.term2().type != ctx.term3().type:
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term2().type, ctx.term3().type)
         ctx.type = 'boolean'
         ctx.val = self.jasmin.write_equaloperator_code(ctx.term2().type, ctx.term2().val, ctx.term3().val, self.label_id, ctx.op.text)
         self.label_id += 1
 
-    def exitE_term3(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term3(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term3().type
         ctx.val = ctx.term3().val
 
-    def exitEq_logic(self, ctx: RaimundoParserLib.Eq_logicContext):
+    def exitEq_logic(self, ctx: PythonSParserLib.Eq_logicContext):
         if ctx.term3().type != ctx.term4().type:
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term3().type, ctx.term4().type)
         ctx.type = 'boolean'
         ctx.val = self.jasmin.write_equaloperator_code(ctx.term3().type, ctx.term3().val, ctx.term4().val, self.label_id, ctx.op.text)
         self.label_id += 1
 
-    def exitE_term4(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term4(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term4().type
         ctx.val = ctx.term4().val
 
-    def exitSum_minus(self, ctx: RaimundoParserLib.Sum_minusContext):
+    def exitSum_minus(self, ctx: PythonSParserLib.Sum_minusContext):
         if not self.__is_numeric(ctx.term4().type):
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term4().type)
         elif not self.__is_numeric(ctx.term5().type):
@@ -318,11 +318,11 @@ class CustomListener(RaimundoListenerLib):
         else:
             ctx.val = self.jasmin.write_suboperator_code(ctx.type, val1, val2)
 
-    def exitE_term5(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term5(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term5().type
         ctx.val = ctx.term5().val
 
-    def exitTime_div(self, ctx: RaimundoParserLib.Time_divContext):
+    def exitTime_div(self, ctx: PythonSParserLib.Time_divContext):
         if not self.__is_numeric(ctx.term5().type):
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term5().type)
         if not self.__is_numeric(ctx.term6().type):
@@ -345,11 +345,11 @@ class CustomListener(RaimundoListenerLib):
         else:
             ctx.val = self.jasmin.write_division_code(ctx.type, val1, val2)
 
-    def exitE_term6(self, ctx: RaimundoParserLib.E_termContext):
+    def exitE_term6(self, ctx: PythonSParserLib.E_termContext):
         ctx.type = ctx.term6().type
         ctx.val = ctx.term6().val
 
-    def exitMinus_not(self, ctx: RaimundoParserLib.Minus_notContext):
+    def exitMinus_not(self, ctx: PythonSParserLib.Minus_notContext):
         if ctx.op.text == '-':
             if self.__is_numeric(ctx.term6().type):
                 ctx.type = ctx.term6().type
@@ -363,15 +363,15 @@ class CustomListener(RaimundoListenerLib):
 
             ctx.val = self.jasmin.write_notoperator_code(ctx.term6().val)
 
-    def exitE_factor(self, ctx: RaimundoParserLib.E_factorContext):
+    def exitE_factor(self, ctx: PythonSParserLib.E_factorContext):
         ctx.type = ctx.factor().type
         ctx.val = ctx.factor().val
 
-    def exitL_expr(self, ctx: RaimundoParserLib.L_exprContext):
+    def exitL_expr(self, ctx: PythonSParserLib.L_exprContext):
         ctx.type = ctx.expr().type
         ctx.val = ctx.expr().val
 
-    def exitL_id(self, ctx: RaimundoParserLib.L_idContext):
+    def exitL_id(self, ctx: PythonSParserLib.L_idContext):
         ctx_id = ctx.ID().getText()
 
         if ctx_id not in self.symbol_table:
@@ -379,23 +379,23 @@ class CustomListener(RaimundoListenerLib):
         ctx.type = self.symbol_table[ctx_id].type
         ctx.val = self.jasmin.write_variable_load(ctx_id)
 
-    def exitL_int_value(self, ctx: RaimundoParserLib.L_int_valueContext):
+    def exitL_int_value(self, ctx: PythonSParserLib.L_int_valueContext):
         ctx.type = 'int'
         ctx.val = self.jasmin.write_store_code(ctx.getText(), ctx.type)
 
-    def exitL_float_value(self, ctx: RaimundoParserLib.L_float_valueContext):
+    def exitL_float_value(self, ctx: PythonSParserLib.L_float_valueContext):
         ctx.type = 'real'
         ctx.val = self.jasmin.write_store_code(ctx.getText(), ctx.type)
 
-    def exitL_str_value(self, ctx: RaimundoParserLib.L_str_valueContext):
+    def exitL_str_value(self, ctx: PythonSParserLib.L_str_valueContext):
         ctx.type = 'string'
         ctx.val = self.jasmin.write_store_code(ctx.getText(), ctx.type)
 
-    def exitL_bool_value(self, ctx: RaimundoParserLib.L_bool_valueContext):
+    def exitL_bool_value(self, ctx: PythonSParserLib.L_bool_valueContext):
         ctx.type = 'boolean'
         ctx.val = self.jasmin.write_store_code(0 if ctx.getText() == 'False' else 1, ctx.type)
 
-    def exitFunction_call_statement(self, ctx: RaimundoParserLib.Function_call_statementContext):
+    def exitFunction_call_statement(self, ctx: PythonSParserLib.Function_call_statementContext):
         ctx.type = self.symbol_table[ctx.ID().getText()].type
         args = []
         types = []
@@ -404,13 +404,13 @@ class CustomListener(RaimundoListenerLib):
             types.append(exp.type)
         ctx.val = self.jasmin.write_function_call(ctx.ID().getText(), args, types)
 
-    def exitL_function_call(self, ctx: RaimundoParserLib.L_function_callContext):
+    def exitL_function_call(self, ctx: PythonSParserLib.L_function_callContext):
         target = ctx.function_call_statement()
         ctx.type = target.type
         ctx.val = target.val
 
-    def exitProgram(self, ctx: RaimundoParserLib.ProgramContext):
+    def exitProgram(self, ctx: PythonSParserLib.ProgramContext):
         self.jasmin.close_file()
 
-    def exitBreak_statement(self, ctx:RaimundoParserLib.Break_statementContext):
+    def exitBreak_statement(self, ctx:PythonSParserLib.Break_statementContext):
         self.jasmin.write_loopbreak_code(len(self.stack_block) - 1)
