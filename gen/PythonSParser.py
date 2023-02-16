@@ -1,4 +1,4 @@
-# Generated from /home/jpedro/workspace/novo_compilador/Raimundo.g4 by ANTLR 4.10.1
+# Generated from C:/Users/rodri/novo_compilador\PythonS.g4 by ANTLR 4.11.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,158 +10,161 @@ else:
 
 def serializedATN():
     return [
-        4,1,50,417,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,50,426,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
-        2,27,7,27,2,28,7,28,2,29,7,29,1,0,1,0,1,0,1,0,1,1,5,1,66,8,1,10,
-        1,12,1,69,9,1,1,2,5,2,72,8,2,10,2,12,2,75,9,2,1,3,1,3,1,3,1,3,1,
-        3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,96,
-        8,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
-        1,4,1,4,1,4,1,4,3,4,117,8,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,
-        127,8,5,10,5,12,5,130,9,5,3,5,132,8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,
-        5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,148,8,5,10,5,12,5,151,9,5,3,5,
-        153,8,5,1,5,1,5,3,5,157,8,5,1,5,1,5,1,5,1,5,3,5,163,8,5,1,6,1,6,
-        3,6,167,8,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,5,7,176,8,7,10,7,12,7,179,
-        9,7,3,7,181,8,7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,193,
-        8,8,1,8,1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,10,
-        1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,
-        1,12,1,12,1,13,1,13,1,13,1,13,1,13,5,13,230,8,13,10,13,12,13,233,
-        9,13,3,13,235,8,13,1,13,1,13,1,13,1,14,1,14,3,14,242,8,14,1,15,1,
-        15,1,15,1,15,3,15,248,8,15,1,15,1,15,1,16,1,16,1,16,1,16,5,16,256,
-        8,16,10,16,12,16,259,9,16,1,16,1,16,1,16,1,16,5,16,265,8,16,10,16,
-        12,16,268,9,16,3,16,270,8,16,1,16,1,16,1,17,1,17,3,17,276,8,17,1,
-        18,1,18,1,18,1,18,3,18,282,8,18,1,18,1,18,1,19,1,19,1,19,1,19,5,
-        19,290,8,19,10,19,12,19,293,9,19,1,19,1,19,1,19,1,19,5,19,299,8,
-        19,10,19,12,19,302,9,19,3,19,304,8,19,1,19,1,19,1,20,1,20,1,20,1,
-        20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,
-        20,1,20,1,20,1,20,3,20,328,8,20,1,21,1,21,1,21,1,21,1,21,1,21,5,
-        21,336,8,21,10,21,12,21,339,9,21,1,22,1,22,1,22,1,22,1,22,1,22,5,
-        22,347,8,22,10,22,12,22,350,9,22,1,23,1,23,1,23,1,23,1,23,1,23,5,
-        23,358,8,23,10,23,12,23,361,9,23,1,24,1,24,1,24,1,24,1,24,1,24,5,
-        24,369,8,24,10,24,12,24,372,9,24,1,25,1,25,1,25,1,25,1,25,1,25,5,
-        25,380,8,25,10,25,12,25,383,9,25,1,26,1,26,1,26,1,26,1,26,1,26,5,
-        26,391,8,26,10,26,12,26,394,9,26,1,27,1,27,1,27,3,27,399,8,27,1,
-        28,1,28,1,28,1,28,1,28,1,28,1,28,1,28,1,28,1,28,3,28,411,8,28,1,
-        29,1,29,1,29,1,29,1,29,0,6,42,44,46,48,50,52,30,0,2,4,6,8,10,12,
-        14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,
-        58,0,5,1,0,11,14,1,0,15,16,1,0,17,18,1,0,19,20,2,0,18,18,30,30,436,
-        0,60,1,0,0,0,2,67,1,0,0,0,4,73,1,0,0,0,6,76,1,0,0,0,8,116,1,0,0,
-        0,10,162,1,0,0,0,12,164,1,0,0,0,14,170,1,0,0,0,16,184,1,0,0,0,18,
-        200,1,0,0,0,20,208,1,0,0,0,22,211,1,0,0,0,24,219,1,0,0,0,26,224,
-        1,0,0,0,28,241,1,0,0,0,30,243,1,0,0,0,32,251,1,0,0,0,34,275,1,0,
-        0,0,36,277,1,0,0,0,38,285,1,0,0,0,40,327,1,0,0,0,42,329,1,0,0,0,
-        44,340,1,0,0,0,46,351,1,0,0,0,48,362,1,0,0,0,50,373,1,0,0,0,52,384,
-        1,0,0,0,54,398,1,0,0,0,56,410,1,0,0,0,58,412,1,0,0,0,60,61,3,2,1,
-        0,61,62,3,4,2,0,62,63,3,6,3,0,63,1,1,0,0,0,64,66,3,28,14,0,65,64,
-        1,0,0,0,66,69,1,0,0,0,67,65,1,0,0,0,67,68,1,0,0,0,68,3,1,0,0,0,69,
-        67,1,0,0,0,70,72,3,10,5,0,71,70,1,0,0,0,72,75,1,0,0,0,73,71,1,0,
-        0,0,73,74,1,0,0,0,74,5,1,0,0,0,75,73,1,0,0,0,76,77,5,37,0,0,77,78,
-        5,38,0,0,78,79,5,24,0,0,79,80,5,25,0,0,80,81,5,26,0,0,81,82,3,8,
-        4,0,82,83,5,27,0,0,83,7,1,0,0,0,84,85,3,16,8,0,85,86,3,8,4,0,86,
-        117,1,0,0,0,87,88,3,20,10,0,88,89,3,8,4,0,89,117,1,0,0,0,90,91,3,
-        18,9,0,91,92,3,8,4,0,92,117,1,0,0,0,93,95,3,22,11,0,94,96,3,24,12,
-        0,95,94,1,0,0,0,95,96,1,0,0,0,96,97,1,0,0,0,97,98,3,8,4,0,98,117,
-        1,0,0,0,99,100,3,26,13,0,100,101,3,8,4,0,101,117,1,0,0,0,102,103,
-        3,40,20,0,103,104,3,8,4,0,104,117,1,0,0,0,105,106,3,34,17,0,106,
-        107,3,8,4,0,107,117,1,0,0,0,108,109,3,14,7,0,109,110,5,23,0,0,110,
-        111,3,8,4,0,111,117,1,0,0,0,112,113,3,12,6,0,113,114,3,8,4,0,114,
-        117,1,0,0,0,115,117,1,0,0,0,116,84,1,0,0,0,116,87,1,0,0,0,116,90,
-        1,0,0,0,116,93,1,0,0,0,116,99,1,0,0,0,116,102,1,0,0,0,116,105,1,
-        0,0,0,116,108,1,0,0,0,116,112,1,0,0,0,116,115,1,0,0,0,117,9,1,0,
-        0,0,118,119,5,37,0,0,119,120,5,48,0,0,120,131,5,24,0,0,121,122,5,
-        40,0,0,122,128,5,48,0,0,123,124,5,21,0,0,124,125,5,40,0,0,125,127,
-        5,48,0,0,126,123,1,0,0,0,127,130,1,0,0,0,128,126,1,0,0,0,128,129,
-        1,0,0,0,129,132,1,0,0,0,130,128,1,0,0,0,131,121,1,0,0,0,131,132,
-        1,0,0,0,132,133,1,0,0,0,133,134,5,25,0,0,134,135,5,40,0,0,135,136,
-        5,26,0,0,136,137,3,8,4,0,137,138,5,27,0,0,138,163,1,0,0,0,139,140,
-        5,37,0,0,140,141,5,48,0,0,141,152,5,24,0,0,142,143,5,40,0,0,143,
-        149,5,48,0,0,144,145,5,21,0,0,145,146,5,40,0,0,146,148,5,48,0,0,
-        147,144,1,0,0,0,148,151,1,0,0,0,149,147,1,0,0,0,149,150,1,0,0,0,
-        150,153,1,0,0,0,151,149,1,0,0,0,152,142,1,0,0,0,152,153,1,0,0,0,
-        153,154,1,0,0,0,154,156,5,25,0,0,155,157,5,45,0,0,156,155,1,0,0,
-        0,156,157,1,0,0,0,157,158,1,0,0,0,158,159,5,26,0,0,159,160,3,8,4,
-        0,160,161,5,27,0,0,161,163,1,0,0,0,162,118,1,0,0,0,162,139,1,0,0,
-        0,163,11,1,0,0,0,164,166,5,39,0,0,165,167,3,42,21,0,166,165,1,0,
-        0,0,166,167,1,0,0,0,167,168,1,0,0,0,168,169,5,23,0,0,169,13,1,0,
-        0,0,170,171,5,48,0,0,171,180,5,24,0,0,172,177,3,42,21,0,173,174,
-        5,21,0,0,174,176,3,42,21,0,175,173,1,0,0,0,176,179,1,0,0,0,177,175,
-        1,0,0,0,177,178,1,0,0,0,178,181,1,0,0,0,179,177,1,0,0,0,180,172,
-        1,0,0,0,180,181,1,0,0,0,181,182,1,0,0,0,182,183,5,25,0,0,183,15,
-        1,0,0,0,184,185,5,31,0,0,185,186,5,48,0,0,186,187,5,36,0,0,187,188,
-        5,3,0,0,188,192,5,24,0,0,189,190,3,42,21,0,190,191,5,21,0,0,191,
-        193,1,0,0,0,192,189,1,0,0,0,192,193,1,0,0,0,193,194,1,0,0,0,194,
-        195,3,42,21,0,195,196,5,25,0,0,196,197,5,22,0,0,197,198,3,8,4,0,
-        198,199,5,27,0,0,199,17,1,0,0,0,200,201,5,35,0,0,201,202,5,24,0,
-        0,202,203,3,42,21,0,203,204,5,25,0,0,204,205,5,26,0,0,205,206,3,
-        8,4,0,206,207,5,27,0,0,207,19,1,0,0,0,208,209,5,32,0,0,209,210,5,
-        23,0,0,210,21,1,0,0,0,211,212,5,33,0,0,212,213,5,24,0,0,213,214,
-        3,42,21,0,214,215,5,25,0,0,215,216,5,26,0,0,216,217,3,8,4,0,217,
-        218,5,27,0,0,218,23,1,0,0,0,219,220,5,34,0,0,220,221,5,26,0,0,221,
-        222,3,8,4,0,222,223,5,27,0,0,223,25,1,0,0,0,224,225,5,1,0,0,225,
-        234,5,24,0,0,226,231,3,42,21,0,227,228,5,21,0,0,228,230,3,42,21,
-        0,229,227,1,0,0,0,230,233,1,0,0,0,231,229,1,0,0,0,231,232,1,0,0,
-        0,232,235,1,0,0,0,233,231,1,0,0,0,234,226,1,0,0,0,234,235,1,0,0,
-        0,235,236,1,0,0,0,236,237,5,25,0,0,237,238,5,23,0,0,238,27,1,0,0,
-        0,239,242,3,30,15,0,240,242,3,32,16,0,241,239,1,0,0,0,241,240,1,
-        0,0,0,242,29,1,0,0,0,243,244,5,40,0,0,244,247,5,48,0,0,245,246,5,
-        10,0,0,246,248,3,42,21,0,247,245,1,0,0,0,247,248,1,0,0,0,248,249,
-        1,0,0,0,249,250,5,23,0,0,250,31,1,0,0,0,251,252,5,40,0,0,252,257,
-        5,48,0,0,253,254,5,21,0,0,254,256,5,48,0,0,255,253,1,0,0,0,256,259,
-        1,0,0,0,257,255,1,0,0,0,257,258,1,0,0,0,258,269,1,0,0,0,259,257,
-        1,0,0,0,260,261,5,10,0,0,261,266,3,42,21,0,262,263,5,21,0,0,263,
-        265,3,42,21,0,264,262,1,0,0,0,265,268,1,0,0,0,266,264,1,0,0,0,266,
-        267,1,0,0,0,267,270,1,0,0,0,268,266,1,0,0,0,269,260,1,0,0,0,269,
-        270,1,0,0,0,270,271,1,0,0,0,271,272,5,23,0,0,272,33,1,0,0,0,273,
-        276,3,36,18,0,274,276,3,38,19,0,275,273,1,0,0,0,275,274,1,0,0,0,
-        276,35,1,0,0,0,277,278,5,40,0,0,278,281,5,48,0,0,279,280,5,10,0,
-        0,280,282,3,42,21,0,281,279,1,0,0,0,281,282,1,0,0,0,282,283,1,0,
-        0,0,283,284,5,23,0,0,284,37,1,0,0,0,285,286,5,40,0,0,286,291,5,48,
-        0,0,287,288,5,21,0,0,288,290,5,48,0,0,289,287,1,0,0,0,290,293,1,
-        0,0,0,291,289,1,0,0,0,291,292,1,0,0,0,292,303,1,0,0,0,293,291,1,
-        0,0,0,294,295,5,10,0,0,295,300,3,42,21,0,296,297,5,21,0,0,297,299,
-        3,42,21,0,298,296,1,0,0,0,299,302,1,0,0,0,300,298,1,0,0,0,300,301,
-        1,0,0,0,301,304,1,0,0,0,302,300,1,0,0,0,303,294,1,0,0,0,303,304,
-        1,0,0,0,304,305,1,0,0,0,305,306,5,23,0,0,306,39,1,0,0,0,307,308,
-        5,48,0,0,308,309,5,10,0,0,309,310,3,42,21,0,310,311,5,23,0,0,311,
-        328,1,0,0,0,312,313,5,48,0,0,313,314,5,10,0,0,314,315,3,58,29,0,
-        315,316,5,23,0,0,316,328,1,0,0,0,317,318,5,48,0,0,318,319,5,8,0,
-        0,319,320,3,42,21,0,320,321,5,23,0,0,321,328,1,0,0,0,322,323,5,48,
-        0,0,323,324,5,9,0,0,324,325,3,42,21,0,325,326,5,23,0,0,326,328,1,
-        0,0,0,327,307,1,0,0,0,327,312,1,0,0,0,327,317,1,0,0,0,327,322,1,
-        0,0,0,328,41,1,0,0,0,329,330,6,21,-1,0,330,331,3,44,22,0,331,337,
-        1,0,0,0,332,333,10,2,0,0,333,334,5,28,0,0,334,336,3,44,22,0,335,
-        332,1,0,0,0,336,339,1,0,0,0,337,335,1,0,0,0,337,338,1,0,0,0,338,
-        43,1,0,0,0,339,337,1,0,0,0,340,341,6,22,-1,0,341,342,3,46,23,0,342,
-        348,1,0,0,0,343,344,10,2,0,0,344,345,5,29,0,0,345,347,3,46,23,0,
-        346,343,1,0,0,0,347,350,1,0,0,0,348,346,1,0,0,0,348,349,1,0,0,0,
-        349,45,1,0,0,0,350,348,1,0,0,0,351,352,6,23,-1,0,352,353,3,48,24,
-        0,353,359,1,0,0,0,354,355,10,2,0,0,355,356,7,0,0,0,356,358,3,48,
-        24,0,357,354,1,0,0,0,358,361,1,0,0,0,359,357,1,0,0,0,359,360,1,0,
-        0,0,360,47,1,0,0,0,361,359,1,0,0,0,362,363,6,24,-1,0,363,364,3,50,
-        25,0,364,370,1,0,0,0,365,366,10,2,0,0,366,367,7,1,0,0,367,369,3,
-        50,25,0,368,365,1,0,0,0,369,372,1,0,0,0,370,368,1,0,0,0,370,371,
-        1,0,0,0,371,49,1,0,0,0,372,370,1,0,0,0,373,374,6,25,-1,0,374,375,
-        3,52,26,0,375,381,1,0,0,0,376,377,10,2,0,0,377,378,7,2,0,0,378,380,
-        3,52,26,0,379,376,1,0,0,0,380,383,1,0,0,0,381,379,1,0,0,0,381,382,
-        1,0,0,0,382,51,1,0,0,0,383,381,1,0,0,0,384,385,6,26,-1,0,385,386,
-        3,54,27,0,386,392,1,0,0,0,387,388,10,2,0,0,388,389,7,3,0,0,389,391,
-        3,54,27,0,390,387,1,0,0,0,391,394,1,0,0,0,392,390,1,0,0,0,392,393,
-        1,0,0,0,393,53,1,0,0,0,394,392,1,0,0,0,395,396,7,4,0,0,396,399,3,
-        54,27,0,397,399,3,56,28,0,398,395,1,0,0,0,398,397,1,0,0,0,399,55,
-        1,0,0,0,400,401,5,24,0,0,401,402,3,42,21,0,402,403,5,25,0,0,403,
-        411,1,0,0,0,404,411,3,14,7,0,405,411,5,48,0,0,406,411,5,4,0,0,407,
-        411,5,5,0,0,408,411,5,6,0,0,409,411,5,7,0,0,410,400,1,0,0,0,410,
-        404,1,0,0,0,410,405,1,0,0,0,410,406,1,0,0,0,410,407,1,0,0,0,410,
-        408,1,0,0,0,410,409,1,0,0,0,411,57,1,0,0,0,412,413,5,2,0,0,413,414,
-        5,24,0,0,414,415,5,25,0,0,415,59,1,0,0,0,35,67,73,95,116,128,131,
-        149,152,156,162,166,177,180,192,231,234,241,247,257,266,269,275,
-        281,291,300,303,327,337,348,359,370,381,392,398,410
+        2,27,7,27,2,28,7,28,2,29,7,29,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,
+        0,1,0,1,0,3,0,72,8,0,1,1,5,1,75,8,1,10,1,12,1,78,9,1,1,2,5,2,81,
+        8,2,10,2,12,2,84,9,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,
+        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,105,8,4,1,4,1,4,1,4,1,4,1,4,
+        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,126,
+        8,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,136,8,5,10,5,12,5,139,9,
+        5,3,5,141,8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,
+        5,1,5,5,5,157,8,5,10,5,12,5,160,9,5,3,5,162,8,5,1,5,1,5,3,5,166,
+        8,5,1,5,1,5,1,5,1,5,3,5,172,8,5,1,6,1,6,3,6,176,8,6,1,6,1,6,1,7,
+        1,7,1,7,1,7,1,7,5,7,185,8,7,10,7,12,7,188,9,7,3,7,190,8,7,1,7,1,
+        7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,202,8,8,1,8,1,8,1,8,1,8,1,
+        8,1,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,11,1,11,1,
+        11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,13,1,13,1,
+        13,1,13,1,13,5,13,239,8,13,10,13,12,13,242,9,13,3,13,244,8,13,1,
+        13,1,13,1,13,1,14,1,14,3,14,251,8,14,1,15,1,15,1,15,1,15,3,15,257,
+        8,15,1,15,1,15,1,16,1,16,1,16,1,16,5,16,265,8,16,10,16,12,16,268,
+        9,16,1,16,1,16,1,16,1,16,5,16,274,8,16,10,16,12,16,277,9,16,3,16,
+        279,8,16,1,16,1,16,1,17,1,17,3,17,285,8,17,1,18,1,18,1,18,1,18,3,
+        18,291,8,18,1,18,1,18,1,19,1,19,1,19,1,19,5,19,299,8,19,10,19,12,
+        19,302,9,19,1,19,1,19,1,19,1,19,5,19,308,8,19,10,19,12,19,311,9,
+        19,3,19,313,8,19,1,19,1,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,
+        20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,
+        20,337,8,20,1,21,1,21,1,21,1,21,1,21,1,21,5,21,345,8,21,10,21,12,
+        21,348,9,21,1,22,1,22,1,22,1,22,1,22,1,22,5,22,356,8,22,10,22,12,
+        22,359,9,22,1,23,1,23,1,23,1,23,1,23,1,23,5,23,367,8,23,10,23,12,
+        23,370,9,23,1,24,1,24,1,24,1,24,1,24,1,24,5,24,378,8,24,10,24,12,
+        24,381,9,24,1,25,1,25,1,25,1,25,1,25,1,25,5,25,389,8,25,10,25,12,
+        25,392,9,25,1,26,1,26,1,26,1,26,1,26,1,26,5,26,400,8,26,10,26,12,
+        26,403,9,26,1,27,1,27,1,27,3,27,408,8,27,1,28,1,28,1,28,1,28,1,28,
+        1,28,1,28,1,28,1,28,1,28,3,28,420,8,28,1,29,1,29,1,29,1,29,1,29,
+        0,6,42,44,46,48,50,52,30,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,
+        30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,0,5,1,0,11,14,1,0,15,
+        16,1,0,17,18,1,0,19,20,2,0,18,18,30,30,448,0,71,1,0,0,0,2,76,1,0,
+        0,0,4,82,1,0,0,0,6,85,1,0,0,0,8,125,1,0,0,0,10,171,1,0,0,0,12,173,
+        1,0,0,0,14,179,1,0,0,0,16,193,1,0,0,0,18,209,1,0,0,0,20,217,1,0,
+        0,0,22,220,1,0,0,0,24,228,1,0,0,0,26,233,1,0,0,0,28,250,1,0,0,0,
+        30,252,1,0,0,0,32,260,1,0,0,0,34,284,1,0,0,0,36,286,1,0,0,0,38,294,
+        1,0,0,0,40,336,1,0,0,0,42,338,1,0,0,0,44,349,1,0,0,0,46,360,1,0,
+        0,0,48,371,1,0,0,0,50,382,1,0,0,0,52,393,1,0,0,0,54,407,1,0,0,0,
+        56,419,1,0,0,0,58,421,1,0,0,0,60,61,3,2,1,0,61,62,3,4,2,0,62,63,
+        3,6,3,0,63,72,1,0,0,0,64,65,3,2,1,0,65,66,3,6,3,0,66,72,1,0,0,0,
+        67,68,3,4,2,0,68,69,3,6,3,0,69,72,1,0,0,0,70,72,3,6,3,0,71,60,1,
+        0,0,0,71,64,1,0,0,0,71,67,1,0,0,0,71,70,1,0,0,0,72,1,1,0,0,0,73,
+        75,3,28,14,0,74,73,1,0,0,0,75,78,1,0,0,0,76,74,1,0,0,0,76,77,1,0,
+        0,0,77,3,1,0,0,0,78,76,1,0,0,0,79,81,3,10,5,0,80,79,1,0,0,0,81,84,
+        1,0,0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,5,1,0,0,0,84,82,1,0,0,0,85,
+        86,5,37,0,0,86,87,5,38,0,0,87,88,5,24,0,0,88,89,5,25,0,0,89,90,5,
+        26,0,0,90,91,3,8,4,0,91,92,5,27,0,0,92,7,1,0,0,0,93,94,3,16,8,0,
+        94,95,3,8,4,0,95,126,1,0,0,0,96,97,3,20,10,0,97,98,3,8,4,0,98,126,
+        1,0,0,0,99,100,3,18,9,0,100,101,3,8,4,0,101,126,1,0,0,0,102,104,
+        3,22,11,0,103,105,3,24,12,0,104,103,1,0,0,0,104,105,1,0,0,0,105,
+        106,1,0,0,0,106,107,3,8,4,0,107,126,1,0,0,0,108,109,3,26,13,0,109,
+        110,3,8,4,0,110,126,1,0,0,0,111,112,3,40,20,0,112,113,3,8,4,0,113,
+        126,1,0,0,0,114,115,3,34,17,0,115,116,3,8,4,0,116,126,1,0,0,0,117,
+        118,3,14,7,0,118,119,5,23,0,0,119,120,3,8,4,0,120,126,1,0,0,0,121,
+        122,3,12,6,0,122,123,3,8,4,0,123,126,1,0,0,0,124,126,1,0,0,0,125,
+        93,1,0,0,0,125,96,1,0,0,0,125,99,1,0,0,0,125,102,1,0,0,0,125,108,
+        1,0,0,0,125,111,1,0,0,0,125,114,1,0,0,0,125,117,1,0,0,0,125,121,
+        1,0,0,0,125,124,1,0,0,0,126,9,1,0,0,0,127,128,5,37,0,0,128,129,5,
+        48,0,0,129,140,5,24,0,0,130,131,5,40,0,0,131,137,5,48,0,0,132,133,
+        5,21,0,0,133,134,5,40,0,0,134,136,5,48,0,0,135,132,1,0,0,0,136,139,
+        1,0,0,0,137,135,1,0,0,0,137,138,1,0,0,0,138,141,1,0,0,0,139,137,
+        1,0,0,0,140,130,1,0,0,0,140,141,1,0,0,0,141,142,1,0,0,0,142,143,
+        5,25,0,0,143,144,5,40,0,0,144,145,5,26,0,0,145,146,3,8,4,0,146,147,
+        5,27,0,0,147,172,1,0,0,0,148,149,5,37,0,0,149,150,5,48,0,0,150,161,
+        5,24,0,0,151,152,5,40,0,0,152,158,5,48,0,0,153,154,5,21,0,0,154,
+        155,5,40,0,0,155,157,5,48,0,0,156,153,1,0,0,0,157,160,1,0,0,0,158,
+        156,1,0,0,0,158,159,1,0,0,0,159,162,1,0,0,0,160,158,1,0,0,0,161,
+        151,1,0,0,0,161,162,1,0,0,0,162,163,1,0,0,0,163,165,5,25,0,0,164,
+        166,5,45,0,0,165,164,1,0,0,0,165,166,1,0,0,0,166,167,1,0,0,0,167,
+        168,5,26,0,0,168,169,3,8,4,0,169,170,5,27,0,0,170,172,1,0,0,0,171,
+        127,1,0,0,0,171,148,1,0,0,0,172,11,1,0,0,0,173,175,5,39,0,0,174,
+        176,3,42,21,0,175,174,1,0,0,0,175,176,1,0,0,0,176,177,1,0,0,0,177,
+        178,5,23,0,0,178,13,1,0,0,0,179,180,5,48,0,0,180,189,5,24,0,0,181,
+        186,3,42,21,0,182,183,5,21,0,0,183,185,3,42,21,0,184,182,1,0,0,0,
+        185,188,1,0,0,0,186,184,1,0,0,0,186,187,1,0,0,0,187,190,1,0,0,0,
+        188,186,1,0,0,0,189,181,1,0,0,0,189,190,1,0,0,0,190,191,1,0,0,0,
+        191,192,5,25,0,0,192,15,1,0,0,0,193,194,5,31,0,0,194,195,5,48,0,
+        0,195,196,5,36,0,0,196,197,5,3,0,0,197,201,5,24,0,0,198,199,3,42,
+        21,0,199,200,5,21,0,0,200,202,1,0,0,0,201,198,1,0,0,0,201,202,1,
+        0,0,0,202,203,1,0,0,0,203,204,3,42,21,0,204,205,5,25,0,0,205,206,
+        5,22,0,0,206,207,3,8,4,0,207,208,5,27,0,0,208,17,1,0,0,0,209,210,
+        5,35,0,0,210,211,5,24,0,0,211,212,3,42,21,0,212,213,5,25,0,0,213,
+        214,5,26,0,0,214,215,3,8,4,0,215,216,5,27,0,0,216,19,1,0,0,0,217,
+        218,5,32,0,0,218,219,5,23,0,0,219,21,1,0,0,0,220,221,5,33,0,0,221,
+        222,5,24,0,0,222,223,3,42,21,0,223,224,5,25,0,0,224,225,5,26,0,0,
+        225,226,3,8,4,0,226,227,5,27,0,0,227,23,1,0,0,0,228,229,5,34,0,0,
+        229,230,5,26,0,0,230,231,3,8,4,0,231,232,5,27,0,0,232,25,1,0,0,0,
+        233,234,5,1,0,0,234,243,5,24,0,0,235,240,3,42,21,0,236,237,5,21,
+        0,0,237,239,3,42,21,0,238,236,1,0,0,0,239,242,1,0,0,0,240,238,1,
+        0,0,0,240,241,1,0,0,0,241,244,1,0,0,0,242,240,1,0,0,0,243,235,1,
+        0,0,0,243,244,1,0,0,0,244,245,1,0,0,0,245,246,5,25,0,0,246,247,5,
+        23,0,0,247,27,1,0,0,0,248,251,3,30,15,0,249,251,3,32,16,0,250,248,
+        1,0,0,0,250,249,1,0,0,0,251,29,1,0,0,0,252,253,5,40,0,0,253,256,
+        5,48,0,0,254,255,5,10,0,0,255,257,3,42,21,0,256,254,1,0,0,0,256,
+        257,1,0,0,0,257,258,1,0,0,0,258,259,5,23,0,0,259,31,1,0,0,0,260,
+        261,5,40,0,0,261,266,5,48,0,0,262,263,5,21,0,0,263,265,5,48,0,0,
+        264,262,1,0,0,0,265,268,1,0,0,0,266,264,1,0,0,0,266,267,1,0,0,0,
+        267,278,1,0,0,0,268,266,1,0,0,0,269,270,5,10,0,0,270,275,3,42,21,
+        0,271,272,5,21,0,0,272,274,3,42,21,0,273,271,1,0,0,0,274,277,1,0,
+        0,0,275,273,1,0,0,0,275,276,1,0,0,0,276,279,1,0,0,0,277,275,1,0,
+        0,0,278,269,1,0,0,0,278,279,1,0,0,0,279,280,1,0,0,0,280,281,5,23,
+        0,0,281,33,1,0,0,0,282,285,3,36,18,0,283,285,3,38,19,0,284,282,1,
+        0,0,0,284,283,1,0,0,0,285,35,1,0,0,0,286,287,5,40,0,0,287,290,5,
+        48,0,0,288,289,5,10,0,0,289,291,3,42,21,0,290,288,1,0,0,0,290,291,
+        1,0,0,0,291,292,1,0,0,0,292,293,5,23,0,0,293,37,1,0,0,0,294,295,
+        5,40,0,0,295,300,5,48,0,0,296,297,5,21,0,0,297,299,5,48,0,0,298,
+        296,1,0,0,0,299,302,1,0,0,0,300,298,1,0,0,0,300,301,1,0,0,0,301,
+        312,1,0,0,0,302,300,1,0,0,0,303,304,5,10,0,0,304,309,3,42,21,0,305,
+        306,5,21,0,0,306,308,3,42,21,0,307,305,1,0,0,0,308,311,1,0,0,0,309,
+        307,1,0,0,0,309,310,1,0,0,0,310,313,1,0,0,0,311,309,1,0,0,0,312,
+        303,1,0,0,0,312,313,1,0,0,0,313,314,1,0,0,0,314,315,5,23,0,0,315,
+        39,1,0,0,0,316,317,5,48,0,0,317,318,5,10,0,0,318,319,3,42,21,0,319,
+        320,5,23,0,0,320,337,1,0,0,0,321,322,5,48,0,0,322,323,5,10,0,0,323,
+        324,3,58,29,0,324,325,5,23,0,0,325,337,1,0,0,0,326,327,5,48,0,0,
+        327,328,5,8,0,0,328,329,3,42,21,0,329,330,5,23,0,0,330,337,1,0,0,
+        0,331,332,5,48,0,0,332,333,5,9,0,0,333,334,3,42,21,0,334,335,5,23,
+        0,0,335,337,1,0,0,0,336,316,1,0,0,0,336,321,1,0,0,0,336,326,1,0,
+        0,0,336,331,1,0,0,0,337,41,1,0,0,0,338,339,6,21,-1,0,339,340,3,44,
+        22,0,340,346,1,0,0,0,341,342,10,2,0,0,342,343,5,28,0,0,343,345,3,
+        44,22,0,344,341,1,0,0,0,345,348,1,0,0,0,346,344,1,0,0,0,346,347,
+        1,0,0,0,347,43,1,0,0,0,348,346,1,0,0,0,349,350,6,22,-1,0,350,351,
+        3,46,23,0,351,357,1,0,0,0,352,353,10,2,0,0,353,354,5,29,0,0,354,
+        356,3,46,23,0,355,352,1,0,0,0,356,359,1,0,0,0,357,355,1,0,0,0,357,
+        358,1,0,0,0,358,45,1,0,0,0,359,357,1,0,0,0,360,361,6,23,-1,0,361,
+        362,3,48,24,0,362,368,1,0,0,0,363,364,10,2,0,0,364,365,7,0,0,0,365,
+        367,3,48,24,0,366,363,1,0,0,0,367,370,1,0,0,0,368,366,1,0,0,0,368,
+        369,1,0,0,0,369,47,1,0,0,0,370,368,1,0,0,0,371,372,6,24,-1,0,372,
+        373,3,50,25,0,373,379,1,0,0,0,374,375,10,2,0,0,375,376,7,1,0,0,376,
+        378,3,50,25,0,377,374,1,0,0,0,378,381,1,0,0,0,379,377,1,0,0,0,379,
+        380,1,0,0,0,380,49,1,0,0,0,381,379,1,0,0,0,382,383,6,25,-1,0,383,
+        384,3,52,26,0,384,390,1,0,0,0,385,386,10,2,0,0,386,387,7,2,0,0,387,
+        389,3,52,26,0,388,385,1,0,0,0,389,392,1,0,0,0,390,388,1,0,0,0,390,
+        391,1,0,0,0,391,51,1,0,0,0,392,390,1,0,0,0,393,394,6,26,-1,0,394,
+        395,3,54,27,0,395,401,1,0,0,0,396,397,10,2,0,0,397,398,7,3,0,0,398,
+        400,3,54,27,0,399,396,1,0,0,0,400,403,1,0,0,0,401,399,1,0,0,0,401,
+        402,1,0,0,0,402,53,1,0,0,0,403,401,1,0,0,0,404,405,7,4,0,0,405,408,
+        3,54,27,0,406,408,3,56,28,0,407,404,1,0,0,0,407,406,1,0,0,0,408,
+        55,1,0,0,0,409,410,5,24,0,0,410,411,3,42,21,0,411,412,5,25,0,0,412,
+        420,1,0,0,0,413,420,3,14,7,0,414,420,5,48,0,0,415,420,5,4,0,0,416,
+        420,5,5,0,0,417,420,5,6,0,0,418,420,5,7,0,0,419,409,1,0,0,0,419,
+        413,1,0,0,0,419,414,1,0,0,0,419,415,1,0,0,0,419,416,1,0,0,0,419,
+        417,1,0,0,0,419,418,1,0,0,0,420,57,1,0,0,0,421,422,5,2,0,0,422,423,
+        5,24,0,0,423,424,5,25,0,0,424,59,1,0,0,0,36,71,76,82,104,125,137,
+        140,158,161,165,171,175,186,189,201,240,243,250,256,266,275,278,
+        284,290,300,309,312,336,346,357,368,379,390,401,407,419
     ]
 
-class RaimundoParser ( Parser ):
+class PythonSParser ( Parser ):
 
-    grammarFileName = "Raimundo.g4"
+    grammarFileName = "PythonS.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -287,7 +290,7 @@ class RaimundoParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.10.1")
+        self.checkVersion("4.11.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -302,19 +305,19 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def global_variables_declaration(self):
-            return self.getTypedRuleContext(RaimundoParser.Global_variables_declarationContext,0)
+            return self.getTypedRuleContext(PythonSParser.Global_variables_declarationContext,0)
 
 
         def functions_declaration(self):
-            return self.getTypedRuleContext(RaimundoParser.Functions_declarationContext,0)
+            return self.getTypedRuleContext(PythonSParser.Functions_declarationContext,0)
 
 
         def main_function_declaration(self):
-            return self.getTypedRuleContext(RaimundoParser.Main_function_declarationContext,0)
+            return self.getTypedRuleContext(PythonSParser.Main_function_declarationContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_program
+            return PythonSParser.RULE_program
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterProgram" ):
@@ -335,16 +338,45 @@ class RaimundoParser ( Parser ):
 
     def program(self):
 
-        localctx = RaimundoParser.ProgramContext(self, self._ctx, self.state)
+        localctx = PythonSParser.ProgramContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_program)
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 60
-            self.global_variables_declaration()
-            self.state = 61
-            self.functions_declaration()
-            self.state = 62
-            self.main_function_declaration()
+            self.state = 71
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 60
+                self.global_variables_declaration()
+                self.state = 61
+                self.functions_declaration()
+                self.state = 62
+                self.main_function_declaration()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 64
+                self.global_variables_declaration()
+                self.state = 65
+                self.main_function_declaration()
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 67
+                self.functions_declaration()
+                self.state = 68
+                self.main_function_declaration()
+                pass
+
+            elif la_ == 4:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 70
+                self.main_function_declaration()
+                pass
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -363,13 +395,13 @@ class RaimundoParser ( Parser ):
 
         def global_variable_declaration_statement(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.Global_variable_declaration_statementContext)
+                return self.getTypedRuleContexts(PythonSParser.Global_variable_declaration_statementContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.Global_variable_declaration_statementContext,i)
+                return self.getTypedRuleContext(PythonSParser.Global_variable_declaration_statementContext,i)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_global_variables_declaration
+            return PythonSParser.RULE_global_variables_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGlobal_variables_declaration" ):
@@ -390,18 +422,18 @@ class RaimundoParser ( Parser ):
 
     def global_variables_declaration(self):
 
-        localctx = RaimundoParser.Global_variables_declarationContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Global_variables_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_global_variables_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 67
+            self.state = 76
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==RaimundoParser.TYPE:
-                self.state = 64
+            while _la==40:
+                self.state = 73
                 self.global_variable_declaration_statement()
-                self.state = 69
+                self.state = 78
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -423,13 +455,13 @@ class RaimundoParser ( Parser ):
 
         def function_declaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.Function_declarationContext)
+                return self.getTypedRuleContexts(PythonSParser.Function_declarationContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.Function_declarationContext,i)
+                return self.getTypedRuleContext(PythonSParser.Function_declarationContext,i)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_functions_declaration
+            return PythonSParser.RULE_functions_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctions_declaration" ):
@@ -450,20 +482,20 @@ class RaimundoParser ( Parser ):
 
     def functions_declaration(self):
 
-        localctx = RaimundoParser.Functions_declarationContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Functions_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_functions_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 73
+            self.state = 82
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 70
+                    self.state = 79
                     self.function_declaration() 
-                self.state = 75
+                self.state = 84
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -482,29 +514,29 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_DEF(self):
-            return self.getToken(RaimundoParser.KW_DEF, 0)
+            return self.getToken(PythonSParser.KW_DEF, 0)
 
         def KW_MAIN(self):
-            return self.getToken(RaimundoParser.KW_MAIN, 0)
+            return self.getToken(PythonSParser.KW_MAIN, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_main_function_declaration
+            return PythonSParser.RULE_main_function_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMain_function_declaration" ):
@@ -525,24 +557,24 @@ class RaimundoParser ( Parser ):
 
     def main_function_declaration(self):
 
-        localctx = RaimundoParser.Main_function_declarationContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Main_function_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_main_function_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 76
-            self.match(RaimundoParser.KW_DEF)
-            self.state = 77
-            self.match(RaimundoParser.KW_MAIN)
-            self.state = 78
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-            self.state = 79
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-            self.state = 80
-            self.match(RaimundoParser.KW_BRACKETS_OPEN)
-            self.state = 81
+            self.state = 85
+            self.match(PythonSParser.KW_DEF)
+            self.state = 86
+            self.match(PythonSParser.KW_MAIN)
+            self.state = 87
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 88
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+            self.state = 89
+            self.match(PythonSParser.KW_BRACKETS_OPEN)
+            self.state = 90
             self.function_body_statements()
-            self.state = 82
-            self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+            self.state = 91
+            self.match(PythonSParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -560,54 +592,54 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def forloop_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Forloop_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Forloop_statementContext,0)
 
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def break_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Break_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Break_statementContext,0)
 
 
         def while_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.While_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.While_statementContext,0)
 
 
         def if_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.If_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.If_statementContext,0)
 
 
         def else_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Else_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Else_statementContext,0)
 
 
         def print_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Print_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Print_statementContext,0)
 
 
         def assigment_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Assigment_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Assigment_statementContext,0)
 
 
         def local_variable_declaration_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Local_variable_declaration_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Local_variable_declaration_statementContext,0)
 
 
         def function_call_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_call_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_call_statementContext,0)
 
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def return_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Return_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Return_statementContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_function_body_statements
+            return PythonSParser.RULE_function_body_statements
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunction_body_statements" ):
@@ -628,92 +660,92 @@ class RaimundoParser ( Parser ):
 
     def function_body_statements(self):
 
-        localctx = RaimundoParser.Function_body_statementsContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Function_body_statementsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_function_body_statements)
         self._la = 0 # Token type
         try:
-            self.state = 116
+            self.state = 125
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 84
+                self.state = 93
                 self.forloop_statement()
-                self.state = 85
+                self.state = 94
                 self.function_body_statements()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 87
+                self.state = 96
                 self.break_statement()
-                self.state = 88
+                self.state = 97
                 self.function_body_statements()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 90
+                self.state = 99
                 self.while_statement()
-                self.state = 91
+                self.state = 100
                 self.function_body_statements()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 93
+                self.state = 102
                 self.if_statement()
-                self.state = 95
+                self.state = 104
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==RaimundoParser.KW_ELSE:
-                    self.state = 94
+                if _la==34:
+                    self.state = 103
                     self.else_statement()
 
 
-                self.state = 97
+                self.state = 106
                 self.function_body_statements()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 99
+                self.state = 108
                 self.print_statement()
-                self.state = 100
+                self.state = 109
                 self.function_body_statements()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 102
+                self.state = 111
                 self.assigment_statement()
-                self.state = 103
+                self.state = 112
                 self.function_body_statements()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 105
+                self.state = 114
                 self.local_variable_declaration_statement()
-                self.state = 106
+                self.state = 115
                 self.function_body_statements()
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 108
+                self.state = 117
                 self.function_call_statement()
-                self.state = 109
-                self.match(RaimundoParser.KW_SEMICOLON)
-                self.state = 110
+                self.state = 118
+                self.match(PythonSParser.KW_SEMICOLON)
+                self.state = 119
                 self.function_body_statements()
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 112
+                self.state = 121
                 self.return_statement()
-                self.state = 113
+                self.state = 122
                 self.function_body_statements()
                 pass
 
@@ -741,7 +773,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_function_declaration
+            return PythonSParser.RULE_function_declaration
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -751,38 +783,38 @@ class RaimundoParser ( Parser ):
 
     class L_typeContext(Function_declarationContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Function_declarationContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Function_declarationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def KW_DEF(self):
-            return self.getToken(RaimundoParser.KW_DEF, 0)
+            return self.getToken(PythonSParser.KW_DEF, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.ID)
+                return self.getTokens(PythonSParser.ID)
             else:
-                return self.getToken(RaimundoParser.ID, i)
+                return self.getToken(PythonSParser.ID, i)
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
         def TYPE(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.TYPE)
+                return self.getTokens(PythonSParser.TYPE)
             else:
-                return self.getToken(RaimundoParser.TYPE, i)
+                return self.getToken(PythonSParser.TYPE, i)
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_type" ):
@@ -801,40 +833,40 @@ class RaimundoParser ( Parser ):
 
     class L_voidContext(Function_declarationContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Function_declarationContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Function_declarationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def KW_DEF(self):
-            return self.getToken(RaimundoParser.KW_DEF, 0)
+            return self.getToken(PythonSParser.KW_DEF, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.ID)
+                return self.getTokens(PythonSParser.ID)
             else:
-                return self.getToken(RaimundoParser.ID, i)
+                return self.getToken(PythonSParser.ID, i)
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
         def TYPE(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.TYPE)
+                return self.getTokens(PythonSParser.TYPE)
             else:
-                return self.getToken(RaimundoParser.TYPE, i)
+                return self.getToken(PythonSParser.TYPE, i)
         def KW_VOID(self):
-            return self.getToken(RaimundoParser.KW_VOID, 0)
+            return self.getToken(PythonSParser.KW_VOID, 0)
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_void" ):
@@ -854,107 +886,107 @@ class RaimundoParser ( Parser ):
 
     def function_declaration(self):
 
-        localctx = RaimundoParser.Function_declarationContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Function_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_function_declaration)
         self._la = 0 # Token type
         try:
-            self.state = 162
+            self.state = 171
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
-                localctx = RaimundoParser.L_typeContext(self, localctx)
+                localctx = PythonSParser.L_typeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 118
-                self.match(RaimundoParser.KW_DEF)
-                self.state = 119
-                self.match(RaimundoParser.ID)
-                self.state = 120
-                self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-                self.state = 131
+                self.state = 127
+                self.match(PythonSParser.KW_DEF)
+                self.state = 128
+                self.match(PythonSParser.ID)
+                self.state = 129
+                self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+                self.state = 140
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==RaimundoParser.TYPE:
-                    self.state = 121
-                    self.match(RaimundoParser.TYPE)
-                    self.state = 122
-                    self.match(RaimundoParser.ID)
-                    self.state = 128
+                if _la==40:
+                    self.state = 130
+                    self.match(PythonSParser.TYPE)
+                    self.state = 131
+                    self.match(PythonSParser.ID)
+                    self.state = 137
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==RaimundoParser.KW_COMMA:
-                        self.state = 123
-                        self.match(RaimundoParser.KW_COMMA)
-                        self.state = 124
-                        self.match(RaimundoParser.TYPE)
-                        self.state = 125
-                        self.match(RaimundoParser.ID)
-                        self.state = 130
+                    while _la==21:
+                        self.state = 132
+                        self.match(PythonSParser.KW_COMMA)
+                        self.state = 133
+                        self.match(PythonSParser.TYPE)
+                        self.state = 134
+                        self.match(PythonSParser.ID)
+                        self.state = 139
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 133
-                self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-                self.state = 134
-                self.match(RaimundoParser.TYPE)
-                self.state = 135
-                self.match(RaimundoParser.KW_BRACKETS_OPEN)
-                self.state = 136
+                self.state = 142
+                self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+                self.state = 143
+                self.match(PythonSParser.TYPE)
+                self.state = 144
+                self.match(PythonSParser.KW_BRACKETS_OPEN)
+                self.state = 145
                 self.function_body_statements()
-                self.state = 137
-                self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+                self.state = 146
+                self.match(PythonSParser.KW_BRACKETS_CLOSE)
                 pass
 
             elif la_ == 2:
-                localctx = RaimundoParser.L_voidContext(self, localctx)
+                localctx = PythonSParser.L_voidContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 139
-                self.match(RaimundoParser.KW_DEF)
-                self.state = 140
-                self.match(RaimundoParser.ID)
-                self.state = 141
-                self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-                self.state = 152
+                self.state = 148
+                self.match(PythonSParser.KW_DEF)
+                self.state = 149
+                self.match(PythonSParser.ID)
+                self.state = 150
+                self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+                self.state = 161
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==RaimundoParser.TYPE:
-                    self.state = 142
-                    self.match(RaimundoParser.TYPE)
-                    self.state = 143
-                    self.match(RaimundoParser.ID)
-                    self.state = 149
+                if _la==40:
+                    self.state = 151
+                    self.match(PythonSParser.TYPE)
+                    self.state = 152
+                    self.match(PythonSParser.ID)
+                    self.state = 158
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==RaimundoParser.KW_COMMA:
-                        self.state = 144
-                        self.match(RaimundoParser.KW_COMMA)
-                        self.state = 145
-                        self.match(RaimundoParser.TYPE)
-                        self.state = 146
-                        self.match(RaimundoParser.ID)
-                        self.state = 151
+                    while _la==21:
+                        self.state = 153
+                        self.match(PythonSParser.KW_COMMA)
+                        self.state = 154
+                        self.match(PythonSParser.TYPE)
+                        self.state = 155
+                        self.match(PythonSParser.ID)
+                        self.state = 160
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 154
-                self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-                self.state = 156
+                self.state = 163
+                self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+                self.state = 165
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==RaimundoParser.KW_VOID:
-                    self.state = 155
-                    self.match(RaimundoParser.KW_VOID)
+                if _la==45:
+                    self.state = 164
+                    self.match(PythonSParser.KW_VOID)
 
 
-                self.state = 158
-                self.match(RaimundoParser.KW_BRACKETS_OPEN)
-                self.state = 159
+                self.state = 167
+                self.match(PythonSParser.KW_BRACKETS_OPEN)
+                self.state = 168
                 self.function_body_statements()
-                self.state = 160
-                self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+                self.state = 169
+                self.match(PythonSParser.KW_BRACKETS_CLOSE)
                 pass
 
 
@@ -975,17 +1007,17 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_RETURN(self):
-            return self.getToken(RaimundoParser.KW_RETURN, 0)
+            return self.getToken(PythonSParser.KW_RETURN, 0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_return_statement
+            return PythonSParser.RULE_return_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterReturn_statement" ):
@@ -1006,23 +1038,23 @@ class RaimundoParser ( Parser ):
 
     def return_statement(self):
 
-        localctx = RaimundoParser.Return_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Return_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_return_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 164
-            self.match(RaimundoParser.KW_RETURN)
-            self.state = 166
+            self.state = 173
+            self.match(PythonSParser.KW_RETURN)
+            self.state = 175
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << RaimundoParser.INT_VALUE) | (1 << RaimundoParser.FLOAT_VALUE) | (1 << RaimundoParser.STR_VALUE) | (1 << RaimundoParser.BOOL_VALUE) | (1 << RaimundoParser.KW_MINUS) | (1 << RaimundoParser.KW_PARENTHESIS_OPEN) | (1 << RaimundoParser.KW_NOT) | (1 << RaimundoParser.ID))) != 0):
-                self.state = 165
+            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 281476067492080) != 0:
+                self.state = 174
                 self.expr(0)
 
 
-            self.state = 168
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 177
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1041,29 +1073,29 @@ class RaimundoParser ( Parser ):
             self.type_ = None
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.ExprContext)
+                return self.getTypedRuleContexts(PythonSParser.ExprContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.ExprContext,i)
+                return self.getTypedRuleContext(PythonSParser.ExprContext,i)
 
 
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_function_call_statement
+            return PythonSParser.RULE_function_call_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunction_call_statement" ):
@@ -1082,39 +1114,39 @@ class RaimundoParser ( Parser ):
 
 
 
-    def function_call_statement(self): #
+    def function_call_statement(self):
 
-        localctx = RaimundoParser.Function_call_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Function_call_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_function_call_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 170
-            self.match(RaimundoParser.ID)
-            self.state = 171
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
+            self.state = 179
+            self.match(PythonSParser.ID)
             self.state = 180
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 189
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << RaimundoParser.INT_VALUE) | (1 << RaimundoParser.FLOAT_VALUE) | (1 << RaimundoParser.STR_VALUE) | (1 << RaimundoParser.BOOL_VALUE) | (1 << RaimundoParser.KW_MINUS) | (1 << RaimundoParser.KW_PARENTHESIS_OPEN) | (1 << RaimundoParser.KW_NOT) | (1 << RaimundoParser.ID))) != 0):
-                self.state = 172
+            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 281476067492080) != 0:
+                self.state = 181
                 self.expr(0)
-                self.state = 177
+                self.state = 186
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==RaimundoParser.KW_COMMA:
-                    self.state = 173
-                    self.match(RaimundoParser.KW_COMMA)
-                    self.state = 174
+                while _la==21:
+                    self.state = 182
+                    self.match(PythonSParser.KW_COMMA)
+                    self.state = 183
                     self.expr(0)
-                    self.state = 179
+                    self.state = 188
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 182
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
+            self.state = 191
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1133,45 +1165,45 @@ class RaimundoParser ( Parser ):
             self.idx = None
 
         def KW_FOR(self):
-            return self.getToken(RaimundoParser.KW_FOR, 0)
+            return self.getToken(PythonSParser.KW_FOR, 0)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
 
         def KW_IN(self):
-            return self.getToken(RaimundoParser.KW_IN, 0)
+            return self.getToken(PythonSParser.KW_IN, 0)
 
         def RANGE(self):
-            return self.getToken(RaimundoParser.RANGE, 0)
+            return self.getToken(PythonSParser.RANGE, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.ExprContext)
+                return self.getTypedRuleContexts(PythonSParser.ExprContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.ExprContext,i)
+                return self.getTypedRuleContext(PythonSParser.ExprContext,i)
 
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def KW_COLON(self):
-            return self.getToken(RaimundoParser.KW_COLON, 0)
+            return self.getToken(PythonSParser.KW_COLON, 0)
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
 
         def KW_COMMA(self):
-            return self.getToken(RaimundoParser.KW_COMMA, 0)
+            return self.getToken(PythonSParser.KW_COMMA, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_forloop_statement
+            return PythonSParser.RULE_forloop_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterForloop_statement" ):
@@ -1192,40 +1224,40 @@ class RaimundoParser ( Parser ):
 
     def forloop_statement(self):
 
-        localctx = RaimundoParser.Forloop_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Forloop_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_forloop_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 184
-            self.match(RaimundoParser.KW_FOR)
-            self.state = 185
-            self.match(RaimundoParser.ID)
-            self.state = 186
-            self.match(RaimundoParser.KW_IN)
-            self.state = 187
-            self.match(RaimundoParser.RANGE)
-            self.state = 188
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-            self.state = 192
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
-            if la_ == 1:
-                self.state = 189
-                self.expr(0)
-                self.state = 190
-                self.match(RaimundoParser.KW_COMMA)
-
-
+            self.state = 193
+            self.match(PythonSParser.KW_FOR)
             self.state = 194
-            self.expr(0)
+            self.match(PythonSParser.ID)
             self.state = 195
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
+            self.match(PythonSParser.KW_IN)
             self.state = 196
-            self.match(RaimundoParser.KW_COLON)
+            self.match(PythonSParser.RANGE)
             self.state = 197
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 201
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+            if la_ == 1:
+                self.state = 198
+                self.expr(0)
+                self.state = 199
+                self.match(PythonSParser.KW_COMMA)
+
+
+            self.state = 203
+            self.expr(0)
+            self.state = 204
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+            self.state = 205
+            self.match(PythonSParser.KW_COLON)
+            self.state = 206
             self.function_body_statements()
-            self.state = 198
-            self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+            self.state = 207
+            self.match(PythonSParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1243,30 +1275,30 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_WHILE(self):
-            return self.getToken(RaimundoParser.KW_WHILE, 0)
+            return self.getToken(PythonSParser.KW_WHILE, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_while_statement
+            return PythonSParser.RULE_while_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterWhile_statement" ):
@@ -1287,24 +1319,24 @@ class RaimundoParser ( Parser ):
 
     def while_statement(self):
 
-        localctx = RaimundoParser.While_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.While_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_while_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 200
-            self.match(RaimundoParser.KW_WHILE)
-            self.state = 201
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-            self.state = 202
+            self.state = 209
+            self.match(PythonSParser.KW_WHILE)
+            self.state = 210
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 211
             self.expr(0)
-            self.state = 203
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-            self.state = 204
-            self.match(RaimundoParser.KW_BRACKETS_OPEN)
-            self.state = 205
+            self.state = 212
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+            self.state = 213
+            self.match(PythonSParser.KW_BRACKETS_OPEN)
+            self.state = 214
             self.function_body_statements()
-            self.state = 206
-            self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+            self.state = 215
+            self.match(PythonSParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1322,13 +1354,13 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_BREAK(self):
-            return self.getToken(RaimundoParser.KW_BREAK, 0)
+            return self.getToken(PythonSParser.KW_BREAK, 0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_break_statement
+            return PythonSParser.RULE_break_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBreak_statement" ):
@@ -1349,14 +1381,14 @@ class RaimundoParser ( Parser ):
 
     def break_statement(self):
 
-        localctx = RaimundoParser.Break_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Break_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_break_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 208
-            self.match(RaimundoParser.KW_BREAK)
-            self.state = 209
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 217
+            self.match(PythonSParser.KW_BREAK)
+            self.state = 218
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1374,30 +1406,30 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_IF(self):
-            return self.getToken(RaimundoParser.KW_IF, 0)
+            return self.getToken(PythonSParser.KW_IF, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_if_statement
+            return PythonSParser.RULE_if_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIf_statement" ):
@@ -1418,24 +1450,24 @@ class RaimundoParser ( Parser ):
 
     def if_statement(self):
 
-        localctx = RaimundoParser.If_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.If_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_if_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 211
-            self.match(RaimundoParser.KW_IF)
-            self.state = 212
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-            self.state = 213
+            self.state = 220
+            self.match(PythonSParser.KW_IF)
+            self.state = 221
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 222
             self.expr(0)
-            self.state = 214
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-            self.state = 215
-            self.match(RaimundoParser.KW_BRACKETS_OPEN)
-            self.state = 216
+            self.state = 223
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+            self.state = 224
+            self.match(PythonSParser.KW_BRACKETS_OPEN)
+            self.state = 225
             self.function_body_statements()
-            self.state = 217
-            self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+            self.state = 226
+            self.match(PythonSParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1453,20 +1485,20 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def KW_ELSE(self):
-            return self.getToken(RaimundoParser.KW_ELSE, 0)
+            return self.getToken(PythonSParser.KW_ELSE, 0)
 
         def KW_BRACKETS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_OPEN, 0)
 
         def function_body_statements(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_body_statementsContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_body_statementsContext,0)
 
 
         def KW_BRACKETS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_BRACKETS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_BRACKETS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_else_statement
+            return PythonSParser.RULE_else_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterElse_statement" ):
@@ -1487,18 +1519,18 @@ class RaimundoParser ( Parser ):
 
     def else_statement(self):
 
-        localctx = RaimundoParser.Else_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Else_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_else_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 219
-            self.match(RaimundoParser.KW_ELSE)
-            self.state = 220
-            self.match(RaimundoParser.KW_BRACKETS_OPEN)
-            self.state = 221
+            self.state = 228
+            self.match(PythonSParser.KW_ELSE)
+            self.state = 229
+            self.match(PythonSParser.KW_BRACKETS_OPEN)
+            self.state = 230
             self.function_body_statements()
-            self.state = 222
-            self.match(RaimundoParser.KW_BRACKETS_CLOSE)
+            self.state = 231
+            self.match(PythonSParser.KW_BRACKETS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1516,32 +1548,32 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def PRINT(self):
-            return self.getToken(RaimundoParser.PRINT, 0)
+            return self.getToken(PythonSParser.PRINT, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.ExprContext)
+                return self.getTypedRuleContexts(PythonSParser.ExprContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.ExprContext,i)
+                return self.getTypedRuleContext(PythonSParser.ExprContext,i)
 
 
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_print_statement
+            return PythonSParser.RULE_print_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrint_statement" ):
@@ -1562,39 +1594,39 @@ class RaimundoParser ( Parser ):
 
     def print_statement(self):
 
-        localctx = RaimundoParser.Print_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Print_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_print_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 224
-            self.match(RaimundoParser.PRINT)
-            self.state = 225
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
+            self.state = 233
+            self.match(PythonSParser.PRINT)
             self.state = 234
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 243
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << RaimundoParser.INT_VALUE) | (1 << RaimundoParser.FLOAT_VALUE) | (1 << RaimundoParser.STR_VALUE) | (1 << RaimundoParser.BOOL_VALUE) | (1 << RaimundoParser.KW_MINUS) | (1 << RaimundoParser.KW_PARENTHESIS_OPEN) | (1 << RaimundoParser.KW_NOT) | (1 << RaimundoParser.ID))) != 0):
-                self.state = 226
+            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 281476067492080) != 0:
+                self.state = 235
                 self.expr(0)
-                self.state = 231
+                self.state = 240
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==RaimundoParser.KW_COMMA:
-                    self.state = 227
-                    self.match(RaimundoParser.KW_COMMA)
-                    self.state = 228
+                while _la==21:
+                    self.state = 236
+                    self.match(PythonSParser.KW_COMMA)
+                    self.state = 237
                     self.expr(0)
-                    self.state = 233
+                    self.state = 242
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 236
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
-            self.state = 237
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 245
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
+            self.state = 246
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1612,15 +1644,15 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def global_single_variable_declaration_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Global_single_variable_declaration_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Global_single_variable_declaration_statementContext,0)
 
 
         def global_multiple_variable_declaration_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Global_multiple_variable_declaration_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Global_multiple_variable_declaration_statementContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_global_variable_declaration_statement
+            return PythonSParser.RULE_global_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGlobal_variable_declaration_statement" ):
@@ -1641,21 +1673,21 @@ class RaimundoParser ( Parser ):
 
     def global_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Global_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Global_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_global_variable_declaration_statement)
         try:
-            self.state = 241
+            self.state = 250
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 239
+                self.state = 248
                 self.global_single_variable_declaration_statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 240
+                self.state = 249
                 self.global_multiple_variable_declaration_statement()
                 pass
 
@@ -1677,23 +1709,23 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def TYPE(self):
-            return self.getToken(RaimundoParser.TYPE, 0)
+            return self.getToken(PythonSParser.TYPE, 0)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_global_single_variable_declaration_statement
+            return PythonSParser.RULE_global_single_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGlobal_single_variable_declaration_statement" ):
@@ -1714,27 +1746,27 @@ class RaimundoParser ( Parser ):
 
     def global_single_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Global_single_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Global_single_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_global_single_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 243
-            self.match(RaimundoParser.TYPE)
-            self.state = 244
-            self.match(RaimundoParser.ID)
-            self.state = 247
+            self.state = 252
+            self.match(PythonSParser.TYPE)
+            self.state = 253
+            self.match(PythonSParser.ID)
+            self.state = 256
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==RaimundoParser.KW_ASSIGNMENT:
-                self.state = 245
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 246
+            if _la==10:
+                self.state = 254
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 255
                 self.expr(0)
 
 
-            self.state = 249
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 258
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1752,35 +1784,35 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def TYPE(self):
-            return self.getToken(RaimundoParser.TYPE, 0)
+            return self.getToken(PythonSParser.TYPE, 0)
 
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.ID)
+                return self.getTokens(PythonSParser.ID)
             else:
-                return self.getToken(RaimundoParser.ID, i)
+                return self.getToken(PythonSParser.ID, i)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.ExprContext)
+                return self.getTypedRuleContexts(PythonSParser.ExprContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.ExprContext,i)
+                return self.getTypedRuleContext(PythonSParser.ExprContext,i)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_global_multiple_variable_declaration_statement
+            return PythonSParser.RULE_global_multiple_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGlobal_multiple_variable_declaration_statement" ):
@@ -1801,51 +1833,51 @@ class RaimundoParser ( Parser ):
 
     def global_multiple_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Global_multiple_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Global_multiple_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_global_multiple_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 251
-            self.match(RaimundoParser.TYPE)
-            self.state = 252
-            self.match(RaimundoParser.ID)
-            self.state = 257
+            self.state = 260
+            self.match(PythonSParser.TYPE)
+            self.state = 261
+            self.match(PythonSParser.ID)
+            self.state = 266
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==RaimundoParser.KW_COMMA:
-                self.state = 253
-                self.match(RaimundoParser.KW_COMMA)
-                self.state = 254
-                self.match(RaimundoParser.ID)
-                self.state = 259
+            while _la==21:
+                self.state = 262
+                self.match(PythonSParser.KW_COMMA)
+                self.state = 263
+                self.match(PythonSParser.ID)
+                self.state = 268
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 269
+            self.state = 278
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==RaimundoParser.KW_ASSIGNMENT:
-                self.state = 260
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 261
+            if _la==10:
+                self.state = 269
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 270
                 self.expr(0)
-                self.state = 266
+                self.state = 275
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==RaimundoParser.KW_COMMA:
-                    self.state = 262
-                    self.match(RaimundoParser.KW_COMMA)
-                    self.state = 263
+                while _la==21:
+                    self.state = 271
+                    self.match(PythonSParser.KW_COMMA)
+                    self.state = 272
                     self.expr(0)
-                    self.state = 268
+                    self.state = 277
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 271
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 280
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1863,15 +1895,15 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def local_single_variable_declaration_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Local_single_variable_declaration_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Local_single_variable_declaration_statementContext,0)
 
 
         def local_multiple_variable_declaration_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Local_multiple_variable_declaration_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Local_multiple_variable_declaration_statementContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_local_variable_declaration_statement
+            return PythonSParser.RULE_local_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLocal_variable_declaration_statement" ):
@@ -1892,21 +1924,21 @@ class RaimundoParser ( Parser ):
 
     def local_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Local_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Local_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_local_variable_declaration_statement)
         try:
-            self.state = 275
+            self.state = 284
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,22,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 273
+                self.state = 282
                 self.local_single_variable_declaration_statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 274
+                self.state = 283
                 self.local_multiple_variable_declaration_statement()
                 pass
 
@@ -1928,23 +1960,23 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def TYPE(self):
-            return self.getToken(RaimundoParser.TYPE, 0)
+            return self.getToken(PythonSParser.TYPE, 0)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_local_single_variable_declaration_statement
+            return PythonSParser.RULE_local_single_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLocal_single_variable_declaration_statement" ):
@@ -1965,27 +1997,27 @@ class RaimundoParser ( Parser ):
 
     def local_single_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Local_single_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Local_single_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_local_single_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 277
-            self.match(RaimundoParser.TYPE)
-            self.state = 278
-            self.match(RaimundoParser.ID)
-            self.state = 281
+            self.state = 286
+            self.match(PythonSParser.TYPE)
+            self.state = 287
+            self.match(PythonSParser.ID)
+            self.state = 290
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==RaimundoParser.KW_ASSIGNMENT:
-                self.state = 279
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 280
+            if _la==10:
+                self.state = 288
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 289
                 self.expr(0)
 
 
-            self.state = 283
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 292
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2003,35 +2035,35 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def TYPE(self):
-            return self.getToken(RaimundoParser.TYPE, 0)
+            return self.getToken(PythonSParser.TYPE, 0)
 
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.ID)
+                return self.getTokens(PythonSParser.ID)
             else:
-                return self.getToken(RaimundoParser.ID, i)
+                return self.getToken(PythonSParser.ID, i)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def KW_COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(RaimundoParser.KW_COMMA)
+                return self.getTokens(PythonSParser.KW_COMMA)
             else:
-                return self.getToken(RaimundoParser.KW_COMMA, i)
+                return self.getToken(PythonSParser.KW_COMMA, i)
 
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(RaimundoParser.ExprContext)
+                return self.getTypedRuleContexts(PythonSParser.ExprContext)
             else:
-                return self.getTypedRuleContext(RaimundoParser.ExprContext,i)
+                return self.getTypedRuleContext(PythonSParser.ExprContext,i)
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_local_multiple_variable_declaration_statement
+            return PythonSParser.RULE_local_multiple_variable_declaration_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLocal_multiple_variable_declaration_statement" ):
@@ -2052,51 +2084,51 @@ class RaimundoParser ( Parser ):
 
     def local_multiple_variable_declaration_statement(self):
 
-        localctx = RaimundoParser.Local_multiple_variable_declaration_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Local_multiple_variable_declaration_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_local_multiple_variable_declaration_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 285
-            self.match(RaimundoParser.TYPE)
-            self.state = 286
-            self.match(RaimundoParser.ID)
-            self.state = 291
+            self.state = 294
+            self.match(PythonSParser.TYPE)
+            self.state = 295
+            self.match(PythonSParser.ID)
+            self.state = 300
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==RaimundoParser.KW_COMMA:
-                self.state = 287
-                self.match(RaimundoParser.KW_COMMA)
-                self.state = 288
-                self.match(RaimundoParser.ID)
-                self.state = 293
+            while _la==21:
+                self.state = 296
+                self.match(PythonSParser.KW_COMMA)
+                self.state = 297
+                self.match(PythonSParser.ID)
+                self.state = 302
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 303
+            self.state = 312
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==RaimundoParser.KW_ASSIGNMENT:
-                self.state = 294
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 295
+            if _la==10:
+                self.state = 303
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 304
                 self.expr(0)
-                self.state = 300
+                self.state = 309
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==RaimundoParser.KW_COMMA:
-                    self.state = 296
-                    self.match(RaimundoParser.KW_COMMA)
-                    self.state = 297
+                while _la==21:
+                    self.state = 305
+                    self.match(PythonSParser.KW_COMMA)
+                    self.state = 306
                     self.expr(0)
-                    self.state = 302
+                    self.state = 311
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 305
-            self.match(RaimundoParser.KW_SEMICOLON)
+            self.state = 314
+            self.match(PythonSParser.KW_SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2115,7 +2147,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_assigment_statement
+            return PythonSParser.RULE_assigment_statement
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2125,19 +2157,19 @@ class RaimundoParser ( Parser ):
 
     class E_plus_assigmentContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Assigment_statementContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
         def KW_PLUS_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_PLUS_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_PLUS_ASSIGNMENT, 0)
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterE_plus_assigment" ):
@@ -2156,19 +2188,19 @@ class RaimundoParser ( Parser ):
 
     class InputContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Assigment_statementContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
         def r_input(self):
-            return self.getTypedRuleContext(RaimundoParser.R_inputContext,0)
+            return self.getTypedRuleContext(PythonSParser.R_inputContext,0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInput" ):
@@ -2187,19 +2219,19 @@ class RaimundoParser ( Parser ):
 
     class E_mult_assigmentContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Assigment_statementContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
         def KW_MULT_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_MULT_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_MULT_ASSIGNMENT, 0)
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterE_mult_assigment" ):
@@ -2218,19 +2250,19 @@ class RaimundoParser ( Parser ):
 
     class E_assigmentContext(Assigment_statementContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Assigment_statementContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Assigment_statementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
         def KW_ASSIGNMENT(self):
-            return self.getToken(RaimundoParser.KW_ASSIGNMENT, 0)
+            return self.getToken(PythonSParser.KW_ASSIGNMENT, 0)
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
         def KW_SEMICOLON(self):
-            return self.getToken(RaimundoParser.KW_SEMICOLON, 0)
+            return self.getToken(PythonSParser.KW_SEMICOLON, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterE_assigment" ):
@@ -2250,62 +2282,62 @@ class RaimundoParser ( Parser ):
 
     def assigment_statement(self):
 
-        localctx = RaimundoParser.Assigment_statementContext(self, self._ctx, self.state)
+        localctx = PythonSParser.Assigment_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_assigment_statement)
         try:
-            self.state = 327
+            self.state = 336
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
             if la_ == 1:
-                localctx = RaimundoParser.E_assigmentContext(self, localctx)
+                localctx = PythonSParser.E_assigmentContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 307
-                self.match(RaimundoParser.ID)
-                self.state = 308
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 309
+                self.state = 316
+                self.match(PythonSParser.ID)
+                self.state = 317
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 318
                 self.expr(0)
-                self.state = 310
-                self.match(RaimundoParser.KW_SEMICOLON)
+                self.state = 319
+                self.match(PythonSParser.KW_SEMICOLON)
                 pass
 
             elif la_ == 2:
-                localctx = RaimundoParser.InputContext(self, localctx)
+                localctx = PythonSParser.InputContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 312
-                self.match(RaimundoParser.ID)
-                self.state = 313
-                self.match(RaimundoParser.KW_ASSIGNMENT)
-                self.state = 314
+                self.state = 321
+                self.match(PythonSParser.ID)
+                self.state = 322
+                self.match(PythonSParser.KW_ASSIGNMENT)
+                self.state = 323
                 self.r_input()
-                self.state = 315
-                self.match(RaimundoParser.KW_SEMICOLON)
+                self.state = 324
+                self.match(PythonSParser.KW_SEMICOLON)
                 pass
 
             elif la_ == 3:
-                localctx = RaimundoParser.E_plus_assigmentContext(self, localctx)
+                localctx = PythonSParser.E_plus_assigmentContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 317
-                self.match(RaimundoParser.ID)
-                self.state = 318
-                self.match(RaimundoParser.KW_PLUS_ASSIGNMENT)
-                self.state = 319
+                self.state = 326
+                self.match(PythonSParser.ID)
+                self.state = 327
+                self.match(PythonSParser.KW_PLUS_ASSIGNMENT)
+                self.state = 328
                 self.expr(0)
-                self.state = 320
-                self.match(RaimundoParser.KW_SEMICOLON)
+                self.state = 329
+                self.match(PythonSParser.KW_SEMICOLON)
                 pass
 
             elif la_ == 4:
-                localctx = RaimundoParser.E_mult_assigmentContext(self, localctx)
+                localctx = PythonSParser.E_mult_assigmentContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
-                self.state = 322
-                self.match(RaimundoParser.ID)
-                self.state = 323
-                self.match(RaimundoParser.KW_MULT_ASSIGNMENT)
-                self.state = 324
+                self.state = 331
+                self.match(PythonSParser.ID)
+                self.state = 332
+                self.match(PythonSParser.KW_MULT_ASSIGNMENT)
+                self.state = 333
                 self.expr(0)
-                self.state = 325
-                self.match(RaimundoParser.KW_SEMICOLON)
+                self.state = 334
+                self.match(PythonSParser.KW_SEMICOLON)
                 pass
 
 
@@ -2329,7 +2361,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_expr
+            return PythonSParser.RULE_expr
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2340,17 +2372,17 @@ class RaimundoParser ( Parser ):
 
     class Or_logicContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
         def KW_OR(self):
-            return self.getToken(RaimundoParser.KW_OR, 0)
+            return self.getToken(PythonSParser.KW_OR, 0)
         def term(self):
-            return self.getTypedRuleContext(RaimundoParser.TermContext,0)
+            return self.getTypedRuleContext(PythonSParser.TermContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2370,12 +2402,12 @@ class RaimundoParser ( Parser ):
 
     class E_termContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term(self):
-            return self.getTypedRuleContext(RaimundoParser.TermContext,0)
+            return self.getTypedRuleContext(PythonSParser.TermContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2397,40 +2429,40 @@ class RaimundoParser ( Parser ):
     def expr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.ExprContext(self, self._ctx, _parentState)
+        localctx = PythonSParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 42
         self.enterRecursionRule(localctx, 42, self.RULE_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_termContext(self, localctx)
+            localctx = PythonSParser.E_termContext(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 330
+            self.state = 339
             self.term(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 337
+            self.state = 346
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.Or_logicContext(self, RaimundoParser.ExprContext(self, _parentctx, _parentState))
+                    localctx = PythonSParser.Or_logicContext(self, PythonSParser.ExprContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                    self.state = 332
+                    self.state = 341
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 333
-                    self.match(RaimundoParser.KW_OR)
-                    self.state = 334
+                    self.state = 342
+                    self.match(PythonSParser.KW_OR)
+                    self.state = 343
                     self.term(0) 
-                self.state = 339
+                self.state = 348
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2451,7 +2483,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term
+            return PythonSParser.RULE_term
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2461,17 +2493,17 @@ class RaimundoParser ( Parser ):
 
     class And_logicContext(TermContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.TermContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.TermContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term(self):
-            return self.getTypedRuleContext(RaimundoParser.TermContext,0)
+            return self.getTypedRuleContext(PythonSParser.TermContext,0)
 
         def KW_AND(self):
-            return self.getToken(RaimundoParser.KW_AND, 0)
+            return self.getToken(PythonSParser.KW_AND, 0)
         def term2(self):
-            return self.getTypedRuleContext(RaimundoParser.Term2Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term2Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2491,12 +2523,12 @@ class RaimundoParser ( Parser ):
 
     class E_term2Context(TermContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.TermContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.TermContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term2(self):
-            return self.getTypedRuleContext(RaimundoParser.Term2Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term2Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2518,40 +2550,40 @@ class RaimundoParser ( Parser ):
     def term(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.TermContext(self, self._ctx, _parentState)
+        localctx = PythonSParser.TermContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 44
         self.enterRecursionRule(localctx, 44, self.RULE_term, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_term2Context(self, localctx)
+            localctx = PythonSParser.E_term2Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 341
+            self.state = 350
             self.term2(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 348
+            self.state = 357
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.And_logicContext(self, RaimundoParser.TermContext(self, _parentctx, _parentState))
+                    localctx = PythonSParser.And_logicContext(self, PythonSParser.TermContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term)
-                    self.state = 343
+                    self.state = 352
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 344
-                    self.match(RaimundoParser.KW_AND)
-                    self.state = 345
+                    self.state = 353
+                    self.match(PythonSParser.KW_AND)
+                    self.state = 354
                     self.term2(0) 
-                self.state = 350
+                self.state = 359
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2572,7 +2604,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term2
+            return PythonSParser.RULE_term2
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2582,25 +2614,25 @@ class RaimundoParser ( Parser ):
 
     class Comp_logicContext(Term2Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term2Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term2Context
             super().__init__(parser)
             self.op = None # Token
             self.copyFrom(ctx)
 
         def term2(self):
-            return self.getTypedRuleContext(RaimundoParser.Term2Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term2Context,0)
 
         def term3(self):
-            return self.getTypedRuleContext(RaimundoParser.Term3Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term3Context,0)
 
         def KW_GREATERTHAN(self):
-            return self.getToken(RaimundoParser.KW_GREATERTHAN, 0)
+            return self.getToken(PythonSParser.KW_GREATERTHAN, 0)
         def KW_LESSERTHAN(self):
-            return self.getToken(RaimundoParser.KW_LESSERTHAN, 0)
+            return self.getToken(PythonSParser.KW_LESSERTHAN, 0)
         def KW_LESSEREQUALTHAN(self):
-            return self.getToken(RaimundoParser.KW_LESSEREQUALTHAN, 0)
+            return self.getToken(PythonSParser.KW_LESSEREQUALTHAN, 0)
         def KW_GREATERQUALTHAN(self):
-            return self.getToken(RaimundoParser.KW_GREATERQUALTHAN, 0)
+            return self.getToken(PythonSParser.KW_GREATERQUALTHAN, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_logic" ):
@@ -2619,12 +2651,12 @@ class RaimundoParser ( Parser ):
 
     class E_term3Context(Term2Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term2Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term2Context
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term3(self):
-            return self.getTypedRuleContext(RaimundoParser.Term3Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term3Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2646,47 +2678,47 @@ class RaimundoParser ( Parser ):
     def term2(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.Term2Context(self, self._ctx, _parentState)
+        localctx = PythonSParser.Term2Context(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 46
         self.enterRecursionRule(localctx, 46, self.RULE_term2, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_term3Context(self, localctx)
+            localctx = PythonSParser.E_term3Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 352
+            self.state = 361
             self.term3(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 359
+            self.state = 368
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.Comp_logicContext(self, RaimundoParser.Term2Context(self, _parentctx, _parentState))
+                    localctx = PythonSParser.Comp_logicContext(self, PythonSParser.Term2Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term2)
-                    self.state = 354
+                    self.state = 363
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 355
+                    self.state = 364
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << RaimundoParser.KW_GREATERTHAN) | (1 << RaimundoParser.KW_LESSERTHAN) | (1 << RaimundoParser.KW_GREATERQUALTHAN) | (1 << RaimundoParser.KW_LESSEREQUALTHAN))) != 0)):
+                    if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 30720) != 0):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 356
+                    self.state = 365
                     self.term3(0) 
-                self.state = 361
+                self.state = 370
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2707,7 +2739,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term3
+            return PythonSParser.RULE_term3
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2717,21 +2749,21 @@ class RaimundoParser ( Parser ):
 
     class Eq_logicContext(Term3Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term3Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term3Context
             super().__init__(parser)
             self.op = None # Token
             self.copyFrom(ctx)
 
         def term3(self):
-            return self.getTypedRuleContext(RaimundoParser.Term3Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term3Context,0)
 
         def term4(self):
-            return self.getTypedRuleContext(RaimundoParser.Term4Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term4Context,0)
 
         def KW_EQUAL(self):
-            return self.getToken(RaimundoParser.KW_EQUAL, 0)
+            return self.getToken(PythonSParser.KW_EQUAL, 0)
         def KW_NOTEQUAL(self):
-            return self.getToken(RaimundoParser.KW_NOTEQUAL, 0)
+            return self.getToken(PythonSParser.KW_NOTEQUAL, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEq_logic" ):
@@ -2750,12 +2782,12 @@ class RaimundoParser ( Parser ):
 
     class E_term4Context(Term3Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term3Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term3Context
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term4(self):
-            return self.getTypedRuleContext(RaimundoParser.Term4Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term4Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2777,47 +2809,47 @@ class RaimundoParser ( Parser ):
     def term3(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.Term3Context(self, self._ctx, _parentState)
+        localctx = PythonSParser.Term3Context(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 48
         self.enterRecursionRule(localctx, 48, self.RULE_term3, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_term4Context(self, localctx)
+            localctx = PythonSParser.E_term4Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 363
+            self.state = 372
             self.term4(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 370
+            self.state = 379
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.Eq_logicContext(self, RaimundoParser.Term3Context(self, _parentctx, _parentState))
+                    localctx = PythonSParser.Eq_logicContext(self, PythonSParser.Term3Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term3)
-                    self.state = 365
+                    self.state = 374
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 366
+                    self.state = 375
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==RaimundoParser.KW_EQUAL or _la==RaimundoParser.KW_NOTEQUAL):
+                    if not(_la==15 or _la==16):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 367
+                    self.state = 376
                     self.term4(0) 
-                self.state = 372
+                self.state = 381
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2838,7 +2870,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term4
+            return PythonSParser.RULE_term4
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2848,21 +2880,21 @@ class RaimundoParser ( Parser ):
 
     class Sum_minusContext(Term4Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term4Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term4Context
             super().__init__(parser)
             self.op = None # Token
             self.copyFrom(ctx)
 
         def term4(self):
-            return self.getTypedRuleContext(RaimundoParser.Term4Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term4Context,0)
 
         def term5(self):
-            return self.getTypedRuleContext(RaimundoParser.Term5Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term5Context,0)
 
         def KW_PLUS(self):
-            return self.getToken(RaimundoParser.KW_PLUS, 0)
+            return self.getToken(PythonSParser.KW_PLUS, 0)
         def KW_MINUS(self):
-            return self.getToken(RaimundoParser.KW_MINUS, 0)
+            return self.getToken(PythonSParser.KW_MINUS, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSum_minus" ):
@@ -2881,12 +2913,12 @@ class RaimundoParser ( Parser ):
 
     class E_term5Context(Term4Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term4Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term4Context
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term5(self):
-            return self.getTypedRuleContext(RaimundoParser.Term5Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term5Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2908,47 +2940,47 @@ class RaimundoParser ( Parser ):
     def term4(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.Term4Context(self, self._ctx, _parentState)
+        localctx = PythonSParser.Term4Context(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 50
         self.enterRecursionRule(localctx, 50, self.RULE_term4, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_term5Context(self, localctx)
+            localctx = PythonSParser.E_term5Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 374
+            self.state = 383
             self.term5(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 381
+            self.state = 390
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.Sum_minusContext(self, RaimundoParser.Term4Context(self, _parentctx, _parentState))
+                    localctx = PythonSParser.Sum_minusContext(self, PythonSParser.Term4Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term4)
-                    self.state = 376
+                    self.state = 385
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 377
+                    self.state = 386
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==RaimundoParser.KW_PLUS or _la==RaimundoParser.KW_MINUS):
+                    if not(_la==17 or _la==18):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 378
+                    self.state = 387
                     self.term5(0) 
-                self.state = 383
+                self.state = 392
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2969,7 +3001,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term5
+            return PythonSParser.RULE_term5
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -2979,12 +3011,12 @@ class RaimundoParser ( Parser ):
 
     class E_term6Context(Term5Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term5Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term5Context
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def term6(self):
-            return self.getTypedRuleContext(RaimundoParser.Term6Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term6Context,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -3004,21 +3036,21 @@ class RaimundoParser ( Parser ):
 
     class Time_divContext(Term5Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term5Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term5Context
             super().__init__(parser)
             self.op = None # Token
             self.copyFrom(ctx)
 
         def term5(self):
-            return self.getTypedRuleContext(RaimundoParser.Term5Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term5Context,0)
 
         def term6(self):
-            return self.getTypedRuleContext(RaimundoParser.Term6Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term6Context,0)
 
         def KW_MULT(self):
-            return self.getToken(RaimundoParser.KW_MULT, 0)
+            return self.getToken(PythonSParser.KW_MULT, 0)
         def KW_DIV(self):
-            return self.getToken(RaimundoParser.KW_DIV, 0)
+            return self.getToken(PythonSParser.KW_DIV, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTime_div" ):
@@ -3039,47 +3071,47 @@ class RaimundoParser ( Parser ):
     def term5(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = RaimundoParser.Term5Context(self, self._ctx, _parentState)
+        localctx = PythonSParser.Term5Context(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 52
         self.enterRecursionRule(localctx, 52, self.RULE_term5, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            localctx = RaimundoParser.E_term6Context(self, localctx)
+            localctx = PythonSParser.E_term6Context(self, localctx)
             self._ctx = localctx
             _prevctx = localctx
 
-            self.state = 385
+            self.state = 394
             self.term6()
             self._ctx.stop = self._input.LT(-1)
-            self.state = 392
+            self.state = 401
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = RaimundoParser.Time_divContext(self, RaimundoParser.Term5Context(self, _parentctx, _parentState))
+                    localctx = PythonSParser.Time_divContext(self, PythonSParser.Term5Context(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_term5)
-                    self.state = 387
+                    self.state = 396
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 388
+                    self.state = 397
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==RaimundoParser.KW_MULT or _la==RaimundoParser.KW_DIV):
+                    if not(_la==19 or _la==20):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 389
+                    self.state = 398
                     self.term6() 
-                self.state = 394
+                self.state = 403
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3100,7 +3132,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_term6
+            return PythonSParser.RULE_term6
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -3111,18 +3143,18 @@ class RaimundoParser ( Parser ):
 
     class Minus_notContext(Term6Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term6Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term6Context
             super().__init__(parser)
             self.op = None # Token
             self.copyFrom(ctx)
 
         def term6(self):
-            return self.getTypedRuleContext(RaimundoParser.Term6Context,0)
+            return self.getTypedRuleContext(PythonSParser.Term6Context,0)
 
         def KW_MINUS(self):
-            return self.getToken(RaimundoParser.KW_MINUS, 0)
+            return self.getToken(PythonSParser.KW_MINUS, 0)
         def KW_NOT(self):
-            return self.getToken(RaimundoParser.KW_NOT, 0)
+            return self.getToken(PythonSParser.KW_NOT, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMinus_not" ):
@@ -3141,12 +3173,12 @@ class RaimundoParser ( Parser ):
 
     class E_factorContext(Term6Context):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.Term6Context
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.Term6Context
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def factor(self):
-            return self.getTypedRuleContext(RaimundoParser.FactorContext,0)
+            return self.getTypedRuleContext(PythonSParser.FactorContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -3167,31 +3199,31 @@ class RaimundoParser ( Parser ):
 
     def term6(self):
 
-        localctx = RaimundoParser.Term6Context(self, self._ctx, self.state)
+        localctx = PythonSParser.Term6Context(self, self._ctx, self.state)
         self.enterRule(localctx, 54, self.RULE_term6)
         self._la = 0 # Token type
         try:
-            self.state = 398
+            self.state = 407
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [RaimundoParser.KW_MINUS, RaimundoParser.KW_NOT]:
-                localctx = RaimundoParser.Minus_notContext(self, localctx)
+            if token in [18, 30]:
+                localctx = PythonSParser.Minus_notContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 395
+                self.state = 404
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==RaimundoParser.KW_MINUS or _la==RaimundoParser.KW_NOT):
+                if not(_la==18 or _la==30):
                     localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 396
+                self.state = 405
                 self.term6()
                 pass
-            elif token in [RaimundoParser.INT_VALUE, RaimundoParser.FLOAT_VALUE, RaimundoParser.STR_VALUE, RaimundoParser.BOOL_VALUE, RaimundoParser.KW_PARENTHESIS_OPEN, RaimundoParser.ID]:
-                localctx = RaimundoParser.E_factorContext(self, localctx)
+            elif token in [4, 5, 6, 7, 24, 48]:
+                localctx = PythonSParser.E_factorContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 397
+                self.state = 406
                 self.factor()
                 pass
             else:
@@ -3216,7 +3248,7 @@ class RaimundoParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_factor
+            return PythonSParser.RULE_factor
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -3227,12 +3259,12 @@ class RaimundoParser ( Parser ):
 
     class L_str_valueContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def STR_VALUE(self):
-            return self.getToken(RaimundoParser.STR_VALUE, 0)
+            return self.getToken(PythonSParser.STR_VALUE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_str_value" ):
@@ -3251,12 +3283,12 @@ class RaimundoParser ( Parser ):
 
     class L_int_valueContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INT_VALUE(self):
-            return self.getToken(RaimundoParser.INT_VALUE, 0)
+            return self.getToken(PythonSParser.INT_VALUE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_int_value" ):
@@ -3275,12 +3307,12 @@ class RaimundoParser ( Parser ):
 
     class L_bool_valueContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BOOL_VALUE(self):
-            return self.getToken(RaimundoParser.BOOL_VALUE, 0)
+            return self.getToken(PythonSParser.BOOL_VALUE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_bool_value" ):
@@ -3299,12 +3331,12 @@ class RaimundoParser ( Parser ):
 
     class L_idContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self):
-            return self.getToken(RaimundoParser.ID, 0)
+            return self.getToken(PythonSParser.ID, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_id" ):
@@ -3323,12 +3355,12 @@ class RaimundoParser ( Parser ):
 
     class L_float_valueContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def FLOAT_VALUE(self):
-            return self.getToken(RaimundoParser.FLOAT_VALUE, 0)
+            return self.getToken(PythonSParser.FLOAT_VALUE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_float_value" ):
@@ -3347,17 +3379,17 @@ class RaimundoParser ( Parser ):
 
     class L_exprContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
         def expr(self):
-            return self.getTypedRuleContext(RaimundoParser.ExprContext,0)
+            return self.getTypedRuleContext(PythonSParser.ExprContext,0)
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterL_expr" ):
@@ -3376,12 +3408,12 @@ class RaimundoParser ( Parser ):
 
     class L_function_callContext(FactorContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaimundoParser.FactorContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PythonSParser.FactorContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def function_call_statement(self):
-            return self.getTypedRuleContext(RaimundoParser.Function_call_statementContext,0)
+            return self.getTypedRuleContext(PythonSParser.Function_call_statementContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -3402,63 +3434,63 @@ class RaimundoParser ( Parser ):
 
     def factor(self):
 
-        localctx = RaimundoParser.FactorContext(self, self._ctx, self.state)
+        localctx = PythonSParser.FactorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_factor)
         try:
-            self.state = 410
+            self.state = 419
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,35,self._ctx)
             if la_ == 1:
-                localctx = RaimundoParser.L_exprContext(self, localctx)
+                localctx = PythonSParser.L_exprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 400
-                self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-                self.state = 401
+                self.state = 409
+                self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+                self.state = 410
                 self.expr(0)
-                self.state = 402
-                self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
+                self.state = 411
+                self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
                 pass
 
             elif la_ == 2:
-                localctx = RaimundoParser.L_function_callContext(self, localctx)
+                localctx = PythonSParser.L_function_callContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 404
+                self.state = 413
                 self.function_call_statement()
                 pass
 
             elif la_ == 3:
-                localctx = RaimundoParser.L_idContext(self, localctx)
+                localctx = PythonSParser.L_idContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 405
-                self.match(RaimundoParser.ID)
+                self.state = 414
+                self.match(PythonSParser.ID)
                 pass
 
             elif la_ == 4:
-                localctx = RaimundoParser.L_int_valueContext(self, localctx)
+                localctx = PythonSParser.L_int_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
-                self.state = 406
-                self.match(RaimundoParser.INT_VALUE)
+                self.state = 415
+                self.match(PythonSParser.INT_VALUE)
                 pass
 
             elif la_ == 5:
-                localctx = RaimundoParser.L_float_valueContext(self, localctx)
+                localctx = PythonSParser.L_float_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
-                self.state = 407
-                self.match(RaimundoParser.FLOAT_VALUE)
+                self.state = 416
+                self.match(PythonSParser.FLOAT_VALUE)
                 pass
 
             elif la_ == 6:
-                localctx = RaimundoParser.L_str_valueContext(self, localctx)
+                localctx = PythonSParser.L_str_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
-                self.state = 408
-                self.match(RaimundoParser.STR_VALUE)
+                self.state = 417
+                self.match(PythonSParser.STR_VALUE)
                 pass
 
             elif la_ == 7:
-                localctx = RaimundoParser.L_bool_valueContext(self, localctx)
+                localctx = PythonSParser.L_bool_valueContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
-                self.state = 409
-                self.match(RaimundoParser.BOOL_VALUE)
+                self.state = 418
+                self.match(PythonSParser.BOOL_VALUE)
                 pass
 
 
@@ -3479,16 +3511,16 @@ class RaimundoParser ( Parser ):
             self.parser = parser
 
         def INPUT(self):
-            return self.getToken(RaimundoParser.INPUT, 0)
+            return self.getToken(PythonSParser.INPUT, 0)
 
         def KW_PARENTHESIS_OPEN(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_OPEN, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_OPEN, 0)
 
         def KW_PARENTHESIS_CLOSE(self):
-            return self.getToken(RaimundoParser.KW_PARENTHESIS_CLOSE, 0)
+            return self.getToken(PythonSParser.KW_PARENTHESIS_CLOSE, 0)
 
         def getRuleIndex(self):
-            return RaimundoParser.RULE_r_input
+            return PythonSParser.RULE_r_input
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterR_input" ):
@@ -3509,16 +3541,16 @@ class RaimundoParser ( Parser ):
 
     def r_input(self):
 
-        localctx = RaimundoParser.R_inputContext(self, self._ctx, self.state)
+        localctx = PythonSParser.R_inputContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_r_input)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 412
-            self.match(RaimundoParser.INPUT)
-            self.state = 413
-            self.match(RaimundoParser.KW_PARENTHESIS_OPEN)
-            self.state = 414
-            self.match(RaimundoParser.KW_PARENTHESIS_CLOSE)
+            self.state = 421
+            self.match(PythonSParser.INPUT)
+            self.state = 422
+            self.match(PythonSParser.KW_PARENTHESIS_OPEN)
+            self.state = 423
+            self.match(PythonSParser.KW_PARENTHESIS_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

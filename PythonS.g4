@@ -1,6 +1,9 @@
 grammar PythonS;
 
-program: global_variables_declaration functions_declaration main_function_declaration;
+program: global_variables_declaration functions_declaration main_function_declaration
+         |global_variables_declaration main_function_declaration
+         |functions_declaration main_function_declaration
+         |main_function_declaration;
 
 global_variables_declaration: global_variable_declaration_statement*;
 functions_declaration: function_declaration*;

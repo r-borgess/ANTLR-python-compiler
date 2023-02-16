@@ -75,7 +75,7 @@ class CustomListener(PythonSListenerLib):
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
 
-    def enterIf_statement(self, ctx:PythonSParserLib.If_statementContext):
+    def enterIf_statement(self, ctx: PythonSParserLib.If_statementContext):
         ctx.expr().inh_type = 'if'
 
     def enterForloop_statement(self, ctx: PythonSParserLib.Forloop_statementContext):
@@ -124,7 +124,6 @@ class CustomListener(PythonSListenerLib):
         self.jasmin.write_function_end()
         self.stack_block.pop()
 
-
     def exitFunction_call_statement(self, ctx: PythonSParserLib.Function_call_statementContext):
         function_id = ctx.ID().getText()
 
@@ -146,35 +145,38 @@ class CustomListener(PythonSListenerLib):
         else:
             self.jasmin.write_forexit_code(ctx_id, ctx.expr()[1].val, ctx.stack_idx)
 
-    def exitWhile_statement(self, ctx:PythonSParserLib.While_statementContext):
+    def exitWhile_statement(self, ctx: PythonSParserLib.While_statementContext):
         if ctx.expr().type != 'boolean':
             raise UnexpectedTypeError(ctx.start.line, 'boolean', ctx.expr().type)
         self.stack_block.pop()
         self.jasmin.write_dowhileexit_code(len(self.stack_block))
 
-
-    def exitGlobal_single_variable_declaration_statement(self, ctx:PythonSParserLib.Global_single_variable_declaration_statementContext):
+    def exitGlobal_single_variable_declaration_statement(self,
+                                                         ctx: PythonSParserLib.Global_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
         self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
         self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitGlobal_multiple_variable_declaration_statement(self, ctx:PythonSParserLib.Global_multiple_variable_declaration_statementContext):
+    def exitGlobal_multiple_variable_declaration_statement(self,
+                                                           ctx: PythonSParserLib.Global_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
             self.symbol_table[token.getText()] = CustomListener(type=ctx.TYPE().getText())
             self.jasmin.create_global(token.getText(), ctx.TYPE().getText())
 
-    def exitLocal_single_variable_declaration_statement(self, ctx:PythonSParserLib.Local_single_variable_declaration_statementContext):
+    def exitLocal_single_variable_declaration_statement(self,
+                                                        ctx: PythonSParserLib.Local_single_variable_declaration_statementContext):
         token = ctx.ID()
         if token.getText() in self.symbol_table:
             raise AlreadyDeclaredError(ctx.start.line, token.getText())
         self.symbol_table[token.getText()] = CustomListener(address=0, type=ctx.TYPE().getText(), local=True)
         self.jasmin.create_local(token.getText(), ctx.TYPE().getText())
 
-    def exitLocal_multiple_variable_declaration_statement(self, ctx:PythonSParserLib.Local_multiple_variable_declaration_statementContext):
+    def exitLocal_multiple_variable_declaration_statement(self,
+                                                          ctx: PythonSParserLib.Local_multiple_variable_declaration_statementContext):
         for token in ctx.ID():
             if token.getText() in self.symbol_table:
                 raise AlreadyDeclaredError(ctx.start.line, token.getText())
@@ -193,7 +195,7 @@ class CustomListener(PythonSListenerLib):
 
         self.jasmin.write_variable_store(ctx_id, ctx.expr().val)
 
-    def exitE_plus_assigment(self, ctx:PythonSParserLib.E_plus_assigmentContext):
+    def exitE_plus_assigment(self, ctx: PythonSParserLib.E_plus_assigmentContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -206,7 +208,7 @@ class CustomListener(PythonSListenerLib):
         new_value = self.symbol_table[ctx_id].val + ctx.expr().val
         self.jasmin.write_variable_store(ctx_id, new_value)
 
-    def exitE_mult_assigment(self, ctx:PythonSParserLib.E_mult_assigmentContext):
+    def exitE_mult_assigment(self, ctx: PythonSParserLib.E_mult_assigmentContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
             raise NonDeclaredVariableError(ctx.start.line, ctx_id)
@@ -219,7 +221,6 @@ class CustomListener(PythonSListenerLib):
         new_value = self.symbol_table[ctx_id].val * ctx.expr().val
         self.jasmin.write_variable_store(ctx_id, new_value)
 
-    
     def exitInput(self, ctx: PythonSParserLib.InputContext):
         ctx_id = ctx.ID().getText()
         if ctx_id not in self.symbol_table:
@@ -227,7 +228,7 @@ class CustomListener(PythonSListenerLib):
 
         self.jasmin.write_inputfunction_code(ctx_id)
 
-    def exitPrint_statement(self, ctx:PythonSParserLib.Print_statementContext):
+    def exitPrint_statement(self, ctx: PythonSParserLib.Print_statementContext):
         type_val = []
         for expr in ctx.expr():
             type_val.append((expr.type, expr.val))
@@ -277,7 +278,8 @@ class CustomListener(PythonSListenerLib):
         if ctx.term2().type != ctx.term3().type:
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term2().type, ctx.term3().type)
         ctx.type = 'boolean'
-        ctx.val = self.jasmin.write_equaloperator_code(ctx.term2().type, ctx.term2().val, ctx.term3().val, self.label_id, ctx.op.text)
+        ctx.val = self.jasmin.write_equaloperator_code(ctx.term2().type, ctx.term2().val, ctx.term3().val,
+                                                       self.label_id, ctx.op.text)
         self.label_id += 1
 
     def exitE_term3(self, ctx: PythonSParserLib.E_termContext):
@@ -288,7 +290,8 @@ class CustomListener(PythonSListenerLib):
         if ctx.term3().type != ctx.term4().type:
             raise ExpressionTypeError(ctx.start.line, ctx.op.text, ctx.term3().type, ctx.term4().type)
         ctx.type = 'boolean'
-        ctx.val = self.jasmin.write_equaloperator_code(ctx.term3().type, ctx.term3().val, ctx.term4().val, self.label_id, ctx.op.text)
+        ctx.val = self.jasmin.write_equaloperator_code(ctx.term3().type, ctx.term3().val, ctx.term4().val,
+                                                       self.label_id, ctx.op.text)
         self.label_id += 1
 
     def exitE_term4(self, ctx: PythonSParserLib.E_termContext):
@@ -412,5 +415,5 @@ class CustomListener(PythonSListenerLib):
     def exitProgram(self, ctx: PythonSParserLib.ProgramContext):
         self.jasmin.close_file()
 
-    def exitBreak_statement(self, ctx:PythonSParserLib.Break_statementContext):
+    def exitBreak_statement(self, ctx: PythonSParserLib.Break_statementContext):
         self.jasmin.write_loopbreak_code(len(self.stack_block) - 1)

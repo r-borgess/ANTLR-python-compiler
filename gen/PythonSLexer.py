@@ -1,4 +1,4 @@
-# Generated from /home/jpedro/workspace/novo_compilador/Raimundo.g4 by ANTLR 4.10.1
+# Generated from C:/Users/rodri/novo_compilador\PythonS.g4 by ANTLR 4.11.1
 from antlr4 import *
 from io import StringIO
 import sys
@@ -123,7 +123,7 @@ def serializedATN():
         0,0,10,0,122,127,133,139,146,249,292,305,309,1,6,0,0
     ]
 
-class RaimundoLexer(Lexer):
+class PythonSLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -216,11 +216,11 @@ class RaimundoLexer(Lexer):
                   "KW_FLOAT", "KW_STRING", "KW_BOOL", "KW_VOID", "KW_TRUE", 
                   "KW_FALSE", "ID", "WS", "COMMENT" ]
 
-    grammarFileName = "Raimundo.g4"
+    grammarFileName = "PythonS.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.10.1")
+        self.checkVersion("4.11.1")
         self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._actions = None
         self._predicates = None
