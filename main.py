@@ -18,6 +18,6 @@ if __name__ == '__main__':
     treewalker.walk(listenerlib, tree)
     jasminFile = filename + '.j'
     os.system(f'java -jar jasmin.jar {jasminFile}')
-    execFile = jasminFile.removesuffix('.class')
-    print(execFile)
+    #execFile = jasminFile.removesuffix('.class')
+    #print(execFile)
     os.system(f'java {jasminFile}')
